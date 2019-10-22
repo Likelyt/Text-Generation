@@ -1,0 +1,2542 @@
+Namespace(batch_size=128, bi=True, data_name='rest_data_pair_24K.txt', embedding_size=300, encoder_dropout=0.2, end_epoch=30, hidden_size=256, lr=0.001, n_layers_decoder=1, n_layers_encoder=2, n_sample=10, numpy_seed=12345, review_name='rest', topic_choice='NTM', topic_dimension=10, topic_hidden_size=400, topic_train_epoch=50, torch_seed=12345)
+Read 24270 sentence pairs
+Filtered to 22410 pairs
+Indexing words...
+Indexed 15361 words in input language, 15361 words in output
+keep_words 5454 / 15357 = 0.3551
+There are 1450489 tokens in data
+There are 22410 pairs sentence in total
+Epoch: 1 / 30, Accumulate Time to End: 0m 2s (- 17m 57s), (Batch: 10 / Batches Num: 140, Percent Run: 0.24%), Loss:7.4674
+Epoch: 1 / 30, Accumulate Time to End: 0m 4s (- 15m 15s), (Batch: 20 / Batches Num: 140, Percent Run: 0.48%), Loss:6.1053
+Epoch: 1 / 30, Accumulate Time to End: 0m 6s (- 14m 21s), (Batch: 30 / Batches Num: 140, Percent Run: 0.71%), Loss:6.0639
+Epoch: 1 / 30, Accumulate Time to End: 0m 8s (- 13m 55s), (Batch: 40 / Batches Num: 140, Percent Run: 0.95%), Loss:6.0431
+Epoch: 1 / 30, Accumulate Time to End: 0m 9s (- 13m 34s), (Batch: 50 / Batches Num: 140, Percent Run: 1.19%), Loss:5.9850
+Epoch: 1 / 30, Accumulate Time to End: 0m 11s (- 13m 33s), (Batch: 60 / Batches Num: 140, Percent Run: 1.43%), Loss:6.0003
+Epoch: 1 / 30, Accumulate Time to End: 0m 13s (- 13m 16s), (Batch: 70 / Batches Num: 140, Percent Run: 1.67%), Loss:5.9859
+Epoch: 1 / 30, Accumulate Time to End: 0m 15s (- 13m 7s), (Batch: 80 / Batches Num: 140, Percent Run: 1.90%), Loss:5.9651
+Epoch: 1 / 30, Accumulate Time to End: 0m 17s (- 13m 6s), (Batch: 90 / Batches Num: 140, Percent Run: 2.14%), Loss:5.9598
+Epoch: 1 / 30, Accumulate Time to End: 0m 18s (- 12m 59s), (Batch: 100 / Batches Num: 140, Percent Run: 2.38%), Loss:5.8817
+Epoch: 1 / 30, Accumulate Time to End: 0m 20s (- 12m 56s), (Batch: 110 / Batches Num: 140, Percent Run: 2.62%), Loss:5.9016
+Epoch: 1 / 30, Accumulate Time to End: 0m 22s (- 12m 54s), (Batch: 120 / Batches Num: 140, Percent Run: 2.86%), Loss:5.9252
+Epoch: 1 / 30, Accumulate Time to End: 0m 24s (- 12m 51s), (Batch: 130 / Batches Num: 140, Percent Run: 3.09%), Loss:5.8663
+Epoch: 1 / 30, Accumulate Time to End: 0m 26s (- 12m 48s), (Batch: 140 / Batches Num: 140, Percent Run: 3.33%), Loss:5.8993
+
+Val Epoch: 1
+
+Val Sample: 1
+
+Input Sentence: < ['our meal edamame with shaved <Unknown> sashimi yellowtail with miso and jalapeno <Unknown> bobby favorite black cod in lettuce cup with <Unknown> flake my favorite so perfect sashimi with garlic chip little too salty salmon sushi toro sushi very tasty fish dessert edamame icecream <Unknown> a <Unknown> <Unknown> sauce and']
+Target Sentence: < ['a super treat for sushi but be prepared to spend money']
+Output Sentence: < the the EOS
+
+Val Sample: 2
+
+Input Sentence: < ['being a vegetarian who is gluten lactose intolerant dining out can be a <Unknown> experience i usually stick to salad but <Unknown> across <Unknown> bistro wa the best part of my vega vacation']
+Target Sentence: < ['they understood my <Unknown> spoke with the chef and made one of the best meal i have had in year that along with the special attention and great service make this a must for me for year to come']
+Output Sentence: < the the the the EOS
+
+Val Sample: 3
+
+Input Sentence: < ['we started off with a personal tour of what wa being served fresh that night right in front of the kitchen where all the fish and seafood were on ice']
+Target Sentence: < ['we were given a <Unknown> description of what each fish wa and how it could be prepared']
+Output Sentence: < the the the EOS
+
+Val Sample: 4
+
+Input Sentence: < ['our appetizer were delicious we had the antipasto and fried zucchini and i had the salmon with a very yummy spinach salad and potato a a main course']
+Target Sentence: < ['everything wa cooked to a turn and well spiced not all salt and pepper a you might find in many place']
+Output Sentence: < the the the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['the burger are just a they say fresh and meaty we came during a rush so we really got to see the staff work efficiently while we waited']
+Target Sentence: < ['we liked the girl working the front area']
+Output Sentence: < the the the the EOS
+
+Val Sample: 6
+
+Input Sentence: < ['recently there wa an issue with my order and i decided to finally give feedback via the <Unknown> email they send when you order from their site']
+Target Sentence: < ['a a quick aside their site ha a pretty simple ordering system and they give you 10 off for using it versus uber or <Unknown>']
+Output Sentence: < the the the EOS
+
+Val Sample: 7
+
+Input Sentence: < ['being mother day it wa busy but the staff handled the crowd and the business with the same great customer service that brings me back everytime']
+Target Sentence: < ['great food great people great atmosphere']
+Output Sentence: < the the EOS
+
+Val Sample: 8
+
+Input Sentence: < ['this is an unusual post because i used to be a <Unknown> the only white guy in an otherwise all thai staff and it wa amazing']
+Target Sentence: < ['they would feed me at the start and end of my shift']
+Output Sentence: < the the the EOS
+
+Val Sample: 9
+
+Input Sentence: < ['i went for the first time and ordered their turkey bacon <Unknown> sandwich and their strawberry harvest salad and it wa definitely worth 5 star']
+Target Sentence: < ['i cant wait to go back and try more thing']
+Output Sentence: < the the the EOS
+
+Val Sample: 10
+
+Input Sentence: < ['ive been going to <Unknown> for more than 5 year and there is not even a close second in phoenix or arizona for that matter']
+Target Sentence: < ['i wa fortunate enough to have lived in europe for 4 year and ive had pizza in belgium italy and other european country']
+Output Sentence: < the the the EOS
+
+Output as Input
+etp score: 0.0000, 0.0000, 0.0000, 0.0000
+Div score: 0.0003, 0.0003, 0.0003, 0.0003
+Bleu score: 0.0251, 0.0000, 0.0000, 0.0000
+Perplexity of Golden Input: 302.9978
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_1.pt
+Epoch: 2 / 30, Accumulate Time to End: 0m 39s (- 17m 51s), (Batch: 10 / Batches Num: 140, Percent Run: 3.57%), Loss:5.8332
+Epoch: 2 / 30, Accumulate Time to End: 0m 41s (- 17m 33s), (Batch: 20 / Batches Num: 140, Percent Run: 3.81%), Loss:5.8585
+Epoch: 2 / 30, Accumulate Time to End: 0m 43s (- 17m 14s), (Batch: 30 / Batches Num: 140, Percent Run: 4.05%), Loss:5.8260
+Epoch: 2 / 30, Accumulate Time to End: 0m 45s (- 16m 54s), (Batch: 40 / Batches Num: 140, Percent Run: 4.29%), Loss:5.8054
+Epoch: 2 / 30, Accumulate Time to End: 0m 47s (- 16m 39s), (Batch: 50 / Batches Num: 140, Percent Run: 4.52%), Loss:5.7976
+Epoch: 2 / 30, Accumulate Time to End: 0m 49s (- 16m 25s), (Batch: 60 / Batches Num: 140, Percent Run: 4.76%), Loss:5.7929
+Epoch: 2 / 30, Accumulate Time to End: 0m 51s (- 16m 11s), (Batch: 70 / Batches Num: 140, Percent Run: 5.00%), Loss:5.8124
+Epoch: 2 / 30, Accumulate Time to End: 0m 52s (- 15m 56s), (Batch: 80 / Batches Num: 140, Percent Run: 5.24%), Loss:5.7658
+Epoch: 2 / 30, Accumulate Time to End: 0m 54s (- 15m 44s), (Batch: 90 / Batches Num: 140, Percent Run: 5.48%), Loss:5.8022
+Epoch: 2 / 30, Accumulate Time to End: 0m 56s (- 15m 33s), (Batch: 100 / Batches Num: 140, Percent Run: 5.71%), Loss:5.7610
+Epoch: 2 / 30, Accumulate Time to End: 0m 58s (- 15m 22s), (Batch: 110 / Batches Num: 140, Percent Run: 5.95%), Loss:5.7511
+Epoch: 2 / 30, Accumulate Time to End: 1m 0s (- 15m 11s), (Batch: 120 / Batches Num: 140, Percent Run: 6.19%), Loss:5.7543
+Epoch: 2 / 30, Accumulate Time to End: 1m 2s (- 15m 2s), (Batch: 130 / Batches Num: 140, Percent Run: 6.43%), Loss:5.6863
+Epoch: 2 / 30, Accumulate Time to End: 1m 3s (- 14m 54s), (Batch: 140 / Batches Num: 140, Percent Run: 6.67%), Loss:5.6678
+
+Val Epoch: 2
+
+Val Sample: 1
+
+Input Sentence: < ['my family and i love this place and the waffle are really good but one day i had the burger there and it wa gross the bread wa soggy and i will never eat the burger ever']
+Target Sentence: < ['the service wa great and the people there are nice']
+Output Sentence: < the wa is the EOS
+
+Val Sample: 2
+
+Input Sentence: < ['we started off with a personal tour of what wa being served fresh that night right in front of the kitchen where all the fish and seafood were on ice']
+Target Sentence: < ['we were given a <Unknown> description of what each fish wa and how it could be prepared']
+Output Sentence: < the the the EOS
+
+Val Sample: 3
+
+Input Sentence: < ['the salad bar is awesome there always an abundance of sample at each counter and ton of selection however if you frequent <Unknown> enough their food can get mundane']
+Target Sentence: < ['one suggestion id have is food allergy <Unknown> or option']
+Output Sentence: < the is is is the the EOS
+
+Val Sample: 4
+
+Input Sentence: < ['we laughed ourselves silly reading the negative review in the voice of an <Unknown> 8 year old <Unknown> their foot while we waited for le than 5 min']
+Target Sentence: < ['it fast food people and it is <Unknown>']
+Output Sentence: < the is and and EOS
+
+Val Sample: 5
+
+Input Sentence: < ['this sushi store is hot like wasabi when i <Unknown> <Unknown> should be big like <Unknown> <Unknown> if you are all about value come to <Unknown>']
+Target Sentence: < ['the food is far beyond the price you will pay for it']
+Output Sentence: < the wa is the EOS
+
+Val Sample: 6
+
+Input Sentence: < ['i went for the first time and ordered their turkey bacon <Unknown> sandwich and their strawberry harvest salad and it wa definitely worth 5 star']
+Target Sentence: < ['i cant wait to go back and try more thing']
+Output Sentence: < the the the EOS
+
+Val Sample: 7
+
+Input Sentence: < ['this summer i went to japan and coming back to charlotte ive hit nearly all the japanese restaurant and this is by far my favorite']
+Target Sentence: < ['it very authentic including the <Unknown> offering']
+Output Sentence: < the is the EOS
+
+Val Sample: 8
+
+Input Sentence: < ['such a wonderful experience at <Unknown> i dont know where to begin except to say that the food wa outstanding and the service wa incomparable']
+Target Sentence: < ['ask for <Unknown> i thought he must be a partner in the restaurant because his enthusiasm personality and passion for what he wa doing that night were really something to experience']
+Output Sentence: < the is the EOS
+
+Val Sample: 9
+
+Input Sentence: < ['of all the year ive been eating pizza from pizza hut domino papa john this is the place i prefer coming back for more']
+Target Sentence: < ['you can tell that is freshly made which make the food even better']
+Output Sentence: < the the the the the the EOS
+
+Val Sample: 10
+
+Input Sentence: < ['my family ha brought me here since i wa an <Unknown> and i am happy to say nothing ha changed not even the atmosphere']
+Target Sentence: < ['the food is awesome i suggest the happy platter for 2 for an amazing <Unknown> and get a mai tai while youre at it']
+Output Sentence: < the wa is the EOS
+
+Output as Input
+etp score: 1.3797, 1.7560, 1.9546, 1.9499
+Div score: 0.0043, 0.0068, 0.0088, 0.0115
+Bleu score: 0.1265, 0.0339, 0.0067, 0.0006
+Perplexity of Golden Input: 248.6373
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_2.pt
+Epoch: 3 / 30, Accumulate Time to End: 1m 15s (- 17m 1s), (Batch: 10 / Batches Num: 140, Percent Run: 6.90%), Loss:5.6426
+Epoch: 3 / 30, Accumulate Time to End: 1m 17s (- 16m 49s), (Batch: 20 / Batches Num: 140, Percent Run: 7.14%), Loss:5.6592
+Epoch: 3 / 30, Accumulate Time to End: 1m 19s (- 16m 38s), (Batch: 30 / Batches Num: 140, Percent Run: 7.38%), Loss:5.5922
+Epoch: 3 / 30, Accumulate Time to End: 1m 21s (- 16m 26s), (Batch: 40 / Batches Num: 140, Percent Run: 7.62%), Loss:5.5880
+Epoch: 3 / 30, Accumulate Time to End: 1m 23s (- 16m 14s), (Batch: 50 / Batches Num: 140, Percent Run: 7.86%), Loss:5.5622
+Epoch: 3 / 30, Accumulate Time to End: 1m 24s (- 16m 4s), (Batch: 60 / Batches Num: 140, Percent Run: 8.09%), Loss:5.5557
+Epoch: 3 / 30, Accumulate Time to End: 1m 26s (- 15m 53s), (Batch: 70 / Batches Num: 140, Percent Run: 8.33%), Loss:5.5429
+Epoch: 3 / 30, Accumulate Time to End: 1m 28s (- 15m 45s), (Batch: 80 / Batches Num: 140, Percent Run: 8.57%), Loss:5.5360
+Epoch: 3 / 30, Accumulate Time to End: 1m 30s (- 15m 37s), (Batch: 90 / Batches Num: 140, Percent Run: 8.81%), Loss:5.5208
+Epoch: 3 / 30, Accumulate Time to End: 1m 32s (- 15m 28s), (Batch: 100 / Batches Num: 140, Percent Run: 9.05%), Loss:5.4966
+Epoch: 3 / 30, Accumulate Time to End: 1m 34s (- 15m 21s), (Batch: 110 / Batches Num: 140, Percent Run: 9.28%), Loss:5.4796
+Epoch: 3 / 30, Accumulate Time to End: 1m 36s (- 15m 12s), (Batch: 120 / Batches Num: 140, Percent Run: 9.52%), Loss:5.5079
+Epoch: 3 / 30, Accumulate Time to End: 1m 37s (- 15m 5s), (Batch: 130 / Batches Num: 140, Percent Run: 9.76%), Loss:5.4794
+Epoch: 3 / 30, Accumulate Time to End: 1m 39s (- 14m 58s), (Batch: 140 / Batches Num: 140, Percent Run: 10.00%), Loss:5.4426
+
+Val Epoch: 3
+
+Val Sample: 1
+
+Input Sentence: < ['the spicy shrimp tempura roll wa delicious at the hibachi side the cooking is amazing and the staff put up a nice show with the flame and the egg breaking a well a balancing the food']
+Target Sentence: < ['we were served by a super polite and very nice japanese waitress']
+Output Sentence: < the had a and the <Unknown> <Unknown> and the great EOS
+
+Val Sample: 2
+
+Input Sentence: < ['i no longer live in cu but when i lived there i wa a regular at farrens and when back in town visiting recently i made sure to stop in and eat at farrens again']
+Target Sentence: < ['the burger were just a good a i remembered']
+Output Sentence: < the food is great a <Unknown> and <Unknown> had EOS
+
+Val Sample: 3
+
+Input Sentence: < ['look past the off the strip hotel everyone is over the age 45 and the sound of <Unknown> in the background and youll get a down to earth restaurant that serf quality southern style food']
+Target Sentence: < ['pan roast gumbo <Unknown> you cant go wrong']
+Output Sentence: < the is is is and had get EOS
+
+Val Sample: 4
+
+Input Sentence: < ['the champaign <Unknown> to the <Unknown> original is very nice and ha much more seating so if youre looking for a <Unknown> wait time this is probably the location to choose']
+Target Sentence: < ['the burnt end are amazing and sell out <Unknown> are freshly available starting at 11 am and 5 pm']
+Output Sentence: < the food is is a EOS
+
+Val Sample: 5
+
+Input Sentence: < ['every time im in montreal i try to satisfy my smoked meat craving with the like of <Unknown> <Unknown> or main because i didnt want to wait in line forever']
+Target Sentence: < ['but none of those really hit the spot']
+Output Sentence: < the the the the the had the <Unknown> EOS
+
+Val Sample: 6
+
+Input Sentence: < ['the salad bar is awesome there always an abundance of sample at each counter and ton of selection however if you frequent <Unknown> enough their food can get mundane']
+Target Sentence: < ['one suggestion id have is food allergy <Unknown> or option']
+Output Sentence: < the of is the the a EOS
+
+Val Sample: 7
+
+Input Sentence: < ['the dressing the egg the hash brown and all of it ingredient add texture flavor and mixture of oh wow and <Unknown> twist style i want some more']
+Target Sentence: < ['trust me though it not from lack of portion size just the need to continue into the next dish so you can find the next dish place in your <Unknown>']
+Output Sentence: < the the to to EOS
+
+Val Sample: 8
+
+Input Sentence: < ['amy is usually in the kitchen busy cooking and baking but always find time to come out and say hello and bring my mom a special treat']
+Target Sentence: < ['the food in phenomenal always fresh and of the highest quality']
+Output Sentence: < the food is the is had and the the food of EOS
+
+Val Sample: 9
+
+Input Sentence: < ['i had the <Unknown> omakase set sashimi wa top grade a well a the cooked item and the accompanying sake just made it even better']
+Target Sentence: < ['if you love your sushi this is a must try']
+Output Sentence: < the i had the <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['this summer i went to japan and coming back to charlotte ive hit nearly all the japanese restaurant and this is by far my favorite']
+Target Sentence: < ['it very authentic including the <Unknown> offering']
+Output Sentence: < the wa great EOS
+
+Output as Input
+etp score: 1.3863, 1.0986, 0.6931, 0.0000
+Div score: 0.0078, 0.0078, 0.0078, 0.0078
+Bleu score: 0.0277, 0.0098, 0.0045, 0.0007
+Perplexity of Golden Input: 193.7182
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_3.pt
+Epoch: 4 / 30, Accumulate Time to End: 1m 51s (- 16m 19s), (Batch: 10 / Batches Num: 140, Percent Run: 10.24%), Loss:5.3830
+Epoch: 4 / 30, Accumulate Time to End: 1m 53s (- 16m 10s), (Batch: 20 / Batches Num: 140, Percent Run: 10.48%), Loss:5.3984
+Epoch: 4 / 30, Accumulate Time to End: 1m 55s (- 16m 1s), (Batch: 30 / Batches Num: 140, Percent Run: 10.71%), Loss:5.4110
+Epoch: 4 / 30, Accumulate Time to End: 1m 57s (- 15m 54s), (Batch: 40 / Batches Num: 140, Percent Run: 10.95%), Loss:5.3850
+Epoch: 4 / 30, Accumulate Time to End: 1m 59s (- 15m 46s), (Batch: 50 / Batches Num: 140, Percent Run: 11.19%), Loss:5.3252
+Epoch: 4 / 30, Accumulate Time to End: 2m 1s (- 15m 38s), (Batch: 60 / Batches Num: 140, Percent Run: 11.43%), Loss:5.3825
+Epoch: 4 / 30, Accumulate Time to End: 2m 2s (- 15m 29s), (Batch: 70 / Batches Num: 140, Percent Run: 11.67%), Loss:5.3378
+Epoch: 4 / 30, Accumulate Time to End: 2m 4s (- 15m 21s), (Batch: 80 / Batches Num: 140, Percent Run: 11.90%), Loss:5.3050
+Epoch: 4 / 30, Accumulate Time to End: 2m 6s (- 15m 15s), (Batch: 90 / Batches Num: 140, Percent Run: 12.14%), Loss:5.3063
+Epoch: 4 / 30, Accumulate Time to End: 2m 8s (- 15m 9s), (Batch: 100 / Batches Num: 140, Percent Run: 12.38%), Loss:5.2847
+Epoch: 4 / 30, Accumulate Time to End: 2m 10s (- 15m 2s), (Batch: 110 / Batches Num: 140, Percent Run: 12.62%), Loss:5.3068
+Epoch: 4 / 30, Accumulate Time to End: 2m 11s (- 14m 54s), (Batch: 120 / Batches Num: 140, Percent Run: 12.86%), Loss:5.3300
+Epoch: 4 / 30, Accumulate Time to End: 2m 13s (- 14m 48s), (Batch: 130 / Batches Num: 140, Percent Run: 13.09%), Loss:5.3381
+Epoch: 4 / 30, Accumulate Time to End: 2m 15s (- 14m 42s), (Batch: 140 / Batches Num: 140, Percent Run: 13.33%), Loss:5.2512
+
+Val Epoch: 4
+
+Val Sample: 1
+
+Input Sentence: < ['the staff is very nice my daughter got sick there once from a headache instead of freaking out being <Unknown> out waiter wa very helpful getting u water towel checked on u the whole time']
+Target Sentence: < ['love this place']
+Output Sentence: < the the place EOS
+
+Val Sample: 2
+
+Input Sentence: < ['had breakfast tea at casa imperial this morning the dim sum wa actually impeccable white tuna an bacon tart bird tart tart and bbq pork are on my favorite list right now']
+Target Sentence: < ['but the <Unknown> is way too overpriced']
+Output Sentence: < the the food is a a a EOS
+
+Val Sample: 3
+
+Input Sentence: < ['when i wa in vega recently one of my <Unknown> thing wa a <Unknown> since i like to eat a larger meal early a breakfast one at that']
+Target Sentence: < ['id <Unknown> a couple of the others but stayed away due to the lack of selection i dont eat meat chicken or seafood']
+Output Sentence: < the a a great of the food of the and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['their pho is <Unknown> had to sorry my favorite are the pho tai nam <Unknown> steak flank and soft tendon and the pho ga chicken']
+Target Sentence: < ['i also love their egg noodle soup with roast duck which ha a wonderful rich complex flavor']
+Output Sentence: < the had had the <Unknown> and and and a and and is a great <Unknown> and EOS
+
+Val Sample: 5
+
+Input Sentence: < ['such a wonderful experience at <Unknown> i dont know where to begin except to say that the food wa outstanding and the service wa incomparable']
+Target Sentence: < ['ask for <Unknown> i thought he must be a partner in the restaurant because his enthusiasm personality and passion for what he wa doing that night were really something to experience']
+Output Sentence: < the the the and have the wa a a great EOS
+
+Val Sample: 6
+
+Input Sentence: < ['not only are the noodle killer but i love the idea of a tiny little restaurant that really only doe a handful of item']
+Target Sentence: < ['you wont find dessert or even much for appetizer here']
+Output Sentence: < the have be EOS
+
+Val Sample: 7
+
+Input Sentence: < ['im not sure why since i get boba so <Unknown> it not like i remember the <Unknown> of the last one i had']
+Target Sentence: < ['but it best to start with the basic i guess']
+Output Sentence: < the the wa EOS
+
+Val Sample: 8
+
+Input Sentence: < ['my mom and i would go pick up my older sister from work and on the way home grab some burrito for dinner']
+Target Sentence: < ['we would get all different kind including the red chile green chile bean burrito and occasionally tostada and taco']
+Output Sentence: < the had be a the of EOS
+
+Val Sample: 9
+
+Input Sentence: < ['the produce is organic and locally grown a much a it can be and our sandwich salad and flatbread were creative and tasty']
+Target Sentence: < ['i dont give out many excellent rating but the herb box deserves one']
+Output Sentence: < the had be the a of and EOS
+
+Val Sample: 10
+
+Input Sentence: < ['we were visiting from the u and after a week exploring montreal and it french cuisine by accident found this gem called <Unknown>']
+Target Sentence: < ['the chef and owner is very friendly and an amazing chef']
+Output Sentence: < the food is the is great great and the great food EOS
+
+Output as Input
+etp score: 1.4156, 1.1744, 0.8554, 0.4034
+Div score: 0.0100, 0.0137, 0.0202, 0.0382
+Bleu score: 0.0296, 0.0106, 0.0050, 0.0007
+Perplexity of Golden Input: 167.3119
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_4.pt
+Epoch: 5 / 30, Accumulate Time to End: 2m 27s (- 15m 40s), (Batch: 10 / Batches Num: 140, Percent Run: 13.57%), Loss:5.1918
+Epoch: 5 / 30, Accumulate Time to End: 2m 29s (- 15m 33s), (Batch: 20 / Batches Num: 140, Percent Run: 13.81%), Loss:5.2352
+Epoch: 5 / 30, Accumulate Time to End: 2m 31s (- 15m 26s), (Batch: 30 / Batches Num: 140, Percent Run: 14.05%), Loss:5.2325
+Epoch: 5 / 30, Accumulate Time to End: 2m 33s (- 15m 20s), (Batch: 40 / Batches Num: 140, Percent Run: 14.29%), Loss:5.2653
+Epoch: 5 / 30, Accumulate Time to End: 2m 35s (- 15m 13s), (Batch: 50 / Batches Num: 140, Percent Run: 14.52%), Loss:5.2072
+Epoch: 5 / 30, Accumulate Time to End: 2m 37s (- 15m 8s), (Batch: 60 / Batches Num: 140, Percent Run: 14.76%), Loss:5.2115
+Epoch: 5 / 30, Accumulate Time to End: 2m 39s (- 15m 1s), (Batch: 70 / Batches Num: 140, Percent Run: 15.00%), Loss:5.1911
+Epoch: 5 / 30, Accumulate Time to End: 2m 40s (- 14m 55s), (Batch: 80 / Batches Num: 140, Percent Run: 15.24%), Loss:5.2042
+Epoch: 5 / 30, Accumulate Time to End: 2m 43s (- 14m 50s), (Batch: 90 / Batches Num: 140, Percent Run: 15.48%), Loss:5.1968
+Epoch: 5 / 30, Accumulate Time to End: 2m 44s (- 14m 44s), (Batch: 100 / Batches Num: 140, Percent Run: 15.71%), Loss:5.1622
+Epoch: 5 / 30, Accumulate Time to End: 2m 46s (- 14m 38s), (Batch: 110 / Batches Num: 140, Percent Run: 15.95%), Loss:5.1900
+Epoch: 5 / 30, Accumulate Time to End: 2m 48s (- 14m 32s), (Batch: 120 / Batches Num: 140, Percent Run: 16.19%), Loss:5.1876
+Epoch: 5 / 30, Accumulate Time to End: 2m 50s (- 14m 27s), (Batch: 130 / Batches Num: 140, Percent Run: 16.43%), Loss:5.1557
+Epoch: 5 / 30, Accumulate Time to End: 2m 52s (- 14m 21s), (Batch: 140 / Batches Num: 140, Percent Run: 16.67%), Loss:5.1631
+
+Val Epoch: 5
+
+Val Sample: 1
+
+Input Sentence: < ['in oct 2011 i had the lunch special just like we used to get in high school only now it is 5 instead of 3 and grabbed a pizza for take out on another night']
+Target Sentence: < ['<Unknown> himself wa there on the take out night even though the <Unknown> family sold the restaurant to long time employee in 2010 or so']
+Output Sentence: < i is to a and the <Unknown> EOS
+
+Val Sample: 2
+
+Input Sentence: < ['ive never actually tasted food like this a surprisingly pleasant taste of south asia in unexpected dish try the scallop ceviche youll know what i mean']
+Target Sentence: < ['do try the <Unknown> taco a well i tried the chicken one which i am a big fan of']
+Output Sentence: < i have the <Unknown> <Unknown> and <Unknown> EOS
+
+Val Sample: 3
+
+Input Sentence: < ['such a wonderful experience at <Unknown> i dont know where to begin except to say that the food wa outstanding and the service wa incomparable']
+Target Sentence: < ['ask for <Unknown> i thought he must be a partner in the restaurant because his enthusiasm personality and passion for what he wa doing that night were really something to experience']
+Output Sentence: < i the the and have i wa be a <Unknown> EOS
+
+Val Sample: 4
+
+Input Sentence: < ['i meet the owner at a local restaurant i wa new to the area and he told me about his restaurant <Unknown> vibe jamaican cuisine']
+Target Sentence: < ['so i had to check it out i got the curry chicken over a bed of rice and bean and it wa absolutely straight from the soul']
+Output Sentence: < i i had the be the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['if the breakfast club were a movie it would be rated by entertainment weekly a the top high school movie of all time']
+Target Sentence: < ['in it category it that good']
+Output Sentence: < i the wa EOS
+
+Val Sample: 6
+
+Input Sentence: < ['and we did the champagne brunch which wa an awesome way to start the day off there were a ton of selection']
+Target Sentence: < ['while buffet food is not always my thing because it is never really the most <Unknown> wa good and since there wa so many different thing to try all of the picky eater i wa with were able to satisfy themselves']
+Output Sentence: < i the is is very a good <Unknown> EOS
+
+Val Sample: 7
+
+Input Sentence: < ['ive come <Unknown> the greatest gift the answer to your burger dream a little taste of true chicago right in your backyard']
+Target Sentence: < ['lobby he is the real chicago deal']
+Output Sentence: < i is wa very <Unknown> <Unknown> EOS
+
+Val Sample: 8
+
+Input Sentence: < ['some location my wing are damn near dry but this one always ha tender chicken and a good amount of sauce']
+Target Sentence: < ['waitress were prompt and attentive']
+Output Sentence: < i wa very and very EOS
+
+Val Sample: 9
+
+Input Sentence: < ['the environment wa great with art covering the wall and connected to a vintage <Unknown> shop with a beautiful dog']
+Target Sentence: < ['i had the texas chili a i wa in no mood for bean and it wa amazing']
+Output Sentence: < i had the <Unknown> and and <Unknown> had a the EOS
+
+Val Sample: 10
+
+Input Sentence: < ['i wa only visiting town for a couple of day but every night after dinner we went to this place']
+Target Sentence: < ['it simply awesome']
+Output Sentence: < i wa a EOS
+
+Output as Input
+etp score: 1.6440, 1.8188, 1.9890, 2.1275
+Div score: 0.0039, 0.0061, 0.0074, 0.0086
+Bleu score: 0.0939, 0.0307, 0.0098, 0.0015
+Perplexity of Golden Input: 149.3353
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_5.pt
+Epoch: 6 / 30, Accumulate Time to End: 3m 5s (- 15m 10s), (Batch: 10 / Batches Num: 140, Percent Run: 16.90%), Loss:5.0855
+Epoch: 6 / 30, Accumulate Time to End: 3m 7s (- 15m 4s), (Batch: 20 / Batches Num: 140, Percent Run: 17.14%), Loss:5.0780
+Epoch: 6 / 30, Accumulate Time to End: 3m 9s (- 14m 58s), (Batch: 30 / Batches Num: 140, Percent Run: 17.38%), Loss:5.1416
+Epoch: 6 / 30, Accumulate Time to End: 3m 10s (- 14m 52s), (Batch: 40 / Batches Num: 140, Percent Run: 17.62%), Loss:5.0658
+Epoch: 6 / 30, Accumulate Time to End: 3m 12s (- 14m 46s), (Batch: 50 / Batches Num: 140, Percent Run: 17.86%), Loss:5.1011
+Epoch: 6 / 30, Accumulate Time to End: 3m 14s (- 14m 41s), (Batch: 60 / Batches Num: 140, Percent Run: 18.09%), Loss:5.0956
+Epoch: 6 / 30, Accumulate Time to End: 3m 16s (- 14m 35s), (Batch: 70 / Batches Num: 140, Percent Run: 18.33%), Loss:5.1024
+Epoch: 6 / 30, Accumulate Time to End: 3m 18s (- 14m 29s), (Batch: 80 / Batches Num: 140, Percent Run: 18.57%), Loss:5.1016
+Epoch: 6 / 30, Accumulate Time to End: 3m 20s (- 14m 24s), (Batch: 90 / Batches Num: 140, Percent Run: 18.81%), Loss:5.1261
+Epoch: 6 / 30, Accumulate Time to End: 3m 22s (- 14m 19s), (Batch: 100 / Batches Num: 140, Percent Run: 19.05%), Loss:5.1057
+Epoch: 6 / 30, Accumulate Time to End: 3m 24s (- 14m 14s), (Batch: 110 / Batches Num: 140, Percent Run: 19.28%), Loss:5.0984
+Epoch: 6 / 30, Accumulate Time to End: 3m 25s (- 14m 9s), (Batch: 120 / Batches Num: 140, Percent Run: 19.52%), Loss:5.0728
+Epoch: 6 / 30, Accumulate Time to End: 3m 27s (- 14m 4s), (Batch: 130 / Batches Num: 140, Percent Run: 19.76%), Loss:5.0642
+Epoch: 6 / 30, Accumulate Time to End: 3m 29s (- 13m 59s), (Batch: 140 / Batches Num: 140, Percent Run: 20.00%), Loss:5.0731
+
+Val Epoch: 6
+
+Val Sample: 1
+
+Input Sentence: < ['ive been to a couple of other pho joint in az that were either hit or miss but this one set the bar pretty high by balancing quality flavor cleanliness and let not forget <Unknown> fast friendly service']
+Target Sentence: < ['ive been to numerous pho restaurant over the last decade in both california where im from originally and arizona to be able to <Unknown> the difference between quality or <Unknown>']
+Output Sentence: < the had a go of and and the <Unknown> of and the the and i a the EOS
+
+Val Sample: 2
+
+Input Sentence: < ['great service and the food wa perfect i still dream about the fish and the lobster ravioli is plain heaven the decor could have done with a bit of <Unknown> up but still quite nice']
+Target Sentence: < ['definitely going back there']
+Output Sentence: < the be to EOS
+
+Val Sample: 3
+
+Input Sentence: < ['however after leaving walmart heading to back to <Unknown> ave on peoria i looked to my right and there is when i saw the food truck in a dark parking lot strip mall']
+Target Sentence: < ['i went a purchase the fried fish and jambalaya bowl']
+Output Sentence: < the had to <Unknown> and <Unknown> and and the and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['the dressing the egg the hash brown and all of it ingredient add texture flavor and mixture of oh wow and <Unknown> twist style i want some more']
+Target Sentence: < ['trust me though it not from lack of portion size just the need to continue into the next dish so you can find the next dish place in your <Unknown>']
+Output Sentence: < the the to it wa a the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['the name <Unknown> pointe cafe had me thinking i would be dining at a casual blah cafe <Unknown> this is 5 star quality food service']
+Target Sentence: < ['they are very generous with the food portion price is very reasonable']
+Output Sentence: < the had a friendly and the <Unknown> and and and the friendly and and and and and and and EOS
+
+Val Sample: 6
+
+Input Sentence: < ['i wa out of town for 10 day and have been craving their <Unknown> side dish and basil lemon drink from the <Unknown> menu']
+Target Sentence: < ['i see now it ha changed to <Unknown> and look forward to trying the cuisine']
+Output Sentence: < the had the the wa a the go the i to to the the <Unknown> EOS
+
+Val Sample: 7
+
+Input Sentence: < ['i love that there is always a <Unknown> of real ale available and a <Unknown> to help find a perfect pairing of food brew']
+Target Sentence: < ['the food beverage service are all exemplary']
+Output Sentence: < the food wa wa wa very a EOS
+
+Val Sample: 8
+
+Input Sentence: < ['great sauce lot of true new mexican style dish to choose <Unknown> the <Unknown> are to die for with cinnamon sugar and honey omg']
+Target Sentence: < ['this is what weve been searching for forever']
+Output Sentence: < the place the i had to to the EOS
+
+Val Sample: 9
+
+Input Sentence: < ['everything we had wa excellent try the beet salad or the <Unknown> tomato <Unknown> the filet medium wa melt in your mouth good']
+Target Sentence: < ['they know how to make a perfect manhattan <Unknown> <Unknown> with a twist up']
+Output Sentence: < the had it i go the <Unknown> <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['rich <Unknown> flavourful broth the most tender <Unknown> meat and sweet complimentary sauce that accompany each bowl will <Unknown> you to pure <Unknown>']
+Target Sentence: < ['this is what all ramen should <Unknown> for']
+Output Sentence: < the place the i the is be EOS
+
+Output as Input
+etp score: 1.8977, 1.8999, 1.9087, 1.9221
+Div score: 0.0044, 0.0051, 0.0059, 0.0065
+Bleu score: 0.1299, 0.0440, 0.0178, 0.0054
+Perplexity of Golden Input: 139.6895
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_6.pt
+Epoch: 7 / 30, Accumulate Time to End: 3m 42s (- 14m 37s), (Batch: 10 / Batches Num: 140, Percent Run: 20.24%), Loss:5.0202
+Epoch: 7 / 30, Accumulate Time to End: 3m 44s (- 14m 32s), (Batch: 20 / Batches Num: 140, Percent Run: 20.48%), Loss:5.0363
+Epoch: 7 / 30, Accumulate Time to End: 3m 46s (- 14m 27s), (Batch: 30 / Batches Num: 140, Percent Run: 20.71%), Loss:5.0327
+Epoch: 7 / 30, Accumulate Time to End: 3m 48s (- 14m 22s), (Batch: 40 / Batches Num: 140, Percent Run: 20.95%), Loss:4.9752
+Epoch: 7 / 30, Accumulate Time to End: 3m 50s (- 14m 17s), (Batch: 50 / Batches Num: 140, Percent Run: 21.19%), Loss:5.0143
+Epoch: 7 / 30, Accumulate Time to End: 3m 52s (- 14m 11s), (Batch: 60 / Batches Num: 140, Percent Run: 21.43%), Loss:4.9813
+Epoch: 7 / 30, Accumulate Time to End: 3m 54s (- 14m 6s), (Batch: 70 / Batches Num: 140, Percent Run: 21.67%), Loss:5.0070
+Epoch: 7 / 30, Accumulate Time to End: 3m 56s (- 14m 1s), (Batch: 80 / Batches Num: 140, Percent Run: 21.90%), Loss:4.9984
+Epoch: 7 / 30, Accumulate Time to End: 3m 57s (- 13m 56s), (Batch: 90 / Batches Num: 140, Percent Run: 22.14%), Loss:4.9892
+Epoch: 7 / 30, Accumulate Time to End: 3m 59s (- 13m 51s), (Batch: 100 / Batches Num: 140, Percent Run: 22.38%), Loss:5.0147
+Epoch: 7 / 30, Accumulate Time to End: 4m 1s (- 13m 46s), (Batch: 110 / Batches Num: 140, Percent Run: 22.62%), Loss:4.9987
+Epoch: 7 / 30, Accumulate Time to End: 4m 3s (- 13m 41s), (Batch: 120 / Batches Num: 140, Percent Run: 22.86%), Loss:4.9468
+Epoch: 7 / 30, Accumulate Time to End: 4m 5s (- 13m 36s), (Batch: 130 / Batches Num: 140, Percent Run: 23.09%), Loss:5.0024
+Epoch: 7 / 30, Accumulate Time to End: 4m 7s (- 13m 31s), (Batch: 140 / Batches Num: 140, Percent Run: 23.33%), Loss:4.9961
+
+Val Epoch: 7
+
+Val Sample: 1
+
+Input Sentence: < ['ive been to a couple of other pho joint in az that were either hit or miss but this one set the bar pretty high by balancing quality flavor cleanliness and let not forget <Unknown> fast friendly service']
+Target Sentence: < ['ive been to numerous pho restaurant over the last decade in both california where im from originally and arizona to be able to <Unknown> the difference between quality or <Unknown>']
+Output Sentence: < the been to <Unknown> <Unknown> and and the <Unknown> and and the and and i a the EOS
+
+Val Sample: 2
+
+Input Sentence: < ['i no longer live in cu but when i lived there i wa a regular at farrens and when back in town visiting recently i made sure to stop in and eat at farrens again']
+Target Sentence: < ['the burger were just a good a i remembered']
+Output Sentence: < the food is very a <Unknown> EOS
+
+Val Sample: 3
+
+Input Sentence: < ['all 5 of u loved our <Unknown> had the chilled leek soup tuna a la <Unknown> duck risotto grilled scallop beef <Unknown> and neapolitan <Unknown> we ate every morsel']
+Target Sentence: < ['the kid <Unknown> over my soup and i should have ordered another bowl because they ate it all']
+Output Sentence: < the food are is the <Unknown> and the have be a the of EOS
+
+Val Sample: 4
+
+Input Sentence: < ['not only wa the pimento cheese burger out of this world but the service i received here wa one of the best i have ever had']
+Target Sentence: < ['heaven wa my server she wa very informative quick to take care of u and she kept a smile on her face the whole entire time']
+Output Sentence: < the the the <Unknown> and wa very friendly and and be the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['<Unknown> himself wa there on the take out night even though the <Unknown> family sold the restaurant to long time employee in 2010 or so']
+Target Sentence: < ['i know many from my class at <Unknown> <Unknown> who have <Unknown> to eat here all these year and everyone <Unknown> it is still wonderful']
+Output Sentence: < the had you of the <Unknown> of the and and wa a <Unknown> try EOS
+
+Val Sample: 6
+
+Input Sentence: < ['not that the food wasnt good it wa but the experience wa so interesting that i would recommend that you give it a try']
+Target Sentence: < ['i would not go again but i would also not miss out on trying it']
+Output Sentence: < the had be be to EOS
+
+Val Sample: 7
+
+Input Sentence: < ['my chirashi bowl is like little jewel box with all these different color of diced up fish and <Unknown> egg and micro green']
+Target Sentence: < ['it wa just delish']
+Output Sentence: < the wa a a and and and and and and and EOS
+
+Val Sample: 8
+
+Input Sentence: < ['rich <Unknown> flavourful broth the most tender <Unknown> meat and sweet complimentary sauce that accompany each bowl will <Unknown> you to pure <Unknown>']
+Target Sentence: < ['this is what all ramen should <Unknown> for']
+Output Sentence: < the is the you the is be EOS
+
+Val Sample: 9
+
+Input Sentence: < ['we were looking for something that had a nice atmosphere and good food that would offer a great experience without breaking the bank']
+Target Sentence: < ['i believe the bill wa around 75 for the two of u which wa both of our dinner and about three drink']
+Output Sentence: < the had the food is a the and the <Unknown> of the EOS
+
+Val Sample: 10
+
+Input Sentence: < ['pork belly is definitely my favourite and goto but since ive tried the beef <Unknown> and the squid too which are both excellent']
+Target Sentence: < ['a few thing seriously subway <Unknown> and 2 banh mi']
+Output Sentence: < the <Unknown> time i i and i i <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> EOS
+
+Output as Input
+etp score: 1.8730, 1.8696, 1.8727, 1.8840
+Div score: 0.0045, 0.0051, 0.0058, 0.0064
+Bleu score: 0.1309, 0.0449, 0.0181, 0.0034
+Perplexity of Golden Input: 129.3712
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_7.pt
+Epoch: 8 / 30, Accumulate Time to End: 4m 19s (- 14m 0s), (Batch: 10 / Batches Num: 140, Percent Run: 23.57%), Loss:4.9304
+Epoch: 8 / 30, Accumulate Time to End: 4m 21s (- 13m 55s), (Batch: 20 / Batches Num: 140, Percent Run: 23.81%), Loss:4.9776
+Epoch: 8 / 30, Accumulate Time to End: 4m 23s (- 13m 50s), (Batch: 30 / Batches Num: 140, Percent Run: 24.05%), Loss:4.9408
+Epoch: 8 / 30, Accumulate Time to End: 4m 24s (- 13m 46s), (Batch: 40 / Batches Num: 140, Percent Run: 24.29%), Loss:4.9230
+Epoch: 8 / 30, Accumulate Time to End: 4m 26s (- 13m 41s), (Batch: 50 / Batches Num: 140, Percent Run: 24.52%), Loss:4.9249
+Epoch: 8 / 30, Accumulate Time to End: 4m 28s (- 13m 36s), (Batch: 60 / Batches Num: 140, Percent Run: 24.76%), Loss:4.9454
+Epoch: 8 / 30, Accumulate Time to End: 4m 30s (- 13m 32s), (Batch: 70 / Batches Num: 140, Percent Run: 25.00%), Loss:4.9340
+Epoch: 8 / 30, Accumulate Time to End: 4m 32s (- 13m 27s), (Batch: 80 / Batches Num: 140, Percent Run: 25.24%), Loss:4.8862
+Epoch: 8 / 30, Accumulate Time to End: 4m 34s (- 13m 23s), (Batch: 90 / Batches Num: 140, Percent Run: 25.48%), Loss:4.9339
+Epoch: 8 / 30, Accumulate Time to End: 4m 36s (- 13m 18s), (Batch: 100 / Batches Num: 140, Percent Run: 25.71%), Loss:4.8830
+Epoch: 8 / 30, Accumulate Time to End: 4m 38s (- 13m 14s), (Batch: 110 / Batches Num: 140, Percent Run: 25.95%), Loss:4.9108
+Epoch: 8 / 30, Accumulate Time to End: 4m 40s (- 13m 9s), (Batch: 120 / Batches Num: 140, Percent Run: 26.19%), Loss:4.9207
+Epoch: 8 / 30, Accumulate Time to End: 4m 42s (- 13m 5s), (Batch: 130 / Batches Num: 140, Percent Run: 26.43%), Loss:4.9154
+Epoch: 8 / 30, Accumulate Time to End: 4m 43s (- 13m 0s), (Batch: 140 / Batches Num: 140, Percent Run: 26.67%), Loss:4.9413
+
+Val Epoch: 8
+
+Val Sample: 1
+
+Input Sentence: < ['you dont feel horrible after eating them and considering they are made fresh you know they will never run out of your favorite flavor like so many other donut place do if you arent there first thing in the morning']
+Target Sentence: < ['my favorite are the black and white strawberry lemonade and cinnamon sugar with <Unknown> icing']
+Output Sentence: < i favorite is a <Unknown> and the and and EOS
+
+Val Sample: 2
+
+Input Sentence: < ['im usually not a fan of airport food but 4 peak wa great the chicken breakfast enchilada were great the portion size wa great and they were quick but the best part wa that they didnt <Unknown> the food']
+Target Sentence: < ['i will stop here everytime']
+Output Sentence: < i had be to EOS
+
+Val Sample: 3
+
+Input Sentence: < ['this wa our first time at this location and we kind of thought oh no is it going to lose the family feeling with a second la vega location babystacks did not disappoint u in the least']
+Target Sentence: < ['the pancake are delicious inventive genius']
+Output Sentence: < i food are great and and and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['the pizza is a bit overpriced and took almost an hour to deliver by that point i wa <Unknown> back and <Unknown> <Unknown> downstairs but it proved to be worth the price and the wait']
+Target Sentence: < ['i mean it wa delicious and while i am usually a picky eater who get full from one slice i ate like 3 and still wanted more']
+Output Sentence: < i had the wa a EOS
+
+Val Sample: 5
+
+Input Sentence: < ['she brought the food to u the serving size wa generous plus a woman forgot her purse and the wonderful <Unknown> cashier hustled it out to the owner truck just before they took off']
+Target Sentence: < ['i usually go to the one on 19th ave but after this night am probably coming here']
+Output Sentence: < i had be to the <Unknown> time the EOS
+
+Val Sample: 6
+
+Input Sentence: < ['had breakfast tea at casa imperial this morning the dim sum wa actually impeccable white tuna an bacon tart bird tart tart and bbq pork are on my favorite list right now']
+Target Sentence: < ['but the <Unknown> is way too overpriced']
+Output Sentence: < i the food are a to good EOS
+
+Val Sample: 7
+
+Input Sentence: < ['they see that we have a toddler and automatically come out w our water of course a styrofoam cup w a lid on it wo even having to ask them for it']
+Target Sentence: < ['typically we like to share our pho w my son rather than ordering him his own bowl']
+Output Sentence: < i is had a be EOS
+
+Val Sample: 8
+
+Input Sentence: < ['ive been to numerous pho restaurant over the last decade in both california where im from originally and arizona to be able to <Unknown> the difference between quality or <Unknown>']
+Target Sentence: < ['what set <Unknown> apart is that theyre able to achieve the level of deep flavor in their pho broth without the use of msg which a lot of cheaper pho joint do to <Unknown> for lack of quality ingredient']
+Output Sentence: < i i the <Unknown> of a i a to be the <Unknown> EOS
+
+Val Sample: 9
+
+Input Sentence: < ['you eat and drink listen and talk in a complete darkness which make you realize how <Unknown> you should be for ability to see that is taken for granted']
+Target Sentence: < ['we were told that the waiter there are blind but they do a good job']
+Output Sentence: < i had a a i <Unknown> wa wa a and the had to <Unknown> place EOS
+
+Val Sample: 10
+
+Input Sentence: < ['we were looking for an easy sandwich place to satisfy our lunch time <Unknown> and i just knew i had to <Unknown> them to the deliciousness that is capriottis']
+Target Sentence: < ['the two most popular sandwich are by far the <Unknown> and the <Unknown>']
+Output Sentence: < i food time of i is a a a best EOS
+
+Output as Input
+etp score: 1.9153, 2.1563, 2.2689, 2.2787
+Div score: 0.0072, 0.0112, 0.0151, 0.0180
+Bleu score: 0.1401, 0.0484, 0.0186, 0.0058
+Perplexity of Golden Input: 121.0686
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_8.pt
+Epoch: 9 / 30, Accumulate Time to End: 4m 56s (- 13m 24s), (Batch: 10 / Batches Num: 140, Percent Run: 26.90%), Loss:4.8608
+Epoch: 9 / 30, Accumulate Time to End: 4m 58s (- 13m 20s), (Batch: 20 / Batches Num: 140, Percent Run: 27.14%), Loss:4.8665
+Epoch: 9 / 30, Accumulate Time to End: 4m 59s (- 13m 15s), (Batch: 30 / Batches Num: 140, Percent Run: 27.38%), Loss:4.8900
+Epoch: 9 / 30, Accumulate Time to End: 5m 1s (- 13m 11s), (Batch: 40 / Batches Num: 140, Percent Run: 27.62%), Loss:4.8021
+Epoch: 9 / 30, Accumulate Time to End: 5m 3s (- 13m 6s), (Batch: 50 / Batches Num: 140, Percent Run: 27.86%), Loss:4.8560
+Epoch: 9 / 30, Accumulate Time to End: 5m 5s (- 13m 1s), (Batch: 60 / Batches Num: 140, Percent Run: 28.09%), Loss:4.8483
+Epoch: 9 / 30, Accumulate Time to End: 5m 7s (- 12m 57s), (Batch: 70 / Batches Num: 140, Percent Run: 28.33%), Loss:4.8596
+Epoch: 9 / 30, Accumulate Time to End: 5m 9s (- 12m 52s), (Batch: 80 / Batches Num: 140, Percent Run: 28.57%), Loss:4.8804
+Epoch: 9 / 30, Accumulate Time to End: 5m 11s (- 12m 48s), (Batch: 90 / Batches Num: 140, Percent Run: 28.81%), Loss:4.8551
+Epoch: 9 / 30, Accumulate Time to End: 5m 12s (- 12m 44s), (Batch: 100 / Batches Num: 140, Percent Run: 29.05%), Loss:4.9122
+Epoch: 9 / 30, Accumulate Time to End: 5m 14s (- 12m 40s), (Batch: 110 / Batches Num: 140, Percent Run: 29.28%), Loss:4.8166
+Epoch: 9 / 30, Accumulate Time to End: 5m 16s (- 12m 35s), (Batch: 120 / Batches Num: 140, Percent Run: 29.52%), Loss:4.8397
+Epoch: 9 / 30, Accumulate Time to End: 5m 18s (- 12m 32s), (Batch: 130 / Batches Num: 140, Percent Run: 29.76%), Loss:4.8846
+Epoch: 9 / 30, Accumulate Time to End: 5m 20s (- 12m 27s), (Batch: 140 / Batches Num: 140, Percent Run: 30.00%), Loss:4.8667
+
+Val Epoch: 9
+
+Val Sample: 1
+
+Input Sentence: < ['our meal edamame with shaved <Unknown> sashimi yellowtail with miso and jalapeno <Unknown> bobby favorite black cod in lettuce cup with <Unknown> flake my favorite so perfect sashimi with garlic chip little too salty salmon sushi toro sushi very tasty fish dessert edamame icecream <Unknown> a <Unknown> <Unknown> sauce and']
+Target Sentence: < ['a super treat for sushi but be prepared to spend money']
+Output Sentence: < the <Unknown> <Unknown> EOS
+
+Val Sample: 2
+
+Input Sentence: < ['started off earlier in the evening at <Unknown> while the <Unknown> side wa <Unknown> getting busier and it wa great being able to hit the dance floor at <Unknown> and then <Unknown> to the <Unknown> side to drink more <Unknown> which wa my favorite bourbon based cocktail']
+Target Sentence: < ['lot of great dj usually kind of nice not to hear the same party hit you hear in almost every other nightclub']
+Output Sentence: < the of <Unknown> food and EOS
+
+Val Sample: 3
+
+Input Sentence: < ['in oct 2011 i had the lunch special just like we used to get in high school only now it is 5 instead of 3 and grabbed a pizza for take out on another night']
+Target Sentence: < ['<Unknown> himself wa there on the take out night even though the <Unknown> family sold the restaurant to long time employee in 2010 or so']
+Output Sentence: < the is to the and the <Unknown> EOS
+
+Val Sample: 4
+
+Input Sentence: < ['we were looking for an easy sandwich place to satisfy our lunch time <Unknown> and i just knew i had to <Unknown> them to the deliciousness that is capriottis']
+Target Sentence: < ['the two most popular sandwich are by far the <Unknown> and the <Unknown>']
+Output Sentence: < the food of the the is a the the best and the food EOS
+
+Val Sample: 5
+
+Input Sentence: < ['great fresh and innovative flavor a well a a really gorgeous <Unknown> shared the crazy mad dragon roll then <Unknown> into some pad <Unknown> portion are really large here']
+Target Sentence: < ['we used to go to chinatown to find a real asian flavor but for the ambiance rice co offer i think from now on well just drive a couple of mile <Unknown> worth it']
+Output Sentence: < the had to go to the <Unknown> go the <Unknown> <Unknown> <Unknown> and i the <Unknown> EOS
+
+Val Sample: 6
+
+Input Sentence: < ['this is an unusual post because i used to be a <Unknown> the only white guy in an otherwise all thai staff and it wa amazing']
+Target Sentence: < ['they would feed me at the start and end of my shift']
+Output Sentence: < the had be the to the <Unknown> EOS
+
+Val Sample: 7
+
+Input Sentence: < ['great sauce lot of true new mexican style dish to choose <Unknown> the <Unknown> are to die for with cinnamon sugar and honey omg']
+Target Sentence: < ['this is what weve been searching for forever']
+Output Sentence: < the place the you been to to a EOS
+
+Val Sample: 8
+
+Input Sentence: < ['after a lackluster experience at sage and not ever really being in the mood for tapa there wasnt must reason to be there']
+Target Sentence: < ['this weekend however we had aria food credit to spend and wanted to try something new']
+Output Sentence: < the place is i have a <Unknown> and and the EOS
+
+Val Sample: 9
+
+Input Sentence: < ['my mom and i would go pick up my older sister from work and on the way home grab some burrito for dinner']
+Target Sentence: < ['we would get all different kind including the red chile green chile bean burrito and occasionally tostada and taco']
+Output Sentence: < the had be the the of of the <Unknown> and EOS
+
+Val Sample: 10
+
+Input Sentence: < ['we were visiting from the u and after a week exploring montreal and it french cuisine by accident found this gem called <Unknown>']
+Target Sentence: < ['the chef and owner is very friendly and an amazing chef']
+Output Sentence: < the food is <Unknown> are very friendly and the <Unknown> place EOS
+
+Output as Input
+etp score: 1.6723, 1.6586, 1.6537, 1.6707
+Div score: 0.0059, 0.0073, 0.0082, 0.0094
+Bleu score: 0.1212, 0.0440, 0.0201, 0.0086
+Perplexity of Golden Input: 116.7870
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_9.pt
+Epoch: 10 / 30, Accumulate Time to End: 5m 32s (- 12m 47s), (Batch: 10 / Batches Num: 140, Percent Run: 30.24%), Loss:4.7727
+Epoch: 10 / 30, Accumulate Time to End: 5m 34s (- 12m 43s), (Batch: 20 / Batches Num: 140, Percent Run: 30.48%), Loss:4.7788
+Epoch: 10 / 30, Accumulate Time to End: 5m 36s (- 12m 39s), (Batch: 30 / Batches Num: 140, Percent Run: 30.71%), Loss:4.7822
+Epoch: 10 / 30, Accumulate Time to End: 5m 38s (- 12m 35s), (Batch: 40 / Batches Num: 140, Percent Run: 30.95%), Loss:4.7846
+Epoch: 10 / 30, Accumulate Time to End: 5m 40s (- 12m 30s), (Batch: 50 / Batches Num: 140, Percent Run: 31.19%), Loss:4.8018
+Epoch: 10 / 30, Accumulate Time to End: 5m 42s (- 12m 26s), (Batch: 60 / Batches Num: 140, Percent Run: 31.43%), Loss:4.7988
+Epoch: 10 / 30, Accumulate Time to End: 5m 44s (- 12m 22s), (Batch: 70 / Batches Num: 140, Percent Run: 31.67%), Loss:4.8007
+Epoch: 10 / 30, Accumulate Time to End: 5m 45s (- 12m 18s), (Batch: 80 / Batches Num: 140, Percent Run: 31.90%), Loss:4.7969
+Epoch: 10 / 30, Accumulate Time to End: 5m 47s (- 12m 14s), (Batch: 90 / Batches Num: 140, Percent Run: 32.14%), Loss:4.8305
+Epoch: 10 / 30, Accumulate Time to End: 5m 49s (- 12m 10s), (Batch: 100 / Batches Num: 140, Percent Run: 32.38%), Loss:4.8714
+Epoch: 10 / 30, Accumulate Time to End: 5m 51s (- 12m 6s), (Batch: 110 / Batches Num: 140, Percent Run: 32.62%), Loss:4.7971
+Epoch: 10 / 30, Accumulate Time to End: 5m 53s (- 12m 2s), (Batch: 120 / Batches Num: 140, Percent Run: 32.86%), Loss:4.7679
+Epoch: 10 / 30, Accumulate Time to End: 5m 55s (- 11m 58s), (Batch: 130 / Batches Num: 140, Percent Run: 33.09%), Loss:4.8047
+Epoch: 10 / 30, Accumulate Time to End: 5m 57s (- 11m 54s), (Batch: 140 / Batches Num: 140, Percent Run: 33.33%), Loss:4.8337
+
+Val Epoch: 10
+
+Val Sample: 1
+
+Input Sentence: < ['first i have to say that <Unknown> is used in the <Unknown> possible sense of the term here since you can order an appetizer of fried wisconsin cheese <Unknown> i cant say that if i had a hankering for lasagna this would be the first place id come to look']
+Target Sentence: < ['but there it is on the menu']
+Output Sentence: < the the is wa a the <Unknown> and and i <Unknown> <Unknown> EOS
+
+Val Sample: 2
+
+Input Sentence: < ['started off earlier in the evening at <Unknown> while the <Unknown> side wa <Unknown> getting busier and it wa great being able to hit the dance floor at <Unknown> and then <Unknown> to the <Unknown> side to drink more <Unknown> which wa my favorite bourbon based cocktail']
+Target Sentence: < ['lot of great dj usually kind of nice not to hear the same party hit you hear in almost every other nightclub']
+Output Sentence: < the of <Unknown> food and and of <Unknown> food a be EOS
+
+Val Sample: 3
+
+Input Sentence: < ['we came a a group of five including my 90 year old <Unknown> with a small appetite and ordered the alaska king crab and lobster set for <Unknown> before tax and tip recommended for 4 people and there wa plenty of food to go around']
+Target Sentence: < ['we all went home perfectly satisfied']
+Output Sentence: < the had had to and and and and and and and <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown>
+
+Val Sample: 4
+
+Input Sentence: < ['my father came to toronto in the mid <Unknown> and you folk extended a hand to him and he got his <Unknown> start with <Unknown> is know gone but i feel him in your place because i can only imagine it wa very similar interior']
+Target Sentence: < ['i love it']
+Output Sentence: < the had the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['the new menu with the all you can eat option for 20 is well worth the price if you plan to eat a few different item which includes appetizer soup nigiri and dessert on top of a variety of roll']
+Target Sentence: < ['i highly recommend trying the takoyaki and <Unknown> ball from the appetizer menu']
+Output Sentence: < the had recommend the the <Unknown> <Unknown> the <Unknown> EOS
+
+Val Sample: 6
+
+Input Sentence: < ['only issue is it not so easy to see where the line form to order and it bottle neck and result in several are you next question to be asked to all the other patron standing around you']
+Target Sentence: < ['hope they can work on signage to <Unknown> the issue']
+Output Sentence: < the the had be to the EOS
+
+Val Sample: 7
+
+Input Sentence: < ['my fat friend and i where going to make breakfast at home but then we where like <Unknown> so we went to babystacks but the wait wa 45 minute long']
+Target Sentence: < ['im telling you we are fat']
+Output Sentence: < the a the i had a and and and and <Unknown> <Unknown> EOS
+
+Val Sample: 8
+
+Input Sentence: < ['me and my friend went a a group 7 of u and of course forgot to make a reservation but we didnt have to wait long for a spot']
+Target Sentence: < ['i think it wa only around 10 minute so not long at all']
+Output Sentence: < the had the wa the <Unknown> the of and i a EOS
+
+Val Sample: 9
+
+Input Sentence: < ['since moving here from new york last year ive been on the search to find good jamaican food and im so glad i found this place']
+Target Sentence: < ['it a half hour drive from my house and it well worth the drive']
+Output Sentence: < the wa great time and to the favorite and i wa a the <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['now they dont let you order temp on your burger which normally would be a deal breaker for me im a rare <Unknown> wow it good']
+Target Sentence: < ['blue cheese fry w bacon best fry <Unknown>']
+Output Sentence: < the and are and <Unknown> and <Unknown> and <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> EOS
+
+Output as Input
+etp score: 2.1147, 2.2807, 2.4792, 2.6615
+Div score: 0.0085, 0.0124, 0.0169, 0.0214
+Bleu score: 0.1359, 0.0504, 0.0232, 0.0087
+Perplexity of Golden Input: 114.4609
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_10.pt
+Epoch: 11 / 30, Accumulate Time to End: 6m 9s (- 12m 11s), (Batch: 10 / Batches Num: 140, Percent Run: 33.57%), Loss:4.7207
+Epoch: 11 / 30, Accumulate Time to End: 6m 11s (- 12m 7s), (Batch: 20 / Batches Num: 140, Percent Run: 33.81%), Loss:4.7380
+Epoch: 11 / 30, Accumulate Time to End: 6m 13s (- 12m 3s), (Batch: 30 / Batches Num: 140, Percent Run: 34.05%), Loss:4.7712
+Epoch: 11 / 30, Accumulate Time to End: 6m 15s (- 11m 59s), (Batch: 40 / Batches Num: 140, Percent Run: 34.29%), Loss:4.7452
+Epoch: 11 / 30, Accumulate Time to End: 6m 17s (- 11m 55s), (Batch: 50 / Batches Num: 140, Percent Run: 34.52%), Loss:4.7404
+Epoch: 11 / 30, Accumulate Time to End: 6m 18s (- 11m 50s), (Batch: 60 / Batches Num: 140, Percent Run: 34.76%), Loss:4.7665
+Epoch: 11 / 30, Accumulate Time to End: 6m 20s (- 11m 47s), (Batch: 70 / Batches Num: 140, Percent Run: 35.00%), Loss:4.7025
+Epoch: 11 / 30, Accumulate Time to End: 6m 22s (- 11m 43s), (Batch: 80 / Batches Num: 140, Percent Run: 35.24%), Loss:4.7424
+Epoch: 11 / 30, Accumulate Time to End: 6m 24s (- 11m 39s), (Batch: 90 / Batches Num: 140, Percent Run: 35.48%), Loss:4.7731
+Epoch: 11 / 30, Accumulate Time to End: 6m 26s (- 11m 35s), (Batch: 100 / Batches Num: 140, Percent Run: 35.71%), Loss:4.7264
+Epoch: 11 / 30, Accumulate Time to End: 6m 28s (- 11m 31s), (Batch: 110 / Batches Num: 140, Percent Run: 35.95%), Loss:4.7530
+Epoch: 11 / 30, Accumulate Time to End: 6m 30s (- 11m 27s), (Batch: 120 / Batches Num: 140, Percent Run: 36.19%), Loss:4.7229
+Epoch: 11 / 30, Accumulate Time to End: 6m 31s (- 11m 24s), (Batch: 130 / Batches Num: 140, Percent Run: 36.43%), Loss:4.7895
+Epoch: 11 / 30, Accumulate Time to End: 6m 33s (- 11m 20s), (Batch: 140 / Batches Num: 140, Percent Run: 36.67%), Loss:4.7696
+
+Val Epoch: 11
+
+Val Sample: 1
+
+Input Sentence: < ['the staff is very nice my daughter got sick there once from a headache instead of freaking out being <Unknown> out waiter wa very helpful getting u water towel checked on u the whole time']
+Target Sentence: < ['love this place']
+Output Sentence: < the the place EOS
+
+Val Sample: 2
+
+Input Sentence: < ['menu is simple beef potato or mix of the 2 half or full their half i would say is closer to 34 pick your topping from butter sour cream or the work']
+Target Sentence: < ['perfect for a comforting lunch dinner or late night bite usually very quick service']
+Output Sentence: < the food a great place and EOS
+
+Val Sample: 3
+
+Input Sentence: < ['the salad bar is awesome there always an abundance of sample at each counter and ton of selection however if you frequent <Unknown> enough their food can get mundane']
+Target Sentence: < ['one suggestion id have is food allergy <Unknown> or option']
+Output Sentence: < i of i have been a and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['breakfast great kim good waitress coffee great price cheap this a deal the bar side is also the best be coming for year something is special and historic here']
+Target Sentence: < ['free wifi best rib in state']
+Output Sentence: < the a and food is the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['the burger are just a they say fresh and meaty we came during a rush so we really got to see the staff work efficiently while we waited']
+Target Sentence: < ['we liked the girl working the front area']
+Output Sentence: < the had the best and and <Unknown> of and and and EOS
+
+Val Sample: 6
+
+Input Sentence: < ['now they dont let you order temp on your burger which normally would be a deal breaker for me im a rare <Unknown> wow it good']
+Target Sentence: < ['blue cheese fry w bacon best fry <Unknown>']
+Output Sentence: < the and and are <Unknown> and and and EOS
+
+Val Sample: 7
+
+Input Sentence: < ['i had the <Unknown> omakase set sashimi wa top grade a well a the cooked item and the accompanying sake just made it even better']
+Target Sentence: < ['if you love your sushi this is a must try']
+Output Sentence: < the you can the <Unknown> EOS
+
+Val Sample: 8
+
+Input Sentence: < ['<Unknown> himself wa there on the take out night even though the <Unknown> family sold the restaurant to long time employee in 2010 or so']
+Target Sentence: < ['i know many from my class at <Unknown> <Unknown> who have <Unknown> to eat here all these year and everyone <Unknown> it is still wonderful']
+Output Sentence: < the have it time the favorite EOS
+
+Val Sample: 9
+
+Input Sentence: < ['ive been coming here for about 5 year mostly for breakfast but occasionally for lunch and dinner and ive never had a bad meal']
+Target Sentence: < ['there almost never a wait great service and youll get your food quickly even when the place is full']
+Output Sentence: < the is a not good EOS
+
+Val Sample: 10
+
+Input Sentence: < ['host staff wa friendly we gave them a cell number and received a text within five minute to <Unknown> u our table wa ready']
+Target Sentence: < ['kind of a shame we didnt have the chance to do any window shopping in this upscale outdoor mall']
+Output Sentence: < the of the great EOS
+
+Output as Input
+etp score: 2.5630, 2.9230, 3.1858, 3.3786
+Div score: 0.0155, 0.0314, 0.0500, 0.0712
+Bleu score: 0.1406, 0.0524, 0.0226, 0.0093
+Perplexity of Golden Input: 111.4917
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_11.pt
+Epoch: 12 / 30, Accumulate Time to End: 6m 46s (- 11m 34s), (Batch: 10 / Batches Num: 140, Percent Run: 36.90%), Loss:4.6872
+Epoch: 12 / 30, Accumulate Time to End: 6m 47s (- 11m 30s), (Batch: 20 / Batches Num: 140, Percent Run: 37.14%), Loss:4.6722
+Epoch: 12 / 30, Accumulate Time to End: 6m 49s (- 11m 26s), (Batch: 30 / Batches Num: 140, Percent Run: 37.38%), Loss:4.6893
+Epoch: 12 / 30, Accumulate Time to End: 6m 51s (- 11m 22s), (Batch: 40 / Batches Num: 140, Percent Run: 37.62%), Loss:4.6751
+Epoch: 12 / 30, Accumulate Time to End: 6m 53s (- 11m 18s), (Batch: 50 / Batches Num: 140, Percent Run: 37.86%), Loss:4.6862
+Epoch: 12 / 30, Accumulate Time to End: 6m 55s (- 11m 15s), (Batch: 60 / Batches Num: 140, Percent Run: 38.09%), Loss:4.6914
+Epoch: 12 / 30, Accumulate Time to End: 6m 57s (- 11m 11s), (Batch: 70 / Batches Num: 140, Percent Run: 38.33%), Loss:4.6971
+Epoch: 12 / 30, Accumulate Time to End: 6m 59s (- 11m 7s), (Batch: 80 / Batches Num: 140, Percent Run: 38.57%), Loss:4.7485
+Epoch: 12 / 30, Accumulate Time to End: 7m 1s (- 11m 3s), (Batch: 90 / Batches Num: 140, Percent Run: 38.81%), Loss:4.6969
+Epoch: 12 / 30, Accumulate Time to End: 7m 3s (- 11m 0s), (Batch: 100 / Batches Num: 140, Percent Run: 39.05%), Loss:4.6579
+Epoch: 12 / 30, Accumulate Time to End: 7m 5s (- 10m 56s), (Batch: 110 / Batches Num: 140, Percent Run: 39.28%), Loss:4.6979
+Epoch: 12 / 30, Accumulate Time to End: 7m 6s (- 10m 53s), (Batch: 120 / Batches Num: 140, Percent Run: 39.52%), Loss:4.7230
+Epoch: 12 / 30, Accumulate Time to End: 7m 8s (- 10m 49s), (Batch: 130 / Batches Num: 140, Percent Run: 39.76%), Loss:4.6933
+Epoch: 12 / 30, Accumulate Time to End: 7m 10s (- 10m 45s), (Batch: 140 / Batches Num: 140, Percent Run: 40.00%), Loss:4.7176
+
+Val Epoch: 12
+
+Val Sample: 1
+
+Input Sentence: < ['the spicy shrimp tempura roll wa delicious at the hibachi side the cooking is amazing and the staff put up a nice show with the flame and the egg breaking a well a balancing the food']
+Target Sentence: < ['we were served by a super polite and very nice japanese waitress']
+Output Sentence: < the had a and the <Unknown> <Unknown> and the friendly and EOS
+
+Val Sample: 2
+
+Input Sentence: < ['think ive tried quite a few menu item and still love the mixed grill meat platter for two and the chorizo and empanadas for my appetizer']
+Target Sentence: < ['true their wine list is not a extensive a i would like but thats not what im there for']
+Output Sentence: < i <Unknown> food and and a a great EOS
+
+Val Sample: 3
+
+Input Sentence: < ['having tasted most middleeastern food in town i would say this is at par if not better than lulu at a <Unknown> of the price']
+Target Sentence: < ['i have absolutely fallen in love with this place']
+Output Sentence: < the have been been to the and the place EOS
+
+Val Sample: 4
+
+Input Sentence: < ['rich <Unknown> flavourful broth the most tender <Unknown> meat and sweet complimentary sauce that accompany each bowl will <Unknown> you to pure <Unknown>']
+Target Sentence: < ['this is what all ramen should <Unknown> for']
+Output Sentence: < i place a you of is be EOS
+
+Val Sample: 5
+
+Input Sentence: < ['the food wa delicious the view wa amazing the staff wa so accommodating when my reservation at <Unknown> <Unknown> went terribly wrong']
+Target Sentence: < ['a fantastic meal']
+Output Sentence: < the great place and and <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 6
+
+Input Sentence: < ['based on the yelp review i wa expecting it to be good but i wa blown away by how incredible it wa']
+Target Sentence: < ['we sat at the sushi counter so we were able to watch the chef prepare everything we ate']
+Output Sentence: < i had to the <Unknown> and and i were a to go the <Unknown> EOS
+
+Val Sample: 7
+
+Input Sentence: < ['we ordered the olive and the <Unknown> alla <Unknown> chicken liver mousse to start and both were very high quality']
+Target Sentence: < ['for our main we both had the special which wa <Unknown> with duck swiss <Unknown> mushroom walnut sauce and <Unknown>']
+Output Sentence: < i a husband time had had a <Unknown> and wa a and the and and and and and and the EOS
+
+Val Sample: 8
+
+Input Sentence: < ['their food is delicious and not to mention when you buy two roll you get one free of your choice']
+Target Sentence: < ['staff is always great and never overlook a customer']
+Output Sentence: < the is great good and the had the good EOS
+
+Val Sample: 9
+
+Input Sentence: < ['my wife and i decided to give our local pizza place a try and we were happy that we did']
+Target Sentence: < ['not only wa the pizza fantastic but the staff were friendly attentive and <Unknown> <Unknown>']
+Output Sentence: < i to wa the best and EOS
+
+Val Sample: 10
+
+Input Sentence: < ['first off try to get there between the off hour like a few hour before or after the <Unknown> period']
+Target Sentence: < ['this place get packed quick']
+Output Sentence: < the place is a for and and and EOS
+
+Output as Input
+etp score: 2.5489, 3.2058, 3.5617, 3.7718
+Div score: 0.0130, 0.0315, 0.0514, 0.0743
+Bleu score: 0.1562, 0.0530, 0.0229, 0.0077
+Perplexity of Golden Input: 111.1398
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_12.pt
+Epoch: 13 / 30, Accumulate Time to End: 7m 22s (- 10m 57s), (Batch: 10 / Batches Num: 140, Percent Run: 40.24%), Loss:4.6336
+Epoch: 13 / 30, Accumulate Time to End: 7m 24s (- 10m 54s), (Batch: 20 / Batches Num: 140, Percent Run: 40.48%), Loss:4.6259
+Epoch: 13 / 30, Accumulate Time to End: 7m 26s (- 10m 50s), (Batch: 30 / Batches Num: 140, Percent Run: 40.71%), Loss:4.6349
+Epoch: 13 / 30, Accumulate Time to End: 7m 28s (- 10m 46s), (Batch: 40 / Batches Num: 140, Percent Run: 40.95%), Loss:4.6033
+Epoch: 13 / 30, Accumulate Time to End: 7m 30s (- 10m 43s), (Batch: 50 / Batches Num: 140, Percent Run: 41.19%), Loss:4.6710
+Epoch: 13 / 30, Accumulate Time to End: 7m 32s (- 10m 39s), (Batch: 60 / Batches Num: 140, Percent Run: 41.43%), Loss:4.6598
+Epoch: 13 / 30, Accumulate Time to End: 7m 34s (- 10m 36s), (Batch: 70 / Batches Num: 140, Percent Run: 41.67%), Loss:4.6405
+Epoch: 13 / 30, Accumulate Time to End: 7m 36s (- 10m 32s), (Batch: 80 / Batches Num: 140, Percent Run: 41.90%), Loss:4.6467
+Epoch: 13 / 30, Accumulate Time to End: 7m 38s (- 10m 29s), (Batch: 90 / Batches Num: 140, Percent Run: 42.14%), Loss:4.6609
+Epoch: 13 / 30, Accumulate Time to End: 7m 40s (- 10m 25s), (Batch: 100 / Batches Num: 140, Percent Run: 42.38%), Loss:4.6388
+Epoch: 13 / 30, Accumulate Time to End: 7m 41s (- 10m 22s), (Batch: 110 / Batches Num: 140, Percent Run: 42.62%), Loss:4.6592
+Epoch: 13 / 30, Accumulate Time to End: 7m 43s (- 10m 18s), (Batch: 120 / Batches Num: 140, Percent Run: 42.86%), Loss:4.6836
+Epoch: 13 / 30, Accumulate Time to End: 7m 45s (- 10m 15s), (Batch: 130 / Batches Num: 140, Percent Run: 43.09%), Loss:4.6131
+Epoch: 13 / 30, Accumulate Time to End: 7m 47s (- 10m 11s), (Batch: 140 / Batches Num: 140, Percent Run: 43.33%), Loss:4.6390
+
+Val Epoch: 13
+
+Val Sample: 1
+
+Input Sentence: < ['<Unknown> is the best frozen yogurt shop ive been to in arizona and ive been to a few place no need for name dropping but have you noticed they are starting to pop up all over the place like coffee shop']
+Target Sentence: < ['like starbucks the consistency is always their perfect']
+Output Sentence: < i a and food of a good best and EOS
+
+Val Sample: 2
+
+Input Sentence: < ['the sommelier came over right away to offer his <Unknown> and although we didnt end up ordering wine we were too <Unknown> by the yummy cocktail he did bring u a taste of the sparkling sangria']
+Target Sentence: < ['<Unknown> our server wa extremely friendly efficient and so helpful in helping u navigate the lengthy menu']
+Output Sentence: < the is server wa very friendly and and the good EOS
+
+Val Sample: 3
+
+Input Sentence: < ['in oct 2011 i had the lunch special just like we used to get in high school only now it is 5 instead of 3 and grabbed a pizza for take out on another night']
+Target Sentence: < ['<Unknown> himself wa there on the take out night even though the <Unknown> family sold the restaurant to long time employee in 2010 or so']
+Output Sentence: < i is is the and the menu to EOS
+
+Val Sample: 4
+
+Input Sentence: < ['great service and the food wa perfect i still dream about the fish and the lobster ravioli is plain heaven the decor could have done with a bit of <Unknown> up but still quite nice']
+Target Sentence: < ['definitely going back there']
+Output Sentence: < i the back for and <Unknown> and EOS
+
+Val Sample: 5
+
+Input Sentence: < ['postino is exactly what i think of when i imagine a wine bar cozy trendy and <Unknown> decor a light menu with plenty of finger food and of course a great wine selection']
+Target Sentence: < ['the parking wa tight but not terrible']
+Output Sentence: < i food is great and the a EOS
+
+Val Sample: 6
+
+Input Sentence: < ['they showed up early were super easy and pleasant to work with and it wa incredibly affordable not to mention they served the whole menu of slider and fry which were delicious']
+Target Sentence: < ['thank you <Unknown> thru']
+Output Sentence: < the you EOS
+
+Val Sample: 7
+
+Input Sentence: < ['the food wa authentic exquisite tasty and <Unknown> you are looking for a great indian restaurant it is at 3900 paradise road and you will be very happy']
+Target Sentence: < ['see the owner <Unknown> and his staff who are very <Unknown> friendly and the service is great']
+Output Sentence: < i to <Unknown> i i the favorite is were very friendly and and the food is great EOS
+
+Val Sample: 8
+
+Input Sentence: < ['this is the only place i know of in the area that ha anything close to <Unknown> food so i like to go when i get <Unknown>']
+Target Sentence: < ['while great there my favorite is to actually take home a container to fry up with some butter until golden brown and serve with their side of sour cream']
+Output Sentence: < i the food is favorite place the be a to EOS
+
+Val Sample: 9
+
+Input Sentence: < ['since moving here from new york last year ive been on the search to find good jamaican food and im so glad i found this place']
+Target Sentence: < ['it a half hour drive from my house and it well worth the drive']
+Output Sentence: < i is great of and to the <Unknown> and i wa a the <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['my friend and i ate here for lunch today because i saw an <Unknown> for them in the paper and i read such great review online']
+Target Sentence: < ['i read one bad review because of that i wanted to see for myself because i love good mexican food']
+Output Sentence: < i have the of and and i the i have to try EOS
+
+Output as Input
+etp score: 2.6985, 3.1638, 3.4581, 3.6510
+Div score: 0.0142, 0.0309, 0.0504, 0.0762
+Bleu score: 0.1415, 0.0495, 0.0207, 0.0066
+Perplexity of Golden Input: 107.1128
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_13.pt
+Epoch: 14 / 30, Accumulate Time to End: 8m 0s (- 10m 22s), (Batch: 10 / Batches Num: 140, Percent Run: 43.57%), Loss:4.5460
+Epoch: 14 / 30, Accumulate Time to End: 8m 2s (- 10m 18s), (Batch: 20 / Batches Num: 140, Percent Run: 43.81%), Loss:4.5825
+Epoch: 14 / 30, Accumulate Time to End: 8m 4s (- 10m 14s), (Batch: 30 / Batches Num: 140, Percent Run: 44.05%), Loss:4.5701
+Epoch: 14 / 30, Accumulate Time to End: 8m 5s (- 10m 11s), (Batch: 40 / Batches Num: 140, Percent Run: 44.29%), Loss:4.6328
+Epoch: 14 / 30, Accumulate Time to End: 8m 7s (- 10m 7s), (Batch: 50 / Batches Num: 140, Percent Run: 44.52%), Loss:4.6322
+Epoch: 14 / 30, Accumulate Time to End: 8m 9s (- 10m 4s), (Batch: 60 / Batches Num: 140, Percent Run: 44.76%), Loss:4.5685
+Epoch: 14 / 30, Accumulate Time to End: 8m 11s (- 10m 0s), (Batch: 70 / Batches Num: 140, Percent Run: 45.00%), Loss:4.5987
+Epoch: 14 / 30, Accumulate Time to End: 8m 13s (- 9m 57s), (Batch: 80 / Batches Num: 140, Percent Run: 45.24%), Loss:4.6099
+Epoch: 14 / 30, Accumulate Time to End: 8m 15s (- 9m 54s), (Batch: 90 / Batches Num: 140, Percent Run: 45.48%), Loss:4.6006
+Epoch: 14 / 30, Accumulate Time to End: 8m 17s (- 9m 50s), (Batch: 100 / Batches Num: 140, Percent Run: 45.71%), Loss:4.6007
+Epoch: 14 / 30, Accumulate Time to End: 8m 19s (- 9m 47s), (Batch: 110 / Batches Num: 140, Percent Run: 45.95%), Loss:4.5638
+Epoch: 14 / 30, Accumulate Time to End: 8m 21s (- 9m 43s), (Batch: 120 / Batches Num: 140, Percent Run: 46.19%), Loss:4.6366
+Epoch: 14 / 30, Accumulate Time to End: 8m 23s (- 9m 40s), (Batch: 130 / Batches Num: 140, Percent Run: 46.43%), Loss:4.6176
+Epoch: 14 / 30, Accumulate Time to End: 8m 24s (- 9m 37s), (Batch: 140 / Batches Num: 140, Percent Run: 46.67%), Loss:4.5928
+
+Val Epoch: 14
+
+Val Sample: 1
+
+Input Sentence: < ['our meal edamame with shaved <Unknown> sashimi yellowtail with miso and jalapeno <Unknown> bobby favorite black cod in lettuce cup with <Unknown> flake my favorite so perfect sashimi with garlic chip little too salty salmon sushi toro sushi very tasty fish dessert edamame icecream <Unknown> a <Unknown> <Unknown> sauce and']
+Target Sentence: < ['a super treat for sushi but be prepared to spend money']
+Output Sentence: < the <Unknown> great and a and the a to go a EOS
+
+Val Sample: 2
+
+Input Sentence: < ['ive been a customer of pizza <Unknown> for about twenty year strong and the best thing that can be said about this <Unknown> little <Unknown> is just how little it ha changed since it first opened it door in <Unknown>']
+Target Sentence: < ['the owner <Unknown> <Unknown> is a <Unknown> gentleman who make every guest feel like they never left home']
+Output Sentence: < the food is is is a great and and wa it time and like it were had EOS
+
+Val Sample: 3
+
+Input Sentence: < ['only issue is it not so easy to see where the line form to order and it bottle neck and result in several are you next question to be asked to all the other patron standing around you']
+Target Sentence: < ['hope they can work on signage to <Unknown> the issue']
+Output Sentence: < the you have be in the to go EOS
+
+Val Sample: 4
+
+Input Sentence: < ['okay did not sound like a rave review but it wa our last meal before leaving scottsdale my hubby doesnt ask for much and how can you fail at breakfast']
+Target Sentence: < ['so we were there mid week and late in the morning']
+Output Sentence: < the i were a to and and the for the <Unknown> i a a a <Unknown> and and and <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown>
+
+Val Sample: 5
+
+Input Sentence: < ['we laughed ourselves silly reading the negative review in the voice of an <Unknown> 8 year old <Unknown> their foot while we waited for le than 5 min']
+Target Sentence: < ['it fast food people and it is <Unknown>']
+Output Sentence: < the a and and and the is a to EOS
+
+Val Sample: 6
+
+Input Sentence: < ['the food wa authentic exquisite tasty and <Unknown> you are looking for a great indian restaurant it is at 3900 paradise road and you will be very happy']
+Target Sentence: < ['see the owner <Unknown> and his staff who are very <Unknown> friendly and the service is great']
+Output Sentence: < i to <Unknown> and is i favorite are were very friendly and and the food is very EOS
+
+Val Sample: 7
+
+Input Sentence: < ['when i wa a student at the university my now husband and i would go here for anniversary and special day and he even proposed to me here']
+Target Sentence: < ['so i must say that although i have <Unknown> bias my love of their service ambiance wine and food remains true']
+Output Sentence: < the i have have it i it have been to EOS
+
+Val Sample: 8
+
+Input Sentence: < ['although i wa sad to see <Unknown> go i wa eager to sample the fare of the space new <Unknown> <Unknown> which offer <Unknown> cuisine']
+Target Sentence: < ['first i have to say that <Unknown> is used in the <Unknown> possible sense of the term here since you can order an appetizer of fried wisconsin cheese <Unknown> i cant say that if i had a hankering for lasagna this would be the first place id come to look']
+Output Sentence: < the of have been have it i wa the to the <Unknown> <Unknown> EOS
+
+Val Sample: 9
+
+Input Sentence: < ['ive been going to <Unknown> for more than 5 year and there is not even a close second in phoenix or arizona for that matter']
+Target Sentence: < ['i wa fortunate enough to have lived in europe for 4 year and ive had pizza in belgium italy and other european country']
+Output Sentence: < the have a to to go a to the and a minute EOS
+
+Val Sample: 10
+
+Input Sentence: < ['ive been coming here for about 5 year mostly for breakfast but occasionally for lunch and dinner and ive never had a bad meal']
+Target Sentence: < ['there almost never a wait great service and youll get your food quickly even when the place is full']
+Output Sentence: < the is a had great EOS
+
+Output as Input
+etp score: 2.4903, 2.8122, 3.0615, 3.1978
+Div score: 0.0186, 0.0387, 0.0598, 0.0794
+Bleu score: 0.1407, 0.0504, 0.0225, 0.0082
+Perplexity of Golden Input: 106.6426
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_14.pt
+Epoch: 15 / 30, Accumulate Time to End: 8m 37s (- 9m 45s), (Batch: 10 / Batches Num: 140, Percent Run: 46.90%), Loss:4.5395
+Epoch: 15 / 30, Accumulate Time to End: 8m 39s (- 9m 42s), (Batch: 20 / Batches Num: 140, Percent Run: 47.14%), Loss:4.5686
+Epoch: 15 / 30, Accumulate Time to End: 8m 41s (- 9m 38s), (Batch: 30 / Batches Num: 140, Percent Run: 47.38%), Loss:4.5364
+Epoch: 15 / 30, Accumulate Time to End: 8m 42s (- 9m 35s), (Batch: 40 / Batches Num: 140, Percent Run: 47.62%), Loss:4.5547
+Epoch: 15 / 30, Accumulate Time to End: 8m 44s (- 9m 31s), (Batch: 50 / Batches Num: 140, Percent Run: 47.86%), Loss:4.5195
+Epoch: 15 / 30, Accumulate Time to End: 8m 46s (- 9m 28s), (Batch: 60 / Batches Num: 140, Percent Run: 48.09%), Loss:4.5580
+Epoch: 15 / 30, Accumulate Time to End: 8m 48s (- 9m 24s), (Batch: 70 / Batches Num: 140, Percent Run: 48.33%), Loss:4.5422
+Epoch: 15 / 30, Accumulate Time to End: 8m 50s (- 9m 21s), (Batch: 80 / Batches Num: 140, Percent Run: 48.57%), Loss:4.5677
+Epoch: 15 / 30, Accumulate Time to End: 8m 52s (- 9m 18s), (Batch: 90 / Batches Num: 140, Percent Run: 48.81%), Loss:4.5296
+Epoch: 15 / 30, Accumulate Time to End: 8m 54s (- 9m 15s), (Batch: 100 / Batches Num: 140, Percent Run: 49.05%), Loss:4.5439
+Epoch: 15 / 30, Accumulate Time to End: 8m 56s (- 9m 11s), (Batch: 110 / Batches Num: 140, Percent Run: 49.28%), Loss:4.5381
+Epoch: 15 / 30, Accumulate Time to End: 8m 58s (- 9m 8s), (Batch: 120 / Batches Num: 140, Percent Run: 49.52%), Loss:4.5283
+Epoch: 15 / 30, Accumulate Time to End: 8m 59s (- 9m 5s), (Batch: 130 / Batches Num: 140, Percent Run: 49.76%), Loss:4.5595
+Epoch: 15 / 30, Accumulate Time to End: 9m 1s (- 9m 1s), (Batch: 140 / Batches Num: 140, Percent Run: 50.00%), Loss:4.5822
+
+Val Epoch: 15
+
+Val Sample: 1
+
+Input Sentence: < ['only issue is it not so easy to see where the line form to order and it bottle neck and result in several are you next question to be asked to all the other patron standing around you']
+Target Sentence: < ['hope they can work on signage to <Unknown> the issue']
+Output Sentence: < i you are be for the EOS
+
+Val Sample: 2
+
+Input Sentence: < ['me and my friend went a a group 7 of u and of course forgot to make a reservation but we didnt have to wait long for a spot']
+Target Sentence: < ['i think it wa only around 10 minute so not long at all']
+Output Sentence: < i had it wa a <Unknown> the of EOS
+
+Val Sample: 3
+
+Input Sentence: < ['the food wa authentic exquisite tasty and <Unknown> you are looking for a great indian restaurant it is at 3900 paradise road and you will be very happy']
+Target Sentence: < ['see the owner <Unknown> and his staff who are very <Unknown> friendly and the service is great']
+Output Sentence: < i you <Unknown> <Unknown> EOS
+
+Val Sample: 4
+
+Input Sentence: < ['im not one to <Unknown> around perfect rating based on just one visit but this place made such a great impression on me there wa just no alternative']
+Target Sentence: < ['i had the salade <Unknown> and a side of the herb fry my god so tasty']
+Output Sentence: < i have the <Unknown> and and the <Unknown> of <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 5
+
+Input Sentence: < ['im also a fan of the iced <Unknown> coffee with the iced <Unknown> made with coffee so it doesnt get <Unknown> down']
+Target Sentence: < ['you can customize your coffee which i love']
+Output Sentence: < i can go the <Unknown> and is can the EOS
+
+Val Sample: 6
+
+Input Sentence: < ['we sat at the service bar so we could watch the chef in action and we met some really nice people']
+Target Sentence: < ['every single thing we ordered wa amazing']
+Output Sentence: < the time of i have wa delicious EOS
+
+Val Sample: 7
+
+Input Sentence: < ['we are vegetarian and enjoyed the many item that we chose to eat tofu veggie tempura clay pot casserole great sauce']
+Target Sentence: < ['my son really liked the bubble tea']
+Output Sentence: < i favorite had like the best and EOS
+
+Val Sample: 8
+
+Input Sentence: < ['this place is awesome so awesome it why i chose the <Unknown> i did because it next to this <Unknown> work']
+Target Sentence: < ['it a great dive bar and everyone get along']
+Output Sentence: < i is little place for in i i the the <Unknown> EOS
+
+Val Sample: 9
+
+Input Sentence: < ['it is one of the best casual unpretentious place to get brunch and have some amazing baked good in the city']
+Target Sentence: < ['from their baguette to tart or <Unknown> this is pure french <Unknown> indulgence']
+Output Sentence: < the the <Unknown> and the and <Unknown> <Unknown> place the of <Unknown> <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['some location my wing are damn near dry but this one always ha tender chicken and a good amount of sauce']
+Target Sentence: < ['waitress were prompt and attentive']
+Output Sentence: < the is very and the EOS
+
+Output as Input
+etp score: 2.4749, 2.9846, 3.4269, 3.6710
+Div score: 0.0238, 0.0496, 0.0788, 0.1138
+Bleu score: 0.1188, 0.0444, 0.0194, 0.0057
+Perplexity of Golden Input: 104.3581
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_15.pt
+Epoch: 16 / 30, Accumulate Time to End: 9m 14s (- 9m 9s), (Batch: 10 / Batches Num: 140, Percent Run: 50.24%), Loss:4.4985
+Epoch: 16 / 30, Accumulate Time to End: 9m 16s (- 9m 5s), (Batch: 20 / Batches Num: 140, Percent Run: 50.48%), Loss:4.5185
+Epoch: 16 / 30, Accumulate Time to End: 9m 18s (- 9m 2s), (Batch: 30 / Batches Num: 140, Percent Run: 50.71%), Loss:4.4963
+Epoch: 16 / 30, Accumulate Time to End: 9m 19s (- 8m 59s), (Batch: 40 / Batches Num: 140, Percent Run: 50.95%), Loss:4.4942
+Epoch: 16 / 30, Accumulate Time to End: 9m 21s (- 8m 55s), (Batch: 50 / Batches Num: 140, Percent Run: 51.19%), Loss:4.5018
+Epoch: 16 / 30, Accumulate Time to End: 9m 23s (- 8m 52s), (Batch: 60 / Batches Num: 140, Percent Run: 51.43%), Loss:4.4517
+Epoch: 16 / 30, Accumulate Time to End: 9m 25s (- 8m 49s), (Batch: 70 / Batches Num: 140, Percent Run: 51.67%), Loss:4.5190
+Epoch: 16 / 30, Accumulate Time to End: 9m 27s (- 8m 45s), (Batch: 80 / Batches Num: 140, Percent Run: 51.90%), Loss:4.5170
+Epoch: 16 / 30, Accumulate Time to End: 9m 29s (- 8m 42s), (Batch: 90 / Batches Num: 140, Percent Run: 52.14%), Loss:4.5306
+Epoch: 16 / 30, Accumulate Time to End: 9m 31s (- 8m 39s), (Batch: 100 / Batches Num: 140, Percent Run: 52.38%), Loss:4.5086
+Epoch: 16 / 30, Accumulate Time to End: 9m 33s (- 8m 36s), (Batch: 110 / Batches Num: 140, Percent Run: 52.62%), Loss:4.5233
+Epoch: 16 / 30, Accumulate Time to End: 9m 35s (- 8m 32s), (Batch: 120 / Batches Num: 140, Percent Run: 52.86%), Loss:4.4532
+Epoch: 16 / 30, Accumulate Time to End: 9m 36s (- 8m 29s), (Batch: 130 / Batches Num: 140, Percent Run: 53.09%), Loss:4.4973
+Epoch: 16 / 30, Accumulate Time to End: 9m 38s (- 8m 26s), (Batch: 140 / Batches Num: 140, Percent Run: 53.33%), Loss:4.5037
+
+Val Epoch: 16
+
+Val Sample: 1
+
+Input Sentence: < ['i no longer live in cu but when i lived there i wa a regular at farrens and when back in town visiting recently i made sure to stop in and eat at farrens again']
+Target Sentence: < ['the burger were just a good a i remembered']
+Output Sentence: < the food are very amazing great and the had the the it it it it EOS
+
+Val Sample: 2
+
+Input Sentence: < ['trust me though it not from lack of portion size just the need to continue into the next dish so you can find the next dish place in your <Unknown>']
+Target Sentence: < ['server are great angie my breakfast waitress is awesome and the manager are friendly']
+Output Sentence: < the wa very and is favorite place and a EOS
+
+Val Sample: 3
+
+Input Sentence: < ['the salad bar is awesome there always an abundance of sample at each counter and ton of selection however if you frequent <Unknown> enough their food can get mundane']
+Target Sentence: < ['one suggestion id have is food allergy <Unknown> or option']
+Output Sentence: < i of are get been a and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['great fresh and innovative flavor a well a a really gorgeous <Unknown> shared the crazy mad dragon roll then <Unknown> into some pad <Unknown> portion are really large here']
+Target Sentence: < ['we used to go to chinatown to find a real asian flavor but for the ambiance rice co offer i think from now on well just drive a couple of mile <Unknown> worth it']
+Output Sentence: < the had to try here the and try a week place place of the the <Unknown> of <Unknown> and the had it the to the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['it is especially hard to find good chip in <Unknown> in la vega on a business trip and a large group of u went to casa don juan']
+Target Sentence: < ['the service wa fast and friendly but i just cannot get over how good the chip were']
+Output Sentence: < i food is great and friendly EOS
+
+Val Sample: 6
+
+Input Sentence: < ['the burger are just a they say fresh and meaty we came during a rush so we really got to see the staff work efficiently while we waited']
+Target Sentence: < ['we liked the girl working the front area']
+Output Sentence: < the had the <Unknown> and the <Unknown> of and and and EOS
+
+Val Sample: 7
+
+Input Sentence: < ['the owner <Unknown> suggested a wonderful wine upon our arrival and the meal to follow did not disappoint especially the tiramisu and fruit plate for dessert']
+Target Sentence: < ['one of the best restaurant experience weve ever had']
+Output Sentence: < the of the best ive i EOS
+
+Val Sample: 8
+
+Input Sentence: < ['ive been living in los angeles previously in manhattan for over two year and it is a <Unknown> to find real new york pizza somewhere anywhere']
+Target Sentence: < ['within 500 mile of my new home']
+Output Sentence: < the the a here the favorite <Unknown> and and and and and EOS
+
+Val Sample: 9
+
+Input Sentence: < ['everything we had wa excellent try the beet salad or the <Unknown> tomato <Unknown> the filet medium wa melt in your mouth good']
+Target Sentence: < ['they know how to make a perfect manhattan <Unknown> <Unknown> with a twist up']
+Output Sentence: < the were it to try the <Unknown> place EOS
+
+Val Sample: 10
+
+Input Sentence: < ['unfortunately we did not get to order a our friend that wa with u got ill we thought he wa having a <Unknown>']
+Target Sentence: < ['i went to the kitchen area and asked them to call <Unknown>']
+Output Sentence: < the had here the <Unknown> and and i the it try the it it it EOS
+
+Output as Input
+etp score: 2.5276, 3.1717, 3.5795, 3.8024
+Div score: 0.0212, 0.0489, 0.0770, 0.1119
+Bleu score: 0.1288, 0.0478, 0.0214, 0.0048
+Perplexity of Golden Input: 103.4615
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_16.pt
+Epoch: 17 / 30, Accumulate Time to End: 9m 51s (- 8m 32s), (Batch: 10 / Batches Num: 140, Percent Run: 53.57%), Loss:4.4182
+Epoch: 17 / 30, Accumulate Time to End: 9m 52s (- 8m 28s), (Batch: 20 / Batches Num: 140, Percent Run: 53.81%), Loss:4.4125
+Epoch: 17 / 30, Accumulate Time to End: 9m 54s (- 8m 25s), (Batch: 30 / Batches Num: 140, Percent Run: 54.05%), Loss:4.4334
+Epoch: 17 / 30, Accumulate Time to End: 9m 56s (- 8m 22s), (Batch: 40 / Batches Num: 140, Percent Run: 54.29%), Loss:4.4401
+Epoch: 17 / 30, Accumulate Time to End: 9m 58s (- 8m 19s), (Batch: 50 / Batches Num: 140, Percent Run: 54.52%), Loss:4.5084
+Epoch: 17 / 30, Accumulate Time to End: 10m 0s (- 8m 16s), (Batch: 60 / Batches Num: 140, Percent Run: 54.76%), Loss:4.4115
+Epoch: 17 / 30, Accumulate Time to End: 10m 2s (- 8m 12s), (Batch: 70 / Batches Num: 140, Percent Run: 55.00%), Loss:4.4977
+Epoch: 17 / 30, Accumulate Time to End: 10m 4s (- 8m 9s), (Batch: 80 / Batches Num: 140, Percent Run: 55.24%), Loss:4.4707
+Epoch: 17 / 30, Accumulate Time to End: 10m 6s (- 8m 6s), (Batch: 90 / Batches Num: 140, Percent Run: 55.48%), Loss:4.4824
+Epoch: 17 / 30, Accumulate Time to End: 10m 8s (- 8m 3s), (Batch: 100 / Batches Num: 140, Percent Run: 55.71%), Loss:4.4705
+Epoch: 17 / 30, Accumulate Time to End: 10m 9s (- 8m 0s), (Batch: 110 / Batches Num: 140, Percent Run: 55.95%), Loss:4.4731
+Epoch: 17 / 30, Accumulate Time to End: 10m 11s (- 7m 57s), (Batch: 120 / Batches Num: 140, Percent Run: 56.19%), Loss:4.4431
+Epoch: 17 / 30, Accumulate Time to End: 10m 13s (- 7m 53s), (Batch: 130 / Batches Num: 140, Percent Run: 56.43%), Loss:4.4675
+Epoch: 17 / 30, Accumulate Time to End: 10m 15s (- 7m 50s), (Batch: 140 / Batches Num: 140, Percent Run: 56.67%), Loss:4.4475
+
+Val Epoch: 17
+
+Val Sample: 1
+
+Input Sentence: < ['my father came to toronto in the mid <Unknown> and you folk extended a hand to him and he got his <Unknown> start with <Unknown> is know gone but i feel him in your place because i can only imagine it wa very similar interior']
+Target Sentence: < ['i love it']
+Output Sentence: < i have the and and and and and and and and and and and and and and and and and <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown>
+
+Val Sample: 2
+
+Input Sentence: < ['i have eaten at a few famous afghan restaurant with my friend such a <Unknown> kabob but the food at these restaurant did not taste like a true afghan experience the kabob wa tasteless']
+Target Sentence: < ['the other night i went to watan kabob with a few friend who were craving the food so i searched for an afghan restaurant and wa <Unknown> to watan kabob']
+Output Sentence: < i food <Unknown> i have to the <Unknown> and the <Unknown> time and wa amazing to <Unknown> wa i have in the <Unknown> <Unknown> EOS
+
+Val Sample: 3
+
+Input Sentence: < ['it wa the perfect sampling of the best of what they have to offer a far a meat and pair perfectly with their any all of the yummy side they offer']
+Target Sentence: < ['we went with the bacon potato salad baked bean and mac cheese <Unknown>']
+Output Sentence: < i had to the <Unknown> and and and and and <Unknown> and and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['the food is awesome there is a great selection the wait staff and kitchen are friendly the price are fair and there is always a table for you without a wait']
+Target Sentence: < ['my little guy even love it he order the <Unknown> chicken']
+Output Sentence: < i husband <Unknown> is it the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['every time im in montreal i try to satisfy my smoked meat craving with the like of <Unknown> <Unknown> or main because i didnt want to wait in line forever']
+Target Sentence: < ['but none of those really hit the spot']
+Output Sentence: < i i the the <Unknown> have the <Unknown> EOS
+
+Val Sample: 6
+
+Input Sentence: < ['the place is unassuming from the outside tucked away in a strip mall but i assure you if you give it a shot you will not be disappointed']
+Target Sentence: < ['to start out the service wa great']
+Output Sentence: < i the the the <Unknown> is great and wa wa wa and and and and and and and EOS
+
+Val Sample: 7
+
+Input Sentence: < ['after a long day of <Unknown> and drinking a house gumbo with a pepsi make me forget that i lost all my money playing penny <Unknown>']
+Target Sentence: < ['look past the off the strip hotel everyone is over the age 45 and the sound of <Unknown> in the background and youll get a down to earth restaurant that serf quality southern style food']
+Output Sentence: < the to a <Unknown> of <Unknown> and in a a the <Unknown> EOS
+
+Val Sample: 8
+
+Input Sentence: < ['having lived in <Unknown> where allyoucaneat buffet were <Unknown> and <Unknown> <Unknown> to a kind of art form im familiar with asian buffet']
+Target Sentence: < ['they have a huge variety of food and most of it suck']
+Output Sentence: < the were a great place of <Unknown> and <Unknown> of the is of EOS
+
+Val Sample: 9
+
+Input Sentence: < ['ive heard from friend who had bad experience here several year ago but the restaurant is under new management and it fantastic']
+Target Sentence: < ['the kung pao chicken is to die for order it chinese style and <Unknown> you dare']
+Output Sentence: < the food and <Unknown> is a die for EOS
+
+Val Sample: 10
+
+Input Sentence: < ['my best friend introduced me to lucky <Unknown> for lunch about two month ago and ive been back three time since then']
+Target Sentence: < ['the atmosphere is that of a bar but dont let this discourage you from checking it out']
+Output Sentence: < i food is always the the <Unknown> place i be to place EOS
+
+Output as Input
+etp score: 2.7394, 3.3037, 3.6140, 3.7962
+Div score: 0.0262, 0.0608, 0.0932, 0.1263
+Bleu score: 0.1240, 0.0453, 0.0209, 0.0082
+Perplexity of Golden Input: 102.8653
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_17.pt
+Epoch: 18 / 30, Accumulate Time to End: 10m 27s (- 7m 55s), (Batch: 10 / Batches Num: 140, Percent Run: 56.90%), Loss:4.3725
+Epoch: 18 / 30, Accumulate Time to End: 10m 29s (- 7m 52s), (Batch: 20 / Batches Num: 140, Percent Run: 57.14%), Loss:4.3936
+Epoch: 18 / 30, Accumulate Time to End: 10m 31s (- 7m 49s), (Batch: 30 / Batches Num: 140, Percent Run: 57.38%), Loss:4.4570
+Epoch: 18 / 30, Accumulate Time to End: 10m 33s (- 7m 46s), (Batch: 40 / Batches Num: 140, Percent Run: 57.62%), Loss:4.3605
+Epoch: 18 / 30, Accumulate Time to End: 10m 35s (- 7m 43s), (Batch: 50 / Batches Num: 140, Percent Run: 57.86%), Loss:4.4490
+Epoch: 18 / 30, Accumulate Time to End: 10m 37s (- 7m 39s), (Batch: 60 / Batches Num: 140, Percent Run: 58.09%), Loss:4.3892
+Epoch: 18 / 30, Accumulate Time to End: 10m 39s (- 7m 36s), (Batch: 70 / Batches Num: 140, Percent Run: 58.33%), Loss:4.4459
+Epoch: 18 / 30, Accumulate Time to End: 10m 41s (- 7m 33s), (Batch: 80 / Batches Num: 140, Percent Run: 58.57%), Loss:4.4246
+Epoch: 18 / 30, Accumulate Time to End: 10m 43s (- 7m 30s), (Batch: 90 / Batches Num: 140, Percent Run: 58.81%), Loss:4.4427
+Epoch: 18 / 30, Accumulate Time to End: 10m 45s (- 7m 27s), (Batch: 100 / Batches Num: 140, Percent Run: 59.05%), Loss:4.4155
+Epoch: 18 / 30, Accumulate Time to End: 10m 47s (- 7m 24s), (Batch: 110 / Batches Num: 140, Percent Run: 59.28%), Loss:4.3861
+Epoch: 18 / 30, Accumulate Time to End: 10m 49s (- 7m 21s), (Batch: 120 / Batches Num: 140, Percent Run: 59.52%), Loss:4.3556
+Epoch: 18 / 30, Accumulate Time to End: 10m 51s (- 7m 18s), (Batch: 130 / Batches Num: 140, Percent Run: 59.76%), Loss:4.3962
+Epoch: 18 / 30, Accumulate Time to End: 10m 52s (- 7m 15s), (Batch: 140 / Batches Num: 140, Percent Run: 60.00%), Loss:4.4317
+
+Val Epoch: 18
+
+Val Sample: 1
+
+Input Sentence: < ['first i have to say that <Unknown> is used in the <Unknown> possible sense of the term here since you can order an appetizer of fried wisconsin cheese <Unknown> i cant say that if i had a hankering for lasagna this would be the first place id come to look']
+Target Sentence: < ['but there it is on the menu']
+Output Sentence: < i i is is a the menu and and <Unknown> and EOS
+
+Val Sample: 2
+
+Input Sentence: < ['the food is awesome there is a great selection the wait staff and kitchen are friendly the price are fair and there is always a table for you without a wait']
+Target Sentence: < ['my little guy even love it he order the <Unknown> chicken']
+Output Sentence: < i favorite place is a the EOS
+
+Val Sample: 3
+
+Input Sentence: < ['we were looking for an easy sandwich place to satisfy our lunch time <Unknown> and i just knew i had to <Unknown> them to the deliciousness that is capriottis']
+Target Sentence: < ['the two most popular sandwich are by far the <Unknown> and the <Unknown>']
+Output Sentence: < the food time delicious food are amazing the the best and the <Unknown> EOS
+
+Val Sample: 4
+
+Input Sentence: < ['the place is unassuming from the outside tucked away in a strip mall but i assure you if you give it a shot you will not be disappointed']
+Target Sentence: < ['to start out the service wa great']
+Output Sentence: < i be the the <Unknown> is very EOS
+
+Val Sample: 5
+
+Input Sentence: < ['when i wa a student at the university my now husband and i would go here for anniversary and special day and he even proposed to me here']
+Target Sentence: < ['so i must say that although i have <Unknown> bias my love of their service ambiance wine and food remains true']
+Output Sentence: < the much wa have the i i had been <Unknown> to favorite EOS
+
+Val Sample: 6
+
+Input Sentence: < ['this is an unusual post because i used to be a <Unknown> the only white guy in an otherwise all thai staff and it wa amazing']
+Target Sentence: < ['they would feed me at the start and end of my shift']
+Output Sentence: < the have be the to the menu of i to the mouth to EOS
+
+Val Sample: 7
+
+Input Sentence: < ['ive never actually tasted food like this a surprisingly pleasant taste of south asia in unexpected dish try the scallop ceviche youll know what i mean']
+Target Sentence: < ['do try the <Unknown> taco a well i tried the chicken one which i am a big fan of']
+Output Sentence: < the not the <Unknown> <Unknown> and well a have the <Unknown> and and wa wa a good good of the EOS
+
+Val Sample: 8
+
+Input Sentence: < ['the ambiance is great if a <Unknown> bit noisy a <Unknown> to a classic <Unknown> diner with the <Unknown> neon lighting lunch counter and bar stool']
+Target Sentence: < ['the portion are huge so this is truly brunch']
+Output Sentence: < the food are great and i is a a EOS
+
+Val Sample: 9
+
+Input Sentence: < ['of all the year ive been eating pizza from pizza hut domino papa john this is the place i prefer coming back for more']
+Target Sentence: < ['you can tell that is freshly made which make the food even better']
+Output Sentence: < the can eat the the the <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['i love that there is always a <Unknown> of real ale available and a <Unknown> to help find a perfect pairing of food brew']
+Target Sentence: < ['the food beverage service are all exemplary']
+Output Sentence: < i food is is is great great and and is and and and and EOS
+
+Output as Input
+etp score: 2.8848, 3.5637, 3.9893, 4.2253
+Div score: 0.0327, 0.0794, 0.1263, 0.1769
+Bleu score: 0.1349, 0.0505, 0.0224, 0.0092
+Perplexity of Golden Input: 101.7209
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_18.pt
+Epoch: 19 / 30, Accumulate Time to End: 11m 5s (- 7m 19s), (Batch: 10 / Batches Num: 140, Percent Run: 60.24%), Loss:4.3575
+Epoch: 19 / 30, Accumulate Time to End: 11m 7s (- 7m 16s), (Batch: 20 / Batches Num: 140, Percent Run: 60.48%), Loss:4.3654
+Epoch: 19 / 30, Accumulate Time to End: 11m 9s (- 7m 13s), (Batch: 30 / Batches Num: 140, Percent Run: 60.71%), Loss:4.3688
+Epoch: 19 / 30, Accumulate Time to End: 11m 11s (- 7m 10s), (Batch: 40 / Batches Num: 140, Percent Run: 60.95%), Loss:4.3380
+Epoch: 19 / 30, Accumulate Time to End: 11m 13s (- 7m 6s), (Batch: 50 / Batches Num: 140, Percent Run: 61.19%), Loss:4.3407
+Epoch: 19 / 30, Accumulate Time to End: 11m 15s (- 7m 3s), (Batch: 60 / Batches Num: 140, Percent Run: 61.43%), Loss:4.3719
+Epoch: 19 / 30, Accumulate Time to End: 11m 16s (- 7m 0s), (Batch: 70 / Batches Num: 140, Percent Run: 61.67%), Loss:4.3882
+Epoch: 19 / 30, Accumulate Time to End: 11m 18s (- 6m 57s), (Batch: 80 / Batches Num: 140, Percent Run: 61.90%), Loss:4.4136
+Epoch: 19 / 30, Accumulate Time to End: 11m 20s (- 6m 54s), (Batch: 90 / Batches Num: 140, Percent Run: 62.14%), Loss:4.3181
+Epoch: 19 / 30, Accumulate Time to End: 11m 22s (- 6m 51s), (Batch: 100 / Batches Num: 140, Percent Run: 62.38%), Loss:4.3423
+Epoch: 19 / 30, Accumulate Time to End: 11m 24s (- 6m 48s), (Batch: 110 / Batches Num: 140, Percent Run: 62.62%), Loss:4.3634
+Epoch: 19 / 30, Accumulate Time to End: 11m 26s (- 6m 45s), (Batch: 120 / Batches Num: 140, Percent Run: 62.86%), Loss:4.3510
+Epoch: 19 / 30, Accumulate Time to End: 11m 28s (- 6m 42s), (Batch: 130 / Batches Num: 140, Percent Run: 63.09%), Loss:4.3561
+Epoch: 19 / 30, Accumulate Time to End: 11m 30s (- 6m 39s), (Batch: 140 / Batches Num: 140, Percent Run: 63.33%), Loss:4.3579
+
+Val Epoch: 19
+
+Val Sample: 1
+
+Input Sentence: < ['<Unknown> is the best frozen yogurt shop ive been to in arizona and ive been to a few place no need for name dropping but have you noticed they are starting to pop up all over the place like coffee shop']
+Target Sentence: < ['like starbucks the consistency is always their perfect']
+Output Sentence: < i a in service of delicious delicious best EOS
+
+Val Sample: 2
+
+Input Sentence: < ['i stayed here when i got married and chose the mgm because i could get a s suite with <Unknown> for the same price i could get a regular room at other place']
+Target Sentence: < ['im a <Unknown> and found this hotel to be clean and fresh <Unknown>']
+Output Sentence: < i not few and i the place and the a and the and EOS
+
+Val Sample: 3
+
+Input Sentence: < ['we got a reservation off open table and came here with a friend on saturday night and we started off with a glass a wine they had an excellent selection']
+Target Sentence: < ['next came the awesome bread basket']
+Output Sentence: < the time the time <Unknown> the and wa wa <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 4
+
+Input Sentence: < ['breakfast great kim good waitress coffee great price cheap this a deal the bar side is also the best be coming for year something is special and historic here']
+Target Sentence: < ['free wifi best rib in state']
+Output Sentence: < the than and food are the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['not only wa the pimento cheese burger out of this world but the service i received here wa one of the best i have ever had']
+Target Sentence: < ['heaven wa my server she wa very informative quick to take care of u and she kept a smile on her face the whole entire time']
+Output Sentence: < the in a favorite EOS
+
+Val Sample: 6
+
+Input Sentence: < ['the name <Unknown> pointe cafe had me thinking i would be dining at a casual blah cafe <Unknown> this is 5 star quality food service']
+Target Sentence: < ['they are very generous with the food portion price is very reasonable']
+Output Sentence: < the have always friendly and a menu and are are great friendly and and is is is <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 7
+
+Input Sentence: < ['having tasted most middleeastern food in town i would say this is at par if not better than lulu at a <Unknown> of the price']
+Target Sentence: < ['i have absolutely fallen in love with this place']
+Output Sentence: < the had been been <Unknown> the and the place EOS
+
+Val Sample: 8
+
+Input Sentence: < ['although i wa sad to see <Unknown> go i wa eager to sample the fare of the space new <Unknown> <Unknown> which offer <Unknown> cuisine']
+Target Sentence: < ['first i have to say that <Unknown> is used in the <Unknown> possible sense of the term here since you can order an appetizer of fried wisconsin cheese <Unknown> i cant say that if i had a hankering for lasagna this would be the first place id come to look']
+Output Sentence: < it here have been go it the wa the to the <Unknown> <Unknown> EOS
+
+Val Sample: 9
+
+Input Sentence: < ['not that the food wasnt good it wa but the experience wa so interesting that i would recommend that you give it a try']
+Target Sentence: < ['i would not go again but i would also not miss out on trying it']
+Output Sentence: < i had recommend have back and i have be have back it of the of a EOS
+
+Val Sample: 10
+
+Input Sentence: < ['we were last there for nye and it wasnt a terrible a i expected a in uber crazy drunk a <Unknown> people everywhere etc']
+Target Sentence: < ['i love your old school <Unknown> crap <Unknown>']
+Output Sentence: < we had the server <Unknown> and and of and and and EOS
+
+Output as Input
+etp score: 2.9573, 3.5521, 3.8893, 4.0827
+Div score: 0.0306, 0.0712, 0.1091, 0.1455
+Bleu score: 0.1312, 0.0499, 0.0223, 0.0086
+Perplexity of Golden Input: 102.4216
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_19.pt
+Epoch: 20 / 30, Accumulate Time to End: 11m 42s (- 6m 42s), (Batch: 10 / Batches Num: 140, Percent Run: 63.57%), Loss:4.2747
+Epoch: 20 / 30, Accumulate Time to End: 11m 44s (- 6m 39s), (Batch: 20 / Batches Num: 140, Percent Run: 63.81%), Loss:4.2878
+Epoch: 20 / 30, Accumulate Time to End: 11m 46s (- 6m 36s), (Batch: 30 / Batches Num: 140, Percent Run: 64.05%), Loss:4.2519
+Epoch: 20 / 30, Accumulate Time to End: 11m 48s (- 6m 33s), (Batch: 40 / Batches Num: 140, Percent Run: 64.29%), Loss:4.3326
+Epoch: 20 / 30, Accumulate Time to End: 11m 50s (- 6m 30s), (Batch: 50 / Batches Num: 140, Percent Run: 64.52%), Loss:4.3112
+Epoch: 20 / 30, Accumulate Time to End: 11m 52s (- 6m 27s), (Batch: 60 / Batches Num: 140, Percent Run: 64.76%), Loss:4.3115
+Epoch: 20 / 30, Accumulate Time to End: 11m 53s (- 6m 24s), (Batch: 70 / Batches Num: 140, Percent Run: 65.00%), Loss:4.3257
+Epoch: 20 / 30, Accumulate Time to End: 11m 55s (- 6m 21s), (Batch: 80 / Batches Num: 140, Percent Run: 65.24%), Loss:4.3083
+Epoch: 20 / 30, Accumulate Time to End: 11m 57s (- 6m 18s), (Batch: 90 / Batches Num: 140, Percent Run: 65.48%), Loss:4.3401
+Epoch: 20 / 30, Accumulate Time to End: 11m 59s (- 6m 15s), (Batch: 100 / Batches Num: 140, Percent Run: 65.71%), Loss:4.3420
+Epoch: 20 / 30, Accumulate Time to End: 12m 1s (- 6m 12s), (Batch: 110 / Batches Num: 140, Percent Run: 65.95%), Loss:4.3268
+Epoch: 20 / 30, Accumulate Time to End: 12m 3s (- 6m 9s), (Batch: 120 / Batches Num: 140, Percent Run: 66.19%), Loss:4.3558
+Epoch: 20 / 30, Accumulate Time to End: 12m 5s (- 6m 6s), (Batch: 130 / Batches Num: 140, Percent Run: 66.43%), Loss:4.3919
+Epoch: 20 / 30, Accumulate Time to End: 12m 7s (- 6m 3s), (Batch: 140 / Batches Num: 140, Percent Run: 66.67%), Loss:4.3123
+
+Val Epoch: 20
+
+Val Sample: 1
+
+Input Sentence: < ['i have been a somewhat regular customer of butter chicken factory for a year or so i only order occasionally a im near the outer edge of their delivery area and <Unknown> it take a while to get here']
+Target Sentence: < ['nobody fault it just take time']
+Output Sentence: < i i in is can a to in in EOS
+
+Val Sample: 2
+
+Input Sentence: < ['okay did not sound like a rave review but it wa our last meal before leaving scottsdale my hubby doesnt ask for much and how can you fail at breakfast']
+Target Sentence: < ['so we were there mid week and late in the morning']
+Output Sentence: < the i were seated to and and i in the time and a a a a EOS
+
+Val Sample: 3
+
+Input Sentence: < ['there is this one <Unknown> that greets <Unknown> customer every time we come here always asks how were doing and always offer to take our tray away when done eating']
+Target Sentence: < ['very friendly guy']
+Output Sentence: < i good and and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['great fresh and innovative flavor a well a a really gorgeous <Unknown> shared the crazy mad dragon roll then <Unknown> into some pad <Unknown> portion are really large here']
+Target Sentence: < ['we used to go to chinatown to find a real asian flavor but for the ambiance rice co offer i think from now on well just drive a couple of mile <Unknown> worth it']
+Output Sentence: < i had to eat here the in eat a few place place and the the menu and <Unknown> and a had a <Unknown> to the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['it is especially hard to find good chip in <Unknown> in la vega on a business trip and a large group of u went to casa don juan']
+Target Sentence: < ['the service wa fast and friendly but i just cannot get over how good the chip were']
+Output Sentence: < i food is great and attentive EOS
+
+Val Sample: 6
+
+Input Sentence: < ['that say something since i dont like to be considered a regular anywhere there are just too many great place out there i havent been to yet']
+Target Sentence: < ['but essence keep drawing me back']
+Output Sentence: < i i i the the and to and and and and and and EOS
+
+Val Sample: 7
+
+Input Sentence: < ['although i wa sad to see <Unknown> go i wa eager to sample the fare of the space new <Unknown> <Unknown> which offer <Unknown> cuisine']
+Target Sentence: < ['first i have to say that <Unknown> is used in the <Unknown> possible sense of the term here since you can order an appetizer of fried wisconsin cheese <Unknown> i cant say that if i had a hankering for lasagna this would be the first place id come to look']
+Output Sentence: < i for had been eat i i wa the to the area <Unknown> EOS
+
+Val Sample: 8
+
+Input Sentence: < ['having tasted most middleeastern food in town i would say this is at par if not better than lulu at a <Unknown> of the price']
+Target Sentence: < ['i have absolutely fallen in love with this place']
+Output Sentence: < the had been been been the in the place EOS
+
+Val Sample: 9
+
+Input Sentence: < ['i havent been back since i became vegetarian and i have really missed it but now i see that you can get taco with potato']
+Target Sentence: < ['i will have to try that or will stop being a vegetarian for some meal just so i can eat the taco again']
+Output Sentence: < i had be to eat the you <Unknown> be in back <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['the <Unknown> concept is great and this location is ideal for me since there not much selection on the east side of downtown']
+Target Sentence: < ['whether i dine in or take back to the office i can always expect a great meal']
+Output Sentence: < i you have here this get a the try <Unknown> i have eat get to great place EOS
+
+Output as Input
+etp score: 2.8698, 3.6420, 4.0955, 4.3256
+Div score: 0.0383, 0.0902, 0.1439, 0.2020
+Bleu score: 0.1235, 0.0458, 0.0205, 0.0062
+Perplexity of Golden Input: 101.5285
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_20.pt
+Epoch: 21 / 30, Accumulate Time to End: 12m 19s (- 6m 5s), (Batch: 10 / Batches Num: 140, Percent Run: 66.90%), Loss:4.2477
+Epoch: 21 / 30, Accumulate Time to End: 12m 21s (- 6m 2s), (Batch: 20 / Batches Num: 140, Percent Run: 67.14%), Loss:4.2430
+Epoch: 21 / 30, Accumulate Time to End: 12m 23s (- 6m 0s), (Batch: 30 / Batches Num: 140, Percent Run: 67.38%), Loss:4.2873
+Epoch: 21 / 30, Accumulate Time to End: 12m 25s (- 5m 57s), (Batch: 40 / Batches Num: 140, Percent Run: 67.62%), Loss:4.2813
+Epoch: 21 / 30, Accumulate Time to End: 12m 27s (- 5m 54s), (Batch: 50 / Batches Num: 140, Percent Run: 67.86%), Loss:4.2496
+Epoch: 21 / 30, Accumulate Time to End: 12m 29s (- 5m 51s), (Batch: 60 / Batches Num: 140, Percent Run: 68.09%), Loss:4.2817
+Epoch: 21 / 30, Accumulate Time to End: 12m 31s (- 5m 48s), (Batch: 70 / Batches Num: 140, Percent Run: 68.33%), Loss:4.2399
+Epoch: 21 / 30, Accumulate Time to End: 12m 33s (- 5m 45s), (Batch: 80 / Batches Num: 140, Percent Run: 68.57%), Loss:4.2940
+Epoch: 21 / 30, Accumulate Time to End: 12m 35s (- 5m 42s), (Batch: 90 / Batches Num: 140, Percent Run: 68.81%), Loss:4.3048
+Epoch: 21 / 30, Accumulate Time to End: 12m 37s (- 5m 39s), (Batch: 100 / Batches Num: 140, Percent Run: 69.05%), Loss:4.3109
+Epoch: 21 / 30, Accumulate Time to End: 12m 39s (- 5m 36s), (Batch: 110 / Batches Num: 140, Percent Run: 69.28%), Loss:4.2569
+Epoch: 21 / 30, Accumulate Time to End: 12m 41s (- 5m 33s), (Batch: 120 / Batches Num: 140, Percent Run: 69.52%), Loss:4.3234
+Epoch: 21 / 30, Accumulate Time to End: 12m 42s (- 5m 30s), (Batch: 130 / Batches Num: 140, Percent Run: 69.76%), Loss:4.2525
+Epoch: 21 / 30, Accumulate Time to End: 12m 44s (- 5m 27s), (Batch: 140 / Batches Num: 140, Percent Run: 70.00%), Loss:4.2821
+
+Val Epoch: 21
+
+Val Sample: 1
+
+Input Sentence: < ['this wa our first time at this location and we kind of thought oh no is it going to lose the family feeling with a second la vega location babystacks did not disappoint u in the least']
+Target Sentence: < ['the pancake are delicious inventive genius']
+Output Sentence: < the food are amazing and and and and and and and and and and EOS
+
+Val Sample: 2
+
+Input Sentence: < ['me and my friend went a a group 7 of u and of course forgot to make a reservation but we didnt have to wait long for a spot']
+Target Sentence: < ['i think it wa only around 10 minute so not long at all']
+Output Sentence: < i had the wa a <Unknown> the minute for we a to the the <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 3
+
+Input Sentence: < ['since moving here from new york last year ive been on the search to find good jamaican food and im so glad i found this place']
+Target Sentence: < ['it a half hour drive from my house and it well worth the drive']
+Output Sentence: < i a great of for for the <Unknown> and i is a the menu EOS
+
+Val Sample: 4
+
+Input Sentence: < ['not that the food wasnt good it wa but the experience wa so interesting that i would recommend that you give it a try']
+Target Sentence: < ['i would not go again but i would also not miss out on trying it']
+Output Sentence: < i had recommend recommend back and i have recommend have coming it the the of a EOS
+
+Val Sample: 5
+
+Input Sentence: < ['it ha such a great selection of ingredient including one you wouldnt normally find at a pizza place like falafel and goat cheese']
+Target Sentence: < ['and most importantly topping arent extra']
+Output Sentence: < the the of the EOS
+
+Val Sample: 6
+
+Input Sentence: < ['and we did the champagne brunch which wa an awesome way to start the day off there were a ton of selection']
+Target Sentence: < ['while buffet food is not always my thing because it is never really the most <Unknown> wa good and since there wa so many different thing to try all of the picky eater i wa with were able to satisfy themselves']
+Output Sentence: < the there i is great a a favorite to it wa a a good best good place a EOS
+
+Val Sample: 7
+
+Input Sentence: < ['the food wa delicious the view wa amazing the staff wa so accommodating when my reservation at <Unknown> <Unknown> went terribly wrong']
+Target Sentence: < ['a fantastic meal']
+Output Sentence: < the great place EOS
+
+Val Sample: 8
+
+Input Sentence: < ['while the neighborhood ha changed <Unknown> over the last thirty year not for the better la <Unknown> hasnt changed a bit']
+Target Sentence: < ['the food is still wonderful and the margarita are too']
+Output Sentence: < the food is delicious delicious EOS
+
+Val Sample: 9
+
+Input Sentence: < ['we were luckily served by michael knowledgeable and <Unknown> server who knew that we need drink and appropriately delicious food']
+Target Sentence: < ['5 star from start to finish']
+Output Sentence: < i year for the to the the and EOS
+
+Val Sample: 10
+
+Input Sentence: < ['first off try to get there between the off hour like a few hour before or after the <Unknown> period']
+Target Sentence: < ['this place get packed quick']
+Output Sentence: < the place is a for and and and EOS
+
+Output as Input
+etp score: 2.9467, 3.7563, 4.2048, 4.4421
+Div score: 0.0389, 0.0926, 0.1434, 0.1977
+Bleu score: 0.1303, 0.0484, 0.0213, 0.0086
+Perplexity of Golden Input: 100.0428
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_21.pt
+Epoch: 22 / 30, Accumulate Time to End: 12m 57s (- 5m 29s), (Batch: 10 / Batches Num: 140, Percent Run: 70.24%), Loss:4.1898
+Epoch: 22 / 30, Accumulate Time to End: 12m 59s (- 5m 26s), (Batch: 20 / Batches Num: 140, Percent Run: 70.48%), Loss:4.2038
+Epoch: 22 / 30, Accumulate Time to End: 13m 1s (- 5m 23s), (Batch: 30 / Batches Num: 140, Percent Run: 70.71%), Loss:4.2262
+Epoch: 22 / 30, Accumulate Time to End: 13m 2s (- 5m 20s), (Batch: 40 / Batches Num: 140, Percent Run: 70.95%), Loss:4.1725
+Epoch: 22 / 30, Accumulate Time to End: 13m 4s (- 5m 17s), (Batch: 50 / Batches Num: 140, Percent Run: 71.19%), Loss:4.1993
+Epoch: 22 / 30, Accumulate Time to End: 13m 6s (- 5m 14s), (Batch: 60 / Batches Num: 140, Percent Run: 71.43%), Loss:4.2424
+Epoch: 22 / 30, Accumulate Time to End: 13m 8s (- 5m 11s), (Batch: 70 / Batches Num: 140, Percent Run: 71.67%), Loss:4.2595
+Epoch: 22 / 30, Accumulate Time to End: 13m 10s (- 5m 8s), (Batch: 80 / Batches Num: 140, Percent Run: 71.90%), Loss:4.2251
+Epoch: 22 / 30, Accumulate Time to End: 13m 12s (- 5m 5s), (Batch: 90 / Batches Num: 140, Percent Run: 72.14%), Loss:4.2024
+Epoch: 22 / 30, Accumulate Time to End: 13m 14s (- 5m 3s), (Batch: 100 / Batches Num: 140, Percent Run: 72.38%), Loss:4.2740
+Epoch: 22 / 30, Accumulate Time to End: 13m 16s (- 5m 0s), (Batch: 110 / Batches Num: 140, Percent Run: 72.62%), Loss:4.2651
+Epoch: 22 / 30, Accumulate Time to End: 13m 17s (- 4m 57s), (Batch: 120 / Batches Num: 140, Percent Run: 72.86%), Loss:4.2555
+Epoch: 22 / 30, Accumulate Time to End: 13m 19s (- 4m 54s), (Batch: 130 / Batches Num: 140, Percent Run: 73.09%), Loss:4.2835
+Epoch: 22 / 30, Accumulate Time to End: 13m 21s (- 4m 51s), (Batch: 140 / Batches Num: 140, Percent Run: 73.33%), Loss:4.2332
+
+Val Epoch: 22
+
+Val Sample: 1
+
+Input Sentence: < ['ive only been to the original in beverly hill but watching all the rose bowl team enjoy the annual beef bowl on the news made me crave lawrys even more']
+Target Sentence: < ['i love how lawrys ha never changed']
+Output Sentence: < i love the much <Unknown> a been EOS
+
+Val Sample: 2
+
+Input Sentence: < ['all 5 of u loved our <Unknown> had the chilled leek soup tuna a la <Unknown> duck risotto grilled scallop beef <Unknown> and neapolitan <Unknown> we ate every morsel']
+Target Sentence: < ['the kid <Unknown> over my soup and i should have ordered another bowl because they ate it all']
+Output Sentence: < the food <Unknown> wa the <Unknown> and <Unknown> had have been <Unknown> <Unknown> of i are EOS
+
+Val Sample: 3
+
+Input Sentence: < ['we were really interested in the braised short rib ravioli but decided on two other dish a a surprise the waiter brought u some <Unknown> or the ravioli']
+Target Sentence: < ['so thoughtful and delish']
+Output Sentence: < we much and attentive EOS
+
+Val Sample: 4
+
+Input Sentence: < ['that say something since i dont like to be considered a regular anywhere there are just too many great place out there i havent been to yet']
+Target Sentence: < ['but essence keep drawing me back']
+Output Sentence: < the the of the the and to and and and and and and and and and and and and and and and and and and and and EOS
+
+Val Sample: 5
+
+Input Sentence: < ['my friend and i ate here for lunch today because i saw an <Unknown> for them in the paper and i read such great review online']
+Target Sentence: < ['i read one bad review because of that i wanted to see for myself because i love good mexican food']
+Output Sentence: < we had the of and and i the the had to go EOS
+
+Val Sample: 6
+
+Input Sentence: < ['this sushi store is hot like wasabi when i <Unknown> <Unknown> should be big like <Unknown> <Unknown> if you are all about value come to <Unknown>']
+Target Sentence: < ['the food is far beyond the price you will pay for it']
+Output Sentence: < i <Unknown> is delicious good the best and can be for the EOS
+
+Val Sample: 7
+
+Input Sentence: < ['not only wa the pimento cheese burger out of this world but the service i received here wa one of the best i have ever had']
+Target Sentence: < ['heaven wa my server she wa very informative quick to take care of u and she kept a smile on her face the whole entire time']
+Output Sentence: < the in a <Unknown> EOS
+
+Val Sample: 8
+
+Input Sentence: < ['i havent been back since i became vegetarian and i have really missed it but now i see that you can get taco with potato']
+Target Sentence: < ['i will have to try that or will stop being a vegetarian for some meal just so i can eat the taco again']
+Output Sentence: < i had definitely a try the you <Unknown> be in back <Unknown> EOS
+
+Val Sample: 9
+
+Input Sentence: < ['not only are the noodle killer but i love the idea of a tiny little restaurant that really only doe a handful of item']
+Target Sentence: < ['you wont find dessert or even much for appetizer here']
+Output Sentence: < the can be a in <Unknown> a of the EOS
+
+Val Sample: 10
+
+Input Sentence: < ['lot of great dj usually kind of nice not to hear the same party hit you hear in almost every other nightclub']
+Target Sentence: < ['good looking crowd']
+Output Sentence: < the food atmosphere and EOS
+
+Output as Input
+etp score: 2.6754, 3.4664, 3.9218, 4.1942
+Div score: 0.0394, 0.0970, 0.1565, 0.2175
+Bleu score: 0.1294, 0.0478, 0.0210, 0.0075
+Perplexity of Golden Input: 100.0333
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_22.pt
+Epoch: 23 / 30, Accumulate Time to End: 13m 34s (- 4m 52s), (Batch: 10 / Batches Num: 140, Percent Run: 73.57%), Loss:4.1603
+Epoch: 23 / 30, Accumulate Time to End: 13m 36s (- 4m 49s), (Batch: 20 / Batches Num: 140, Percent Run: 73.81%), Loss:4.1431
+Epoch: 23 / 30, Accumulate Time to End: 13m 38s (- 4m 46s), (Batch: 30 / Batches Num: 140, Percent Run: 74.05%), Loss:4.1955
+Epoch: 23 / 30, Accumulate Time to End: 13m 39s (- 4m 43s), (Batch: 40 / Batches Num: 140, Percent Run: 74.29%), Loss:4.1688
+Epoch: 23 / 30, Accumulate Time to End: 13m 41s (- 4m 40s), (Batch: 50 / Batches Num: 140, Percent Run: 74.52%), Loss:4.1693
+Epoch: 23 / 30, Accumulate Time to End: 13m 43s (- 4m 38s), (Batch: 60 / Batches Num: 140, Percent Run: 74.76%), Loss:4.2162
+Epoch: 23 / 30, Accumulate Time to End: 13m 45s (- 4m 35s), (Batch: 70 / Batches Num: 140, Percent Run: 75.00%), Loss:4.1956
+Epoch: 23 / 30, Accumulate Time to End: 13m 47s (- 4m 32s), (Batch: 80 / Batches Num: 140, Percent Run: 75.24%), Loss:4.1375
+Epoch: 23 / 30, Accumulate Time to End: 13m 49s (- 4m 29s), (Batch: 90 / Batches Num: 140, Percent Run: 75.48%), Loss:4.1812
+Epoch: 23 / 30, Accumulate Time to End: 13m 51s (- 4m 26s), (Batch: 100 / Batches Num: 140, Percent Run: 75.71%), Loss:4.2153
+Epoch: 23 / 30, Accumulate Time to End: 13m 53s (- 4m 23s), (Batch: 110 / Batches Num: 140, Percent Run: 75.95%), Loss:4.1931
+Epoch: 23 / 30, Accumulate Time to End: 13m 55s (- 4m 20s), (Batch: 120 / Batches Num: 140, Percent Run: 76.19%), Loss:4.2314
+Epoch: 23 / 30, Accumulate Time to End: 13m 57s (- 4m 18s), (Batch: 130 / Batches Num: 140, Percent Run: 76.43%), Loss:4.2425
+Epoch: 23 / 30, Accumulate Time to End: 13m 58s (- 4m 15s), (Batch: 140 / Batches Num: 140, Percent Run: 76.67%), Loss:4.1913
+
+Val Epoch: 23
+
+Val Sample: 1
+
+Input Sentence: < ['im usually not a fan of airport food but 4 peak wa great the chicken breakfast enchilada were great the portion size wa great and they were quick but the best part wa that they didnt <Unknown> the food']
+Target Sentence: < ['i will stop here everytime']
+Output Sentence: < i had definitely to for i a <Unknown> EOS
+
+Val Sample: 2
+
+Input Sentence: < ['the staff wa extremely friendly helpful i told the cashier it wa my first time coming to dine with them and he let me know which wa the most popular item etc food wa so good']
+Target Sentence: < ['im addicted <Unknown>']
+Output Sentence: < i not it and and and and and and and and EOS
+
+Val Sample: 3
+
+Input Sentence: < ['this chili is just a good a tommys burger coming from an og tommys customer from la we have been looking for a <Unknown> spot for 10 year now and have finally found it']
+Target Sentence: < ['they also offer an in n out type burger and the difference is the cheese and the meat']
+Output Sentence: < the have have a <Unknown> a a to of and <Unknown> <Unknown> of a best are <Unknown> <Unknown> is to EOS
+
+Val Sample: 4
+
+Input Sentence: < ['great fresh and innovative flavor a well a a really gorgeous <Unknown> shared the crazy mad dragon roll then <Unknown> into some pad <Unknown> portion are really large here']
+Target Sentence: < ['we used to go to chinatown to find a real asian flavor but for the ambiance rice co offer i think from now on well just drive a couple of mile <Unknown> worth it']
+Output Sentence: < i have to go for the for have a few place restaurant and the the <Unknown> is the and a have it <Unknown> to the to a to <Unknown> of
+
+Val Sample: 5
+
+Input Sentence: < ['now they dont let you order temp on your burger which normally would be a deal breaker for me im a rare <Unknown> wow it good']
+Target Sentence: < ['blue cheese fry w bacon best fry <Unknown>']
+Output Sentence: < the of and and <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 6
+
+Input Sentence: < ['i meet the owner at a local restaurant i wa new to the area and he told me about his restaurant <Unknown> vibe jamaican cuisine']
+Target Sentence: < ['so i had to check it out i got the curry chicken over a bed of rice and bean and it wa absolutely straight from the soul']
+Output Sentence: < we a wa a be it out and have a <Unknown> and and the <Unknown> of <Unknown> and <Unknown> and a wa delicious delicious to the menu EOS
+
+Val Sample: 7
+
+Input Sentence: < ['this is the little known place you want to bring someone if you want to impress them and have good food thats reasonably priced']
+Target Sentence: < ['i have never <Unknown> a dish i tried here and the people ive brought here loved it too']
+Output Sentence: < i have been had here few for have the i i food there had here and the EOS
+
+Val Sample: 8
+
+Input Sentence: < ['of all the year ive been eating pizza from pizza hut domino papa john this is the place i prefer coming back for more']
+Target Sentence: < ['you can tell that is freshly made which make the food even better']
+Output Sentence: < the can eat the the the <Unknown> in is it best EOS
+
+Val Sample: 9
+
+Input Sentence: < ['unfortunately we did not get to order a our friend that wa with u got ill we thought he wa having a <Unknown>']
+Target Sentence: < ['i went to the kitchen area and asked them to call <Unknown>']
+Output Sentence: < we had with the <Unknown> and and i the we go the and and and and EOS
+
+Val Sample: 10
+
+Input Sentence: < ['after a lackluster experience at sage and not ever really being in the mood for tapa there wasnt must reason to be there']
+Target Sentence: < ['this weekend however we had aria food credit to spend and wanted to try something new']
+Output Sentence: < the place wa i had a <Unknown> a the be a the to be the a EOS
+
+Output as Input
+etp score: 3.1181, 3.8040, 4.1330, 4.3087
+Div score: 0.0361, 0.0855, 0.1295, 0.1715
+Bleu score: 0.1385, 0.0514, 0.0234, 0.0085
+Perplexity of Golden Input: 100.4485
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_23.pt
+Epoch: 24 / 30, Accumulate Time to End: 14m 11s (- 4m 15s), (Batch: 10 / Batches Num: 140, Percent Run: 76.90%), Loss:4.1397
+Epoch: 24 / 30, Accumulate Time to End: 14m 13s (- 4m 12s), (Batch: 20 / Batches Num: 140, Percent Run: 77.14%), Loss:4.1138
+Epoch: 24 / 30, Accumulate Time to End: 14m 15s (- 4m 9s), (Batch: 30 / Batches Num: 140, Percent Run: 77.38%), Loss:4.1157
+Epoch: 24 / 30, Accumulate Time to End: 14m 17s (- 4m 7s), (Batch: 40 / Batches Num: 140, Percent Run: 77.62%), Loss:4.1633
+Epoch: 24 / 30, Accumulate Time to End: 14m 18s (- 4m 4s), (Batch: 50 / Batches Num: 140, Percent Run: 77.86%), Loss:4.1267
+Epoch: 24 / 30, Accumulate Time to End: 14m 21s (- 4m 1s), (Batch: 60 / Batches Num: 140, Percent Run: 78.09%), Loss:4.1551
+Epoch: 24 / 30, Accumulate Time to End: 14m 22s (- 3m 58s), (Batch: 70 / Batches Num: 140, Percent Run: 78.33%), Loss:4.1509
+Epoch: 24 / 30, Accumulate Time to End: 14m 24s (- 3m 55s), (Batch: 80 / Batches Num: 140, Percent Run: 78.57%), Loss:4.1620
+Epoch: 24 / 30, Accumulate Time to End: 14m 26s (- 3m 53s), (Batch: 90 / Batches Num: 140, Percent Run: 78.81%), Loss:4.1684
+Epoch: 24 / 30, Accumulate Time to End: 14m 28s (- 3m 50s), (Batch: 100 / Batches Num: 140, Percent Run: 79.05%), Loss:4.1268
+Epoch: 24 / 30, Accumulate Time to End: 14m 30s (- 3m 47s), (Batch: 110 / Batches Num: 140, Percent Run: 79.28%), Loss:4.2134
+Epoch: 24 / 30, Accumulate Time to End: 14m 32s (- 3m 44s), (Batch: 120 / Batches Num: 140, Percent Run: 79.52%), Loss:4.1647
+Epoch: 24 / 30, Accumulate Time to End: 14m 34s (- 3m 41s), (Batch: 130 / Batches Num: 140, Percent Run: 79.76%), Loss:4.1412
+Epoch: 24 / 30, Accumulate Time to End: 14m 36s (- 3m 39s), (Batch: 140 / Batches Num: 140, Percent Run: 80.00%), Loss:4.1873
+
+Val Epoch: 24
+
+Val Sample: 1
+
+Input Sentence: < ['ive been to a couple of other pho joint in az that were either hit or miss but this one set the bar pretty high by balancing quality flavor cleanliness and let not forget <Unknown> fast friendly service']
+Target Sentence: < ['ive been to numerous pho restaurant over the last decade in both california where im from originally and arizona to be able to <Unknown> the difference between quality or <Unknown>']
+Output Sentence: < the been here the time and and the menu time and the and and i in the and the EOS
+
+Val Sample: 2
+
+Input Sentence: < ['look past the off the strip hotel everyone is over the age 45 and the sound of <Unknown> in the background and youll get a down to earth restaurant that serf quality southern style food']
+Target Sentence: < ['pan roast gumbo <Unknown> you cant go wrong']
+Output Sentence: < the <Unknown> with <Unknown> <Unknown> go wait wrong EOS
+
+Val Sample: 3
+
+Input Sentence: < ['i have eaten at a few famous afghan restaurant with my friend such a <Unknown> kabob but the food at these restaurant did not taste like a true afghan experience the kabob wa tasteless']
+Target Sentence: < ['the other night i went to watan kabob with a few friend who were craving the food so i searched for an afghan restaurant and wa <Unknown> to watan kabob']
+Output Sentence: < the food <Unknown> is have in the <Unknown> and a <Unknown> of and wa <Unknown> the <Unknown> wa we had in the <Unknown> EOS
+
+Val Sample: 4
+
+Input Sentence: < ['we got a reservation off open table and came here with a friend on saturday night and we started off with a glass a wine they had an excellent selection']
+Target Sentence: < ['next came the awesome bread basket']
+Output Sentence: < the time for night <Unknown> and and were wa <Unknown> and and and and and and and and and and and and and EOS
+
+Val Sample: 5
+
+Input Sentence: < ['the place is unassuming from the outside tucked away in a strip mall but i assure you if you give it a shot you will not be disappointed']
+Target Sentence: < ['to start out the service wa great']
+Output Sentence: < the the i the food is great and were wa wa and and and and and and and and and and EOS
+
+Val Sample: 6
+
+Input Sentence: < ['although i wa sad to see <Unknown> go i wa eager to sample the fare of the space new <Unknown> <Unknown> which offer <Unknown> cuisine']
+Target Sentence: < ['first i have to say that <Unknown> is used in the <Unknown> possible sense of the term here since you can order an appetizer of fried wisconsin cheese <Unknown> i cant say that if i had a hankering for lasagna this would be the first place id come to look']
+Output Sentence: < i of wa been go it i wa the to the <Unknown> <Unknown> EOS
+
+Val Sample: 7
+
+Input Sentence: < ['the name <Unknown> pointe cafe had me thinking i would be dining at a casual blah cafe <Unknown> this is 5 star quality food service']
+Target Sentence: < ['they are very generous with the food portion price is very reasonable']
+Output Sentence: < i have very friendly and a menu and and are great good and and is is and and and and and EOS
+
+Val Sample: 8
+
+Input Sentence: < ['not only are the noodle killer but i love the idea of a tiny little restaurant that really only doe a handful of item']
+Target Sentence: < ['you wont find dessert or even much for appetizer here']
+Output Sentence: < the can be to in <Unknown> a of the EOS
+
+Val Sample: 9
+
+Input Sentence: < ['amy and <Unknown> are two of the nicest most welcoming people youll meet when dining out and ive done my share of dining out']
+Target Sentence: < ['when we arrive <Unknown> always welcome u like family and i feel like we are eating at home']
+Output Sentence: < the i were at for we and in a and i can like i were in here least i i i <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['a a major foodie coming from southern california for spring break i have ate my heart out around orange county but this place']
+Target Sentence: < ['this place is something special']
+Output Sentence: < the is is a a and EOS
+
+Output as Input
+etp score: 2.8806, 3.7512, 4.1451, 4.2948
+Div score: 0.0499, 0.1217, 0.1872, 0.2504
+Bleu score: 0.1223, 0.0469, 0.0219, 0.0104
+Perplexity of Golden Input: 98.9762
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_24.pt
+Epoch: 25 / 30, Accumulate Time to End: 14m 48s (- 3m 38s), (Batch: 10 / Batches Num: 140, Percent Run: 80.24%), Loss:4.0458
+Epoch: 25 / 30, Accumulate Time to End: 14m 50s (- 3m 36s), (Batch: 20 / Batches Num: 140, Percent Run: 80.48%), Loss:4.1107
+Epoch: 25 / 30, Accumulate Time to End: 14m 52s (- 3m 33s), (Batch: 30 / Batches Num: 140, Percent Run: 80.71%), Loss:4.1390
+Epoch: 25 / 30, Accumulate Time to End: 14m 54s (- 3m 30s), (Batch: 40 / Batches Num: 140, Percent Run: 80.95%), Loss:4.1227
+Epoch: 25 / 30, Accumulate Time to End: 14m 56s (- 3m 27s), (Batch: 50 / Batches Num: 140, Percent Run: 81.19%), Loss:4.1370
+Epoch: 25 / 30, Accumulate Time to End: 14m 58s (- 3m 24s), (Batch: 60 / Batches Num: 140, Percent Run: 81.43%), Loss:4.0947
+Epoch: 25 / 30, Accumulate Time to End: 14m 59s (- 3m 22s), (Batch: 70 / Batches Num: 140, Percent Run: 81.67%), Loss:4.1227
+Epoch: 25 / 30, Accumulate Time to End: 15m 1s (- 3m 19s), (Batch: 80 / Batches Num: 140, Percent Run: 81.90%), Loss:4.1452
+Epoch: 25 / 30, Accumulate Time to End: 15m 3s (- 3m 16s), (Batch: 90 / Batches Num: 140, Percent Run: 82.14%), Loss:4.1776
+Epoch: 25 / 30, Accumulate Time to End: 15m 5s (- 3m 13s), (Batch: 100 / Batches Num: 140, Percent Run: 82.38%), Loss:4.1298
+Epoch: 25 / 30, Accumulate Time to End: 15m 7s (- 3m 10s), (Batch: 110 / Batches Num: 140, Percent Run: 82.62%), Loss:4.1232
+Epoch: 25 / 30, Accumulate Time to End: 15m 9s (- 3m 8s), (Batch: 120 / Batches Num: 140, Percent Run: 82.86%), Loss:4.1349
+Epoch: 25 / 30, Accumulate Time to End: 15m 11s (- 3m 5s), (Batch: 130 / Batches Num: 140, Percent Run: 83.09%), Loss:4.1070
+Epoch: 25 / 30, Accumulate Time to End: 15m 13s (- 3m 2s), (Batch: 140 / Batches Num: 140, Percent Run: 83.33%), Loss:4.1005
+
+Val Epoch: 25
+
+Val Sample: 1
+
+Input Sentence: < ['im usually not a fan of airport food but 4 peak wa great the chicken breakfast enchilada were great the portion size wa great and they were quick but the best part wa that they didnt <Unknown> the food']
+Target Sentence: < ['i will stop here everytime']
+Output Sentence: < i had definitely to for i the EOS
+
+Val Sample: 2
+
+Input Sentence: < ['my family and i love this place and the waffle are really good but one day i had the burger there and it wa gross the bread wa soggy and i will never eat the burger ever']
+Target Sentence: < ['the service wa great and the people there are nice']
+Output Sentence: < the food is great and the food were were a and and EOS
+
+Val Sample: 3
+
+Input Sentence: < ['however after leaving walmart heading to back to <Unknown> ave on peoria i looked to my right and there is when i saw the food truck in a dark parking lot strip mall']
+Target Sentence: < ['i went a purchase the fried fish and jambalaya bowl']
+Output Sentence: < it had here week of <Unknown> chicken and i and with and and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['ive been a huge fan of <Unknown> and it sister restaurant <Unknown> ever since they opened in vancouver so i wa thrilled to hear it came to toronto']
+Target Sentence: < ['service is impeccable']
+Output Sentence: < i is great and and and and and and and and and EOS
+
+Val Sample: 5
+
+Input Sentence: < ['we laughed ourselves silly reading the negative review in the voice of an <Unknown> 8 year old <Unknown> their foot while we waited for le than 5 min']
+Target Sentence: < ['it fast food people and it is <Unknown>']
+Output Sentence: < the wa and great and definitely great always a and and and and and and and and and EOS
+
+Val Sample: 6
+
+Input Sentence: < ['the place is unassuming from the outside tucked away in a strip mall but i assure you if you give it a shot you will not be disappointed']
+Target Sentence: < ['to start out the service wa great']
+Output Sentence: < the be i the food is great and were were wa and and and and and and and and and and EOS
+
+Val Sample: 7
+
+Input Sentence: < ['my friend and i ate here for lunch today because i saw an <Unknown> for them in the paper and i read such great review online']
+Target Sentence: < ['i read one bad review because of that i wanted to see for myself because i love good mexican food']
+Output Sentence: < we had the of of EOS
+
+Val Sample: 8
+
+Input Sentence: < ['the owner <Unknown> suggested a wonderful wine upon our arrival and the meal to follow did not disappoint especially the tiramisu and fruit plate for dessert']
+Target Sentence: < ['one of the best restaurant experience weve ever had']
+Output Sentence: < the of the best ive in in had had EOS
+
+Val Sample: 9
+
+Input Sentence: < ['this wa no ordinary day for u we were <Unknown> our vow after 25 year and didnt want to go to just any restaurant']
+Target Sentence: < ['we wanted to go somewhere special']
+Output Sentence: < the were to go back on and and and and and and and and and and and and EOS
+
+Val Sample: 10
+
+Input Sentence: < ['after a lackluster experience at sage and not ever really being in the mood for tapa there wasnt must reason to be there']
+Target Sentence: < ['this weekend however we had aria food credit to spend and wanted to try something new']
+Output Sentence: < the place wa wa had a of a a be a we to be the good EOS
+
+Output as Input
+etp score: 3.2410, 4.1472, 4.5776, 4.8345
+Div score: 0.0493, 0.1239, 0.1988, 0.2718
+Bleu score: 0.1358, 0.0507, 0.0233, 0.0086
+Perplexity of Golden Input: 99.9966
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_25.pt
+Epoch: 26 / 30, Accumulate Time to End: 15m 25s (- 3m 2s), (Batch: 10 / Batches Num: 140, Percent Run: 83.57%), Loss:4.0211
+Epoch: 26 / 30, Accumulate Time to End: 15m 27s (- 2m 59s), (Batch: 20 / Batches Num: 140, Percent Run: 83.81%), Loss:4.0490
+Epoch: 26 / 30, Accumulate Time to End: 15m 29s (- 2m 56s), (Batch: 30 / Batches Num: 140, Percent Run: 84.05%), Loss:4.0408
+Epoch: 26 / 30, Accumulate Time to End: 15m 31s (- 2m 53s), (Batch: 40 / Batches Num: 140, Percent Run: 84.29%), Loss:4.1077
+Epoch: 26 / 30, Accumulate Time to End: 15m 33s (- 2m 50s), (Batch: 50 / Batches Num: 140, Percent Run: 84.52%), Loss:4.0608
+Epoch: 26 / 30, Accumulate Time to End: 15m 35s (- 2m 48s), (Batch: 60 / Batches Num: 140, Percent Run: 84.76%), Loss:4.0833
+Epoch: 26 / 30, Accumulate Time to End: 15m 37s (- 2m 45s), (Batch: 70 / Batches Num: 140, Percent Run: 85.00%), Loss:4.0626
+Epoch: 26 / 30, Accumulate Time to End: 15m 39s (- 2m 42s), (Batch: 80 / Batches Num: 140, Percent Run: 85.24%), Loss:4.0516
+Epoch: 26 / 30, Accumulate Time to End: 15m 41s (- 2m 39s), (Batch: 90 / Batches Num: 140, Percent Run: 85.48%), Loss:4.0928
+Epoch: 26 / 30, Accumulate Time to End: 15m 43s (- 2m 37s), (Batch: 100 / Batches Num: 140, Percent Run: 85.71%), Loss:4.0871
+Epoch: 26 / 30, Accumulate Time to End: 15m 44s (- 2m 34s), (Batch: 110 / Batches Num: 140, Percent Run: 85.95%), Loss:4.0854
+Epoch: 26 / 30, Accumulate Time to End: 15m 46s (- 2m 31s), (Batch: 120 / Batches Num: 140, Percent Run: 86.19%), Loss:4.1379
+Epoch: 26 / 30, Accumulate Time to End: 15m 48s (- 2m 29s), (Batch: 130 / Batches Num: 140, Percent Run: 86.43%), Loss:4.1355
+Epoch: 26 / 30, Accumulate Time to End: 15m 50s (- 2m 26s), (Batch: 140 / Batches Num: 140, Percent Run: 86.67%), Loss:4.0787
+
+Val Epoch: 26
+
+Val Sample: 1
+
+Input Sentence: < ['ive been a customer of pizza <Unknown> for about twenty year strong and the best thing that can be said about this <Unknown> little <Unknown> is just how little it ha changed since it first opened it door in <Unknown>']
+Target Sentence: < ['the owner <Unknown> <Unknown> is a <Unknown> gentleman who make every guest feel like they never left home']
+Output Sentence: < the food are is and a little and and have me day to like a are had EOS
+
+Val Sample: 2
+
+Input Sentence: < ['ask for <Unknown> i thought he must be a partner in the restaurant because his enthusiasm personality and passion for what he wa doing that night were really something to experience']
+Target Sentence: < ['we started off with a personal tour of what wa being served fresh that night right in front of the kitchen where all the fish and seafood were on ice']
+Output Sentence: < i had with for a <Unknown> server of the i the <Unknown> and and i and in the of me menu and i wa staff wa cheese are very the
+
+Val Sample: 3
+
+Input Sentence: < ['it wa the perfect sampling of the best of what they have to offer a far a meat and pair perfectly with their any all of the yummy side they offer']
+Target Sentence: < ['we went with the bacon potato salad baked bean and mac cheese <Unknown>']
+Output Sentence: < i had in the <Unknown> <Unknown> and and and and cheese and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['okay did not sound like a rave review but it wa our last meal before leaving scottsdale my hubby doesnt ask for much and how can you fail at breakfast']
+Target Sentence: < ['so we were there mid week and late in the morning']
+Output Sentence: < the many were a for and and we with the <Unknown> we the a a EOS
+
+Val Sample: 5
+
+Input Sentence: < ['there is this one <Unknown> that greets <Unknown> customer every time we come here always asks how were doing and always offer to take our tray away when done eating']
+Target Sentence: < ['very friendly guy']
+Output Sentence: < i busy and and i i i EOS
+
+Val Sample: 6
+
+Input Sentence: < ['the first time we went to this restaurant we had just returned from a trip to italy where a we know the pizza is a good a it get']
+Target Sentence: < ['we thought it wa a bit <Unknown> to order pizza and be disappointed but instead we were delighted by how delicious it wa']
+Output Sentence: < the had the wa the <Unknown> pricey and the the i the only to the the were disappointed to the much the wa EOS
+
+Val Sample: 7
+
+Input Sentence: < ['so i had to check it out i got the curry chicken over a bed of rice and bean and it wa absolutely straight from the soul']
+Target Sentence: < ['this food wa so <Unknown> and tasty i ate every bite']
+Output Sentence: < the is wa good good and the the had a time to <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 8
+
+Input Sentence: < ['the owner <Unknown> suggested a wonderful wine upon our arrival and the meal to follow did not disappoint especially the tiramisu and fruit plate for dessert']
+Target Sentence: < ['one of the best restaurant experience weve ever had']
+Output Sentence: < the of the best ive in in had had EOS
+
+Val Sample: 9
+
+Input Sentence: < ['i havent been back since i became vegetarian and i have really missed it but now i see that you can get taco with potato']
+Target Sentence: < ['i will have to try that or will stop being a vegetarian for some meal just so i can eat the taco again']
+Output Sentence: < i would be to try the you <Unknown> be here back <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['i love that there is always a <Unknown> of real ale available and a <Unknown> to help find a perfect pairing of food brew']
+Target Sentence: < ['the food beverage service are all exemplary']
+Output Sentence: < i food is is is great great EOS
+
+Output as Input
+etp score: 3.1169, 4.0590, 4.5358, 4.8421
+Div score: 0.0526, 0.1327, 0.2119, 0.2927
+Bleu score: 0.1274, 0.0470, 0.0201, 0.0057
+Perplexity of Golden Input: 99.9356
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_26.pt
+Epoch: 27 / 30, Accumulate Time to End: 16m 3s (- 2m 25s), (Batch: 10 / Batches Num: 140, Percent Run: 86.90%), Loss:4.0236
+Epoch: 27 / 30, Accumulate Time to End: 16m 5s (- 2m 22s), (Batch: 20 / Batches Num: 140, Percent Run: 87.14%), Loss:4.0286
+Epoch: 27 / 30, Accumulate Time to End: 16m 7s (- 2m 19s), (Batch: 30 / Batches Num: 140, Percent Run: 87.38%), Loss:4.0446
+Epoch: 27 / 30, Accumulate Time to End: 16m 9s (- 2m 16s), (Batch: 40 / Batches Num: 140, Percent Run: 87.62%), Loss:3.9901
+Epoch: 27 / 30, Accumulate Time to End: 16m 11s (- 2m 14s), (Batch: 50 / Batches Num: 140, Percent Run: 87.86%), Loss:4.0636
+Epoch: 27 / 30, Accumulate Time to End: 16m 12s (- 2m 11s), (Batch: 60 / Batches Num: 140, Percent Run: 88.09%), Loss:4.0134
+Epoch: 27 / 30, Accumulate Time to End: 16m 14s (- 2m 8s), (Batch: 70 / Batches Num: 140, Percent Run: 88.33%), Loss:4.0173
+Epoch: 27 / 30, Accumulate Time to End: 16m 16s (- 2m 6s), (Batch: 80 / Batches Num: 140, Percent Run: 88.57%), Loss:4.0639
+Epoch: 27 / 30, Accumulate Time to End: 16m 18s (- 2m 3s), (Batch: 90 / Batches Num: 140, Percent Run: 88.81%), Loss:4.0436
+Epoch: 27 / 30, Accumulate Time to End: 16m 20s (- 2m 0s), (Batch: 100 / Batches Num: 140, Percent Run: 89.05%), Loss:4.0319
+Epoch: 27 / 30, Accumulate Time to End: 16m 22s (- 1m 57s), (Batch: 110 / Batches Num: 140, Percent Run: 89.28%), Loss:4.0431
+Epoch: 27 / 30, Accumulate Time to End: 16m 24s (- 1m 55s), (Batch: 120 / Batches Num: 140, Percent Run: 89.52%), Loss:4.0765
+Epoch: 27 / 30, Accumulate Time to End: 16m 26s (- 1m 52s), (Batch: 130 / Batches Num: 140, Percent Run: 89.76%), Loss:4.0276
+Epoch: 27 / 30, Accumulate Time to End: 16m 27s (- 1m 49s), (Batch: 140 / Batches Num: 140, Percent Run: 90.00%), Loss:4.0391
+
+Val Epoch: 27
+
+Val Sample: 1
+
+Input Sentence: < ['the sommelier came over right away to offer his <Unknown> and although we didnt end up ordering wine we were too <Unknown> by the yummy cocktail he did bring u a taste of the sparkling sangria']
+Target Sentence: < ['<Unknown> our server wa extremely friendly efficient and so helpful in helping u navigate the lengthy menu']
+Output Sentence: < the <Unknown> server wa very friendly and and friendly gave we a me a the <Unknown> <Unknown> EOS
+
+Val Sample: 2
+
+Input Sentence: < ['the staff wa extremely friendly helpful i told the cashier it wa my first time coming to dine with them and he let me know which wa the most popular item etc food wa so good']
+Target Sentence: < ['im addicted <Unknown>']
+Output Sentence: < i not the EOS
+
+Val Sample: 3
+
+Input Sentence: < ['i stayed here when i got married and chose the mgm because i could get a s suite with <Unknown> for the same price i could get a regular room at other place']
+Target Sentence: < ['im a <Unknown> and found this hotel to be clean and fresh <Unknown>']
+Output Sentence: < i a <Unknown> and i a place a the the and the EOS
+
+Val Sample: 4
+
+Input Sentence: < ['had breakfast tea at casa imperial this morning the dim sum wa actually impeccable white tuna an bacon tart bird tart tart and bbq pork are on my favorite list right now']
+Target Sentence: < ['but the <Unknown> is way too overpriced']
+Output Sentence: < i the <Unknown> is always to good EOS
+
+Val Sample: 5
+
+Input Sentence: < ['you eat and drink listen and talk in a complete darkness which make you realize how <Unknown> you should be for ability to see that is taken for granted']
+Target Sentence: < ['we were told that the waiter there are blind but they do a good job']
+Output Sentence: < great always in the i food wa wa very and the were not great selection EOS
+
+Val Sample: 6
+
+Input Sentence: < ['ive been a huge fan of <Unknown> and it sister restaurant <Unknown> ever since they opened in vancouver so i wa thrilled to hear it came to toronto']
+Target Sentence: < ['service is impeccable']
+Output Sentence: < i is great and and and and and and and and and and and and and EOS
+
+Val Sample: 7
+
+Input Sentence: < ['now they dont let you order temp on your burger which normally would be a deal breaker for me im a rare <Unknown> wow it good']
+Target Sentence: < ['blue cheese fry w bacon best fry <Unknown>']
+Output Sentence: < i <Unknown> <Unknown> with <Unknown> <Unknown> <Unknown> in in <Unknown> <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 8
+
+Input Sentence: < ['this is an unusual post because i used to be a <Unknown> the only white guy in an otherwise all thai staff and it wa amazing']
+Target Sentence: < ['they would feed me at the start and end of my shift']
+Output Sentence: < i have be the for the bar of is to a mouth to to EOS
+
+Val Sample: 9
+
+Input Sentence: < ['when we checked in with the hostess she wa super nice and gave u menu to look at while we were waiting for our table']
+Target Sentence: < ['before we were seated <Unknown> the owner came over and introduced himself and thanked u for coming in']
+Output Sentence: < the a were seated at in <Unknown> and with and have a a we the the the and the EOS
+
+Val Sample: 10
+
+Input Sentence: < ['the wine and cheese tasting are informative and fun the four course <Unknown> menu dinner are amazing heck even the regular menu is outstanding']
+Target Sentence: < ['if this restaurant were in new york it would take a huge <Unknown> a big name or a month to get a table for dinner']
+Output Sentence: < the you is is in the <Unknown> and is be you great selection EOS
+
+Output as Input
+etp score: 2.8505, 3.7488, 4.1759, 4.3628
+Div score: 0.0570, 0.1387, 0.2123, 0.2799
+Bleu score: 0.1159, 0.0418, 0.0193, 0.0077
+Perplexity of Golden Input: 100.4495
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_27.pt
+Epoch: 28 / 30, Accumulate Time to End: 16m 40s (- 1m 48s), (Batch: 10 / Batches Num: 140, Percent Run: 90.24%), Loss:3.9340
+Epoch: 28 / 30, Accumulate Time to End: 16m 42s (- 1m 45s), (Batch: 20 / Batches Num: 140, Percent Run: 90.48%), Loss:4.0225
+Epoch: 28 / 30, Accumulate Time to End: 16m 44s (- 1m 42s), (Batch: 30 / Batches Num: 140, Percent Run: 90.71%), Loss:4.0012
+Epoch: 28 / 30, Accumulate Time to End: 16m 46s (- 1m 40s), (Batch: 40 / Batches Num: 140, Percent Run: 90.95%), Loss:3.9644
+Epoch: 28 / 30, Accumulate Time to End: 16m 48s (- 1m 37s), (Batch: 50 / Batches Num: 140, Percent Run: 91.19%), Loss:3.9848
+Epoch: 28 / 30, Accumulate Time to End: 16m 50s (- 1m 34s), (Batch: 60 / Batches Num: 140, Percent Run: 91.43%), Loss:4.0121
+Epoch: 28 / 30, Accumulate Time to End: 16m 51s (- 1m 32s), (Batch: 70 / Batches Num: 140, Percent Run: 91.67%), Loss:3.9619
+Epoch: 28 / 30, Accumulate Time to End: 16m 53s (- 1m 29s), (Batch: 80 / Batches Num: 140, Percent Run: 91.90%), Loss:4.0498
+Epoch: 28 / 30, Accumulate Time to End: 16m 55s (- 1m 26s), (Batch: 90 / Batches Num: 140, Percent Run: 92.14%), Loss:4.0108
+Epoch: 28 / 30, Accumulate Time to End: 16m 57s (- 1m 23s), (Batch: 100 / Batches Num: 140, Percent Run: 92.38%), Loss:4.0002
+Epoch: 28 / 30, Accumulate Time to End: 16m 59s (- 1m 21s), (Batch: 110 / Batches Num: 140, Percent Run: 92.62%), Loss:4.0492
+Epoch: 28 / 30, Accumulate Time to End: 17m 1s (- 1m 18s), (Batch: 120 / Batches Num: 140, Percent Run: 92.86%), Loss:4.0036
+Epoch: 28 / 30, Accumulate Time to End: 17m 3s (- 1m 15s), (Batch: 130 / Batches Num: 140, Percent Run: 93.09%), Loss:4.0113
+Epoch: 28 / 30, Accumulate Time to End: 17m 5s (- 1m 13s), (Batch: 140 / Batches Num: 140, Percent Run: 93.33%), Loss:3.9896
+
+Val Epoch: 28
+
+Val Sample: 1
+
+Input Sentence: < ['started off earlier in the evening at <Unknown> while the <Unknown> side wa <Unknown> getting busier and it wa great being able to hit the dance floor at <Unknown> and then <Unknown> to the <Unknown> side to drink more <Unknown> which wa my favorite bourbon based cocktail']
+Target Sentence: < ['lot of great dj usually kind of nice not to hear the same party hit you hear in almost every other nightclub']
+Output Sentence: < i of food place and EOS
+
+Val Sample: 2
+
+Input Sentence: < ['<Unknown> is the best frozen yogurt shop ive been to in arizona and ive been to a few place no need for name dropping but have you noticed they are starting to pop up all over the place like coffee shop']
+Target Sentence: < ['like starbucks the consistency is always their perfect']
+Output Sentence: < i a a <Unknown> of amazing fresh menu menu EOS
+
+Val Sample: 3
+
+Input Sentence: < ['you dont feel horrible after eating them and considering they are made fresh you know they will never run out of your favorite flavor like so many other donut place do if you arent there first thing in the morning']
+Target Sentence: < ['my favorite are the black and white strawberry lemonade and cinnamon sugar with <Unknown> icing']
+Output Sentence: < i husband is the <Unknown> chicken the bean and EOS
+
+Val Sample: 4
+
+Input Sentence: < ['ive only been to the original in beverly hill but watching all the rose bowl team enjoy the annual beef bowl on the news made me crave lawrys even more']
+Target Sentence: < ['i love how lawrys ha never changed']
+Output Sentence: < i love this i is a been EOS
+
+Val Sample: 5
+
+Input Sentence: < ['a a young persian far away from my mom delightful creation i can say this is one of the best persian eatery ive been to to satisfy my craving']
+Target Sentence: < ['the kabob are without a doubt on point']
+Output Sentence: < i food were amazing amazing little to the EOS
+
+Val Sample: 6
+
+Input Sentence: < ['the place is unassuming from the outside tucked away in a strip mall but i assure you if you give it a shot you will not be disappointed']
+Target Sentence: < ['to start out the service wa great']
+Output Sentence: < the the i the menu wa great EOS
+
+Val Sample: 7
+
+Input Sentence: < ['this sushi store is hot like wasabi when i <Unknown> <Unknown> should be big like <Unknown> <Unknown> if you are all about value come to <Unknown>']
+Target Sentence: < ['the food is far beyond the price you will pay for it']
+Output Sentence: < i food is amazing good the best are can be EOS
+
+Val Sample: 8
+
+Input Sentence: < ['the owner <Unknown> suggested a wonderful wine upon our arrival and the meal to follow did not disappoint especially the tiramisu and fruit plate for dessert']
+Target Sentence: < ['one of the best restaurant experience weve ever had']
+Output Sentence: < the of the best place in ever had had EOS
+
+Val Sample: 9
+
+Input Sentence: < ['host staff wa friendly we gave them a cell number and received a text within five minute to <Unknown> u our table wa ready']
+Target Sentence: < ['kind of a shame we didnt have the chance to do any window shopping in this upscale outdoor mall']
+Output Sentence: < we of <Unknown> little EOS
+
+Val Sample: 10
+
+Input Sentence: < ['i came in for a hot dog but ended up with a <Unknown> link <Unknown> the owner gave me a complementary cup of soup']
+Target Sentence: < ['the hot link wa definitely delicious but the soup really <Unknown> the deal']
+Output Sentence: < the food <Unknown> wa a a EOS
+
+Output as Input
+etp score: 3.1181, 3.9933, 4.4017, 4.5737
+Div score: 0.0602, 0.1468, 0.2284, 0.3091
+Bleu score: 0.1018, 0.0370, 0.0163, 0.0059
+Perplexity of Golden Input: 100.2938
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_28.pt
+Epoch: 29 / 30, Accumulate Time to End: 17m 17s (- 1m 11s), (Batch: 10 / Batches Num: 140, Percent Run: 93.57%), Loss:3.9596
+Epoch: 29 / 30, Accumulate Time to End: 17m 19s (- 1m 8s), (Batch: 20 / Batches Num: 140, Percent Run: 93.81%), Loss:3.9382
+Epoch: 29 / 30, Accumulate Time to End: 17m 21s (- 1m 5s), (Batch: 30 / Batches Num: 140, Percent Run: 94.05%), Loss:3.9742
+Epoch: 29 / 30, Accumulate Time to End: 17m 23s (- 1m 3s), (Batch: 40 / Batches Num: 140, Percent Run: 94.29%), Loss:3.9828
+Epoch: 29 / 30, Accumulate Time to End: 17m 25s (- 1m 0s), (Batch: 50 / Batches Num: 140, Percent Run: 94.52%), Loss:3.9224
+Epoch: 29 / 30, Accumulate Time to End: 17m 27s (- 0m 57s), (Batch: 60 / Batches Num: 140, Percent Run: 94.76%), Loss:3.9633
+Epoch: 29 / 30, Accumulate Time to End: 17m 29s (- 0m 55s), (Batch: 70 / Batches Num: 140, Percent Run: 95.00%), Loss:3.9617
+Epoch: 29 / 30, Accumulate Time to End: 17m 31s (- 0m 52s), (Batch: 80 / Batches Num: 140, Percent Run: 95.24%), Loss:3.9301
+Epoch: 29 / 30, Accumulate Time to End: 17m 32s (- 0m 49s), (Batch: 90 / Batches Num: 140, Percent Run: 95.48%), Loss:3.9605
+Epoch: 29 / 30, Accumulate Time to End: 17m 34s (- 0m 47s), (Batch: 100 / Batches Num: 140, Percent Run: 95.71%), Loss:3.9674
+Epoch: 29 / 30, Accumulate Time to End: 17m 36s (- 0m 44s), (Batch: 110 / Batches Num: 140, Percent Run: 95.95%), Loss:3.9899
+Epoch: 29 / 30, Accumulate Time to End: 17m 38s (- 0m 41s), (Batch: 120 / Batches Num: 140, Percent Run: 96.19%), Loss:4.0024
+Epoch: 29 / 30, Accumulate Time to End: 17m 40s (- 0m 39s), (Batch: 130 / Batches Num: 140, Percent Run: 96.43%), Loss:4.0450
+Epoch: 29 / 30, Accumulate Time to End: 17m 42s (- 0m 36s), (Batch: 140 / Batches Num: 140, Percent Run: 96.67%), Loss:3.9742
+
+Val Epoch: 29
+
+Val Sample: 1
+
+Input Sentence: < ['we laughed ourselves silly reading the negative review in the voice of an <Unknown> 8 year old <Unknown> their foot while we waited for le than 5 min']
+Target Sentence: < ['it fast food people and it is <Unknown>']
+Output Sentence: < great great fresh great so the ha always a great and and and and EOS
+
+Val Sample: 2
+
+Input Sentence: < ['one awesome thing is that they offer normal food sister description such a burger hot dog fish and chip and chicken strip a well a mediterranean food']
+Target Sentence: < ['we got the vegetarian platter appetizer so the <Unknown> could try something mediterranean without <Unknown> to a full meal that they were convinced they wouldnt like']
+Output Sentence: < the always the <Unknown> and and and i best and be it to the the EOS
+
+Val Sample: 3
+
+Input Sentence: < ['now they dont let you order temp on your burger which normally would be a deal breaker for me im a rare <Unknown> wow it good']
+Target Sentence: < ['blue cheese fry w bacon best fry <Unknown>']
+Output Sentence: < but of <Unknown> with <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 4
+
+Input Sentence: < ['the owner <Unknown> suggested a wonderful wine upon our arrival and the meal to follow did not disappoint especially the tiramisu and fruit plate for dessert']
+Target Sentence: < ['one of the best restaurant experience weve ever had']
+Output Sentence: < the of the best place in in had had EOS
+
+Val Sample: 5
+
+Input Sentence: < ['the name <Unknown> pointe cafe had me thinking i would be dining at a casual blah cafe <Unknown> this is 5 star quality food service']
+Target Sentence: < ['they are very generous with the food portion price is very reasonable']
+Output Sentence: < i have always friendly and a menu and and are great reasonable and and are is EOS
+
+Val Sample: 6
+
+Input Sentence: < ['i had read about this place before and it had very good rating with that being said when expectation are high disappointment isnt far behind']
+Target Sentence: < ['this place not only met expectation but surpassed them']
+Output Sentence: < the is wa disappoint EOS
+
+Val Sample: 7
+
+Input Sentence: < ['food 55 service 55 atmosphere 455 food hot stuff savory crepe hot <Unknown> salami mushroom tomato basil spinach sun dried tomato <Unknown> cheese']
+Target Sentence: < ['crepe wa crispy on the outside yet doughy']
+Output Sentence: < i and very and the menu and to and wa wa and and EOS
+
+Val Sample: 8
+
+Input Sentence: < ['im new to the area so ive been trying out local bbq establishment to find a new home and feed my <Unknown> craving']
+Target Sentence: < ['i saw the <Unknown> food truck out front of <Unknown> and wa curious how good can a food truck be']
+Output Sentence: < not would the <Unknown> of of with of EOS
+
+Val Sample: 9
+
+Input Sentence: < ['my best friend introduced me to lucky <Unknown> for lunch about two month ago and ive been back three time since then']
+Target Sentence: < ['the atmosphere is that of a bar but dont let this discourage you from checking it out']
+Output Sentence: < i food is very nice the little area <Unknown> forget it place EOS
+
+Val Sample: 10
+
+Input Sentence: < ['this is a little hidden gem im a regular the breakfast wa <Unknown> the tortilla are home made they are great']
+Target Sentence: < ['the service wa excellent']
+Output Sentence: < the food wa great and wa wa wa and and and and and and and and and and and and and and EOS
+
+Output as Input
+etp score: 3.1113, 4.0509, 4.5493, 4.8173
+Div score: 0.0624, 0.1563, 0.2469, 0.3339
+Bleu score: 0.1186, 0.0450, 0.0208, 0.0087
+Perplexity of Golden Input: 101.3090
+
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_29.pt
+Epoch: 30 / 30, Accumulate Time to End: 17m 54s (- 0m 34s), (Batch: 10 / Batches Num: 140, Percent Run: 96.90%), Loss:3.9148
+Epoch: 30 / 30, Accumulate Time to End: 17m 56s (- 0m 31s), (Batch: 20 / Batches Num: 140, Percent Run: 97.14%), Loss:3.8845
+Epoch: 30 / 30, Accumulate Time to End: 17m 58s (- 0m 29s), (Batch: 30 / Batches Num: 140, Percent Run: 97.38%), Loss:3.9188
+Epoch: 30 / 30, Accumulate Time to End: 18m 0s (- 0m 26s), (Batch: 40 / Batches Num: 140, Percent Run: 97.62%), Loss:3.9321
+Epoch: 30 / 30, Accumulate Time to End: 18m 2s (- 0m 23s), (Batch: 50 / Batches Num: 140, Percent Run: 97.86%), Loss:3.9336
+Epoch: 30 / 30, Accumulate Time to End: 18m 4s (- 0m 21s), (Batch: 60 / Batches Num: 140, Percent Run: 98.09%), Loss:3.9302
+Epoch: 30 / 30, Accumulate Time to End: 18m 6s (- 0m 18s), (Batch: 70 / Batches Num: 140, Percent Run: 98.33%), Loss:3.9298
+Epoch: 30 / 30, Accumulate Time to End: 18m 8s (- 0m 15s), (Batch: 80 / Batches Num: 140, Percent Run: 98.57%), Loss:3.9377
+Epoch: 30 / 30, Accumulate Time to End: 18m 10s (- 0m 13s), (Batch: 90 / Batches Num: 140, Percent Run: 98.81%), Loss:3.9483
+Epoch: 30 / 30, Accumulate Time to End: 18m 12s (- 0m 10s), (Batch: 100 / Batches Num: 140, Percent Run: 99.05%), Loss:3.9443
+Epoch: 30 / 30, Accumulate Time to End: 18m 14s (- 0m 7s), (Batch: 110 / Batches Num: 140, Percent Run: 99.28%), Loss:3.9259
+Epoch: 30 / 30, Accumulate Time to End: 18m 15s (- 0m 5s), (Batch: 120 / Batches Num: 140, Percent Run: 99.52%), Loss:3.9678
+Epoch: 30 / 30, Accumulate Time to End: 18m 17s (- 0m 2s), (Batch: 130 / Batches Num: 140, Percent Run: 99.76%), Loss:3.9562
+Epoch: 30 / 30, Accumulate Time to End: 18m 19s (- 0m 0s), (Batch: 140 / Batches Num: 140, Percent Run: 100.00%), Loss:3.9268
+
+Val Epoch: 30
+
+Val Sample: 1
+
+Input Sentence: < ['our meal edamame with shaved <Unknown> sashimi yellowtail with miso and jalapeno <Unknown> bobby favorite black cod in lettuce cup with <Unknown> flake my favorite so perfect sashimi with garlic chip little too salty salmon sushi toro sushi very tasty fish dessert edamame icecream <Unknown> a <Unknown> <Unknown> sauce and']
+Target Sentence: < ['a super treat for sushi but be prepared to spend money']
+Output Sentence: < the bit <Unknown> to a EOS
+
+Val Sample: 2
+
+Input Sentence: < ['my family and i love this place and the waffle are really good but one day i had the burger there and it wa gross the bread wa soggy and i will never eat the burger ever']
+Target Sentence: < ['the service wa great and the people there are nice']
+Output Sentence: < the food is great the the food were were so to to to EOS
+
+Val Sample: 3
+
+Input Sentence: < ['i have never had a sandwich that i did not enjoy and i usually find myself eating till im sick because i just dont want to stop eating the delicious thing piled on my plate']
+Target Sentence: < ['it a very good value you get a lot of food for your dollar']
+Output Sentence: < i a great good place for can EOS
+
+Val Sample: 4
+
+Input Sentence: < ['use to be a regular to the <Unknown> location but we havent been in a while because the quality seemed to have dropped and the service wasnt so great']
+Target Sentence: < ['went to the <Unknown> location this week and we were pleasantly surprised']
+Output Sentence: < i back the <Unknown> <Unknown> in is and i had very surprised to the EOS
+
+Val Sample: 5
+
+Input Sentence: < ['the place is unassuming from the outside tucked away in a strip mall but i assure you if you give it a shot you will not be disappointed']
+Target Sentence: < ['to start out the service wa great']
+Output Sentence: < the be i the food wa great and wa were and and and and and and and and and and and and and and and and and and and and
+
+Val Sample: 6
+
+Input Sentence: < ['not only wa the pimento cheese burger out of this world but the service i received here wa one of the best i have ever had']
+Target Sentence: < ['heaven wa my server she wa very informative quick to take care of u and she kept a smile on her face the whole entire time']
+Output Sentence: < i <Unknown> a first <Unknown> wa friendly friendly and and see a of u EOS
+
+Val Sample: 7
+
+Input Sentence: < ['when we checked in with the hostess she wa super nice and gave u menu to look at while we were waiting for our table']
+Target Sentence: < ['before we were seated <Unknown> the owner came over and introduced himself and thanked u for coming in']
+Output Sentence: < the we were seated at in <Unknown> and with a our to to we u to the to the EOS
+
+Val Sample: 8
+
+Input Sentence: < ['unfortunately we did not get to order a our friend that wa with u got ill we thought he wa having a <Unknown>']
+Target Sentence: < ['i went to the kitchen area and asked them to call <Unknown>']
+Output Sentence: < we had to the night in in we the were go the we EOS
+
+Val Sample: 9
+
+Input Sentence: < ['<Unknown> <Unknown> outlet in toronto <Unknown> und bei yelp nach rib in der <Unknown> <Unknown> und <Unknown> auf <Unknown> <Unknown> <Unknown>']
+Target Sentence: < ['<Unknown> barbecue war er nicht zu <Unknown>']
+Output Sentence: < <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> <Unknown> EOS
+
+Val Sample: 10
+
+Input Sentence: < ['a soon a we got out of the car we could smell the burger cooking like a backyard get together']
+Target Sentence: < ['i ordered the breakfast burger and sweet potato fry']
+Output Sentence: < the had the <Unknown> menu and the chicken and EOS
+
+Output as Input
+etp score: 3.0117, 3.9436, 4.4016, 4.6340
+Div score: 0.0597, 0.1422, 0.2170, 0.2870
+Bleu score: 0.1191, 0.0430, 0.0187, 0.0057
+Perplexity of Golden Input: 102.0160
+
+[nltk_data] Downloading package punkt to /home/li.9953/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/li.9953/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/li.9953/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/li.9953/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+Using TensorFlow backend.
+Save model as model_result/rest_2241_hidden_size_256_E_layer_2_D_layer_1_Enc_bidi_1_T_10_epoch_30.pt
+
+The optimal epoch is: 24 
