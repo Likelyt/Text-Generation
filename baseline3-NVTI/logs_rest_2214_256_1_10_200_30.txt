@@ -1,0 +1,424 @@
+Namespace(batch_size=128, bi=True, data_name='rest_data_pair_24K.txt', embedding_size=300, encoder_dropout=0.2, end_epoch=30, h1_testing_samples=1, h1_train_samples=1, h2_testing_samples=10, h2_train_samples=1, hidden_size=256, lr=0.001, n_layers_decoder=1, n_layers_encoder=2, n_sample=10, n_topic=200, review_name='rest', sampling_seed=12345, torch_seed=12345)
+Read 24270 sentence pairs
+Filtered to 22410 pairs
+Indexing words...
+Indexed 15361 words in input language, 15361 words in output
+keep_words 5454 / 15357 = 0.3551
+There are 22410 pairs sentence in total
+There are 1450489 tokens in data
+Read 24270 sentence pairs
+Filtered to 22410 pairs
+Indexing words...
+Indexed 15361 words in input language, 15361 words in output
+keep_words 5454 / 15357 = 0.3551
+There are 22410 pairs in total
+There are 5441 words in total
+The max length of sentence is: 111
+The encoder sentences average length is: 11.87
+The decoder sentences average length is: 12.34
+EncoderRNN(
+  (embedding): Embedding(5454, 300)
+  (embedding_dropout): Dropout(p=0.2)
+  (gru): GRU(300, 256, num_layers=2, dropout=0.2, bidirectional=True)
+)
+AttnDecoderRNN(
+  (embedding_pretrained): Embedding(5454, 300)
+  (embedding_dropout): Dropout(p=0.2)
+  (gru): GRU(300, 256, dropout=0.2)
+  (topic_transofm): Linear(in_features=200, out_features=256, bias=True)
+  (concat): Linear(in_features=768, out_features=256, bias=True)
+  (out): Linear(in_features=256, out_features=5454, bias=True)
+  (attn): Attn(
+    (linear_in): Linear(in_features=256, out_features=256, bias=False)
+    (sm): Softmax()
+    (linear_out): Linear(in_features=512, out_features=256, bias=False)
+    (tanh): Tanh()
+  )
+)
+VAE(
+  (fc1): Linear(in_features=5441, out_features=256, bias=True)
+  (fc21): Linear(in_features=256, out_features=200, bias=True)
+  (fc22): Linear(in_features=256, out_features=200, bias=True)
+  (fc3): Linear(in_features=200, out_features=5441, bias=True)
+)
+Topic_Transition(
+  (fc1): Linear(in_features=456, out_features=256, bias=True)
+  (fc21): Linear(in_features=256, out_features=200, bias=True)
+  (fc22): Linear(in_features=256, out_features=200, bias=True)
+)
+Epoch: 1 / 30, Accumulate Time to End: 1m 44s (- 729m 12s), (Batch: 10 / Batches Num: 140, Percent Run: 0.24%), Loss:-92.2548
+Epoch: 1 / 30, Accumulate Time to End: 3m 40s (- 769m 30s), (Batch: 20 / Batches Num: 140, Percent Run: 0.48%), Loss:-93.8375
+Epoch: 1 / 30, Accumulate Time to End: 5m 42s (- 793m 28s), (Batch: 30 / Batches Num: 140, Percent Run: 0.71%), Loss:-93.8973
+Epoch: 1 / 30, Accumulate Time to End: 7m 44s (- 804m 50s), (Batch: 40 / Batches Num: 140, Percent Run: 0.95%), Loss:-93.8943
+Epoch: 1 / 30, Accumulate Time to End: 9m 43s (- 807m 33s), (Batch: 50 / Batches Num: 140, Percent Run: 1.19%), Loss:-93.9142
+Epoch: 1 / 30, Accumulate Time to End: 11m 33s (- 797m 24s), (Batch: 60 / Batches Num: 140, Percent Run: 1.43%), Loss:-93.9645
+Epoch: 1 / 30, Accumulate Time to End: 13m 20s (- 786m 56s), (Batch: 70 / Batches Num: 140, Percent Run: 1.67%), Loss:-93.9996
+Epoch: 1 / 30, Accumulate Time to End: 15m 8s (- 779m 40s), (Batch: 80 / Batches Num: 140, Percent Run: 1.90%), Loss:-94.0038
+Epoch: 1 / 30, Accumulate Time to End: 17m 10s (- 784m 27s), (Batch: 90 / Batches Num: 140, Percent Run: 2.14%), Loss:-94.0149
+Epoch: 1 / 30, Accumulate Time to End: 19m 3s (- 781m 3s), (Batch: 100 / Batches Num: 140, Percent Run: 2.38%), Loss:-94.0327
+Epoch: 1 / 30, Accumulate Time to End: 20m 59s (- 780m 28s), (Batch: 110 / Batches Num: 140, Percent Run: 2.62%), Loss:-94.0390
+Epoch: 1 / 30, Accumulate Time to End: 23m 36s (- 802m 49s), (Batch: 120 / Batches Num: 140, Percent Run: 2.86%), Loss:-94.0643
+Epoch: 1 / 30, Accumulate Time to End: 26m 7s (- 817m 48s), (Batch: 130 / Batches Num: 140, Percent Run: 3.10%), Loss:-94.0490
+Epoch: 1 / 30, Accumulate Time to End: 28m 36s (- 829m 39s), (Batch: 140 / Batches Num: 140, Percent Run: 3.33%), Loss:-94.0955
+
+Val Epoch: 1
+
+Output as Input
+etp score: 0.0000, 0.0000, 0.0000, 0.0000
+Div score: 0.0003, 0.0003, 0.0003, 0.0003
+Bleu score: 0.0256, 0.0000, 0.0000, 0.0000
+Perplexity of Golden Input:  314.3667
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_1.pt
+Epoch: 2 / 30, Accumulate Time to End: 42m 59s (- 1160m 39s), (Batch: 10 / Batches Num: 140, Percent Run: 3.57%), Loss:-94.1154
+Epoch: 2 / 30, Accumulate Time to End: 45m 25s (- 1146m 47s), (Batch: 20 / Batches Num: 140, Percent Run: 3.81%), Loss:-94.1240
+Epoch: 2 / 30, Accumulate Time to End: 47m 50s (- 1134m 8s), (Batch: 30 / Batches Num: 140, Percent Run: 4.05%), Loss:-94.1182
+Epoch: 2 / 30, Accumulate Time to End: 50m 17s (- 1123m 19s), (Batch: 40 / Batches Num: 140, Percent Run: 4.29%), Loss:-94.1523
+Epoch: 2 / 30, Accumulate Time to End: 52m 38s (- 1111m 9s), (Batch: 50 / Batches Num: 140, Percent Run: 4.52%), Loss:-94.1440
+Epoch: 2 / 30, Accumulate Time to End: 54m 48s (- 1096m 3s), (Batch: 60 / Batches Num: 140, Percent Run: 4.76%), Loss:-94.1560
+Epoch: 2 / 30, Accumulate Time to End: 56m 58s (- 1082m 29s), (Batch: 70 / Batches Num: 140, Percent Run: 5.00%), Loss:-94.1429
+Epoch: 2 / 30, Accumulate Time to End: 59m 6s (- 1069m 28s), (Batch: 80 / Batches Num: 140, Percent Run: 5.24%), Loss:-94.2056
+Epoch: 2 / 30, Accumulate Time to End: 61m 16s (- 1057m 31s), (Batch: 90 / Batches Num: 140, Percent Run: 5.48%), Loss:-94.1787
+Epoch: 2 / 30, Accumulate Time to End: 63m 26s (- 1046m 42s), (Batch: 100 / Batches Num: 140, Percent Run: 5.71%), Loss:-94.1999
+Epoch: 2 / 30, Accumulate Time to End: 65m 32s (- 1035m 30s), (Batch: 110 / Batches Num: 140, Percent Run: 5.95%), Loss:-94.1901
+Epoch: 2 / 30, Accumulate Time to End: 67m 38s (- 1025m 4s), (Batch: 120 / Batches Num: 140, Percent Run: 6.19%), Loss:-94.1988
+Epoch: 2 / 30, Accumulate Time to End: 69m 44s (- 1015m 3s), (Batch: 130 / Batches Num: 140, Percent Run: 6.43%), Loss:-94.1891
+Epoch: 2 / 30, Accumulate Time to End: 71m 51s (- 1006m 5s), (Batch: 140 / Batches Num: 140, Percent Run: 6.67%), Loss:-94.2474
+
+Val Epoch: 2
+
+Output as Input
+etp score: 0.0980, 0.1974, 0.2978, 0.3975
+Div score: 0.0008, 0.0016, 0.0025, 0.0036
+Bleu score: 0.0299, 0.0029, 0.0000, 0.0000
+Perplexity of Golden Input:  277.3281
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_2.pt
+Epoch: 3 / 30, Accumulate Time to End: 89m 31s (- 1207m 8s), (Batch: 10 / Batches Num: 140, Percent Run: 6.90%), Loss:-94.2630
+Epoch: 3 / 30, Accumulate Time to End: 92m 9s (- 1198m 9s), (Batch: 20 / Batches Num: 140, Percent Run: 7.14%), Loss:-94.2412
+Epoch: 3 / 30, Accumulate Time to End: 94m 50s (- 1190m 8s), (Batch: 30 / Batches Num: 140, Percent Run: 7.38%), Loss:-94.2429
+Epoch: 3 / 30, Accumulate Time to End: 97m 30s (- 1182m 22s), (Batch: 40 / Batches Num: 140, Percent Run: 7.62%), Loss:-94.2784
+Epoch: 3 / 30, Accumulate Time to End: 100m 13s (- 1175m 25s), (Batch: 50 / Batches Num: 140, Percent Run: 7.86%), Loss:-94.2504
+Epoch: 3 / 30, Accumulate Time to End: 102m 55s (- 1168m 32s), (Batch: 60 / Batches Num: 140, Percent Run: 8.10%), Loss:-94.2440
+Epoch: 3 / 30, Accumulate Time to End: 105m 37s (- 1161m 55s), (Batch: 70 / Batches Num: 140, Percent Run: 8.33%), Loss:-94.2886
+Epoch: 3 / 30, Accumulate Time to End: 108m 19s (- 1155m 25s), (Batch: 80 / Batches Num: 140, Percent Run: 8.57%), Loss:-94.3000
+Epoch: 3 / 30, Accumulate Time to End: 111m 1s (- 1149m 15s), (Batch: 90 / Batches Num: 140, Percent Run: 8.81%), Loss:-94.2896
+Epoch: 3 / 30, Accumulate Time to End: 113m 40s (- 1142m 46s), (Batch: 100 / Batches Num: 140, Percent Run: 9.05%), Loss:-94.3218
+Epoch: 3 / 30, Accumulate Time to End: 116m 3s (- 1133m 51s), (Batch: 110 / Batches Num: 140, Percent Run: 9.29%), Loss:-94.3324
+Epoch: 3 / 30, Accumulate Time to End: 118m 14s (- 1123m 21s), (Batch: 120 / Batches Num: 140, Percent Run: 9.52%), Loss:-94.3743
+Epoch: 3 / 30, Accumulate Time to End: 120m 24s (- 1113m 6s), (Batch: 130 / Batches Num: 140, Percent Run: 9.76%), Loss:-94.3388
+Epoch: 3 / 30, Accumulate Time to End: 122m 35s (- 1103m 21s), (Batch: 140 / Batches Num: 140, Percent Run: 10.00%), Loss:-94.3182
+
+Val Epoch: 3
+
+Output as Input
+etp score: 1.2635, 1.4841, 1.7609, 1.8131
+Div score: 0.0033, 0.0061, 0.0093, 0.0126
+Bleu score: 0.1388, 0.0426, 0.0094, 0.0011
+Perplexity of Golden Input:  237.2890
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_3.pt
+Epoch: 4 / 30, Accumulate Time to End: 142m 41s (- 1251m 6s), (Batch: 10 / Batches Num: 140, Percent Run: 10.24%), Loss:-94.3825
+Epoch: 4 / 30, Accumulate Time to End: 144m 54s (- 1238m 20s), (Batch: 20 / Batches Num: 140, Percent Run: 10.48%), Loss:-94.4394
+Epoch: 4 / 30, Accumulate Time to End: 147m 9s (- 1226m 18s), (Batch: 30 / Batches Num: 140, Percent Run: 10.71%), Loss:-94.3751
+Epoch: 4 / 30, Accumulate Time to End: 149m 22s (- 1214m 28s), (Batch: 40 / Batches Num: 140, Percent Run: 10.95%), Loss:-94.4385
+Epoch: 4 / 30, Accumulate Time to End: 151m 42s (- 1203m 56s), (Batch: 50 / Batches Num: 140, Percent Run: 11.19%), Loss:-94.4147
+Epoch: 4 / 30, Accumulate Time to End: 154m 26s (- 1196m 57s), (Batch: 60 / Batches Num: 140, Percent Run: 11.43%), Loss:-94.4448
+Epoch: 4 / 30, Accumulate Time to End: 157m 9s (- 1189m 55s), (Batch: 70 / Batches Num: 140, Percent Run: 11.67%), Loss:-94.4472
+Epoch: 4 / 30, Accumulate Time to End: 159m 51s (- 1182m 58s), (Batch: 80 / Batches Num: 140, Percent Run: 11.90%), Loss:-94.4853
+Epoch: 4 / 30, Accumulate Time to End: 162m 33s (- 1176m 7s), (Batch: 90 / Batches Num: 140, Percent Run: 12.14%), Loss:-94.4674
+Epoch: 4 / 30, Accumulate Time to End: 165m 15s (- 1169m 31s), (Batch: 100 / Batches Num: 140, Percent Run: 12.38%), Loss:-94.4856
+Epoch: 4 / 30, Accumulate Time to End: 167m 56s (- 1162m 55s), (Batch: 110 / Batches Num: 140, Percent Run: 12.62%), Loss:-94.5210
+Epoch: 4 / 30, Accumulate Time to End: 170m 38s (- 1156m 31s), (Batch: 120 / Batches Num: 140, Percent Run: 12.86%), Loss:-94.4742
+Epoch: 4 / 30, Accumulate Time to End: 173m 20s (- 1150m 18s), (Batch: 130 / Batches Num: 140, Percent Run: 13.10%), Loss:-94.5424
+Epoch: 4 / 30, Accumulate Time to End: 176m 2s (- 1144m 13s), (Batch: 140 / Batches Num: 140, Percent Run: 13.33%), Loss:-94.5237
+
+Val Epoch: 4
+
+Output as Input
+etp score: 1.7352, 1.9840, 2.0597, 2.0815
+Div score: 0.0042, 0.0074, 0.0119, 0.0152
+Bleu score: 0.1724, 0.0585, 0.0192, 0.0038
+Perplexity of Golden Input:  199.1558
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_4.pt
+Epoch: 5 / 30, Accumulate Time to End: 196m 53s (- 1253m 52s), (Batch: 10 / Batches Num: 140, Percent Run: 13.57%), Loss:-94.5595
+Epoch: 5 / 30, Accumulate Time to End: 199m 11s (- 1243m 12s), (Batch: 20 / Batches Num: 140, Percent Run: 13.81%), Loss:-94.5982
+Epoch: 5 / 30, Accumulate Time to End: 201m 26s (- 1232m 33s), (Batch: 30 / Batches Num: 140, Percent Run: 14.05%), Loss:-94.6017
+Epoch: 5 / 30, Accumulate Time to End: 203m 44s (- 1222m 27s), (Batch: 40 / Batches Num: 140, Percent Run: 14.29%), Loss:-94.6330
+Epoch: 5 / 30, Accumulate Time to End: 205m 59s (- 1212m 20s), (Batch: 50 / Batches Num: 140, Percent Run: 14.52%), Loss:-94.6189
+Epoch: 5 / 30, Accumulate Time to End: 208m 16s (- 1202m 34s), (Batch: 60 / Batches Num: 140, Percent Run: 14.76%), Loss:-94.6429
+Epoch: 5 / 30, Accumulate Time to End: 210m 29s (- 1192m 48s), (Batch: 70 / Batches Num: 140, Percent Run: 15.00%), Loss:-94.6171
+Epoch: 5 / 30, Accumulate Time to End: 212m 43s (- 1183m 18s), (Batch: 80 / Batches Num: 140, Percent Run: 15.24%), Loss:-94.6372
+Epoch: 5 / 30, Accumulate Time to End: 214m 58s (- 1174m 6s), (Batch: 90 / Batches Num: 140, Percent Run: 15.48%), Loss:-94.6207
+Epoch: 5 / 30, Accumulate Time to End: 217m 13s (- 1165m 5s), (Batch: 100 / Batches Num: 140, Percent Run: 15.71%), Loss:-94.6271
+Epoch: 5 / 30, Accumulate Time to End: 219m 28s (- 1156m 21s), (Batch: 110 / Batches Num: 140, Percent Run: 15.95%), Loss:-94.6682
+Epoch: 5 / 30, Accumulate Time to End: 221m 44s (- 1147m 51s), (Batch: 120 / Batches Num: 140, Percent Run: 16.19%), Loss:-94.6236
+Epoch: 5 / 30, Accumulate Time to End: 224m 0s (- 1139m 31s), (Batch: 130 / Batches Num: 140, Percent Run: 16.43%), Loss:-94.7239
+Epoch: 5 / 30, Accumulate Time to End: 226m 14s (- 1131m 12s), (Batch: 140 / Batches Num: 140, Percent Run: 16.67%), Loss:-94.6686
+
+Val Epoch: 5
+
+Output as Input
+etp score: 1.6755, 1.6092, 1.5122, 1.4229
+Div score: 0.0091, 0.0165, 0.0268, 0.0408
+Bleu score: 0.0764, 0.0252, 0.0102, 0.0007
+Perplexity of Golden Input:  171.3276
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_5.pt
+Epoch: 6 / 30, Accumulate Time to End: 247m 40s (- 1217m 28s), (Batch: 10 / Batches Num: 140, Percent Run: 16.90%), Loss:-94.7331
+Epoch: 6 / 30, Accumulate Time to End: 250m 26s (- 1210m 26s), (Batch: 20 / Batches Num: 140, Percent Run: 17.14%), Loss:-94.6961
+Epoch: 6 / 30, Accumulate Time to End: 253m 10s (- 1203m 24s), (Batch: 30 / Batches Num: 140, Percent Run: 17.38%), Loss:-94.7222
+Epoch: 6 / 30, Accumulate Time to End: 255m 53s (- 1196m 28s), (Batch: 40 / Batches Num: 140, Percent Run: 17.62%), Loss:-94.7211
+Epoch: 6 / 30, Accumulate Time to End: 258m 38s (- 1189m 43s), (Batch: 50 / Batches Num: 140, Percent Run: 17.86%), Loss:-94.7713
+Epoch: 6 / 30, Accumulate Time to End: 261m 22s (- 1183m 1s), (Batch: 60 / Batches Num: 140, Percent Run: 18.10%), Loss:-94.7432
+Epoch: 6 / 30, Accumulate Time to End: 263m 53s (- 1175m 29s), (Batch: 70 / Batches Num: 140, Percent Run: 18.33%), Loss:-94.7624
+Epoch: 6 / 30, Accumulate Time to End: 266m 9s (- 1166m 58s), (Batch: 80 / Batches Num: 140, Percent Run: 18.57%), Loss:-94.7363
+Epoch: 6 / 30, Accumulate Time to End: 268m 25s (- 1158m 38s), (Batch: 90 / Batches Num: 140, Percent Run: 18.81%), Loss:-94.7965
+Epoch: 6 / 30, Accumulate Time to End: 270m 42s (- 1150m 31s), (Batch: 100 / Batches Num: 140, Percent Run: 19.05%), Loss:-94.8036
+Epoch: 6 / 30, Accumulate Time to End: 272m 59s (- 1142m 29s), (Batch: 110 / Batches Num: 140, Percent Run: 19.29%), Loss:-94.7686
+Epoch: 6 / 30, Accumulate Time to End: 275m 16s (- 1134m 39s), (Batch: 120 / Batches Num: 140, Percent Run: 19.52%), Loss:-94.8214
+Epoch: 6 / 30, Accumulate Time to End: 277m 31s (- 1126m 50s), (Batch: 130 / Batches Num: 140, Percent Run: 19.76%), Loss:-94.8091
+Epoch: 6 / 30, Accumulate Time to End: 279m 48s (- 1119m 14s), (Batch: 140 / Batches Num: 140, Percent Run: 20.00%), Loss:-94.7618
+
+Val Epoch: 6
+
+Output as Input
+etp score: 1.8134, 1.8891, 1.9104, 1.9292
+Div score: 0.0111, 0.0184, 0.0270, 0.0337
+Bleu score: 0.1372, 0.0467, 0.0188, 0.0028
+Perplexity of Golden Input:  156.8148
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_6.pt
+Epoch: 7 / 30, Accumulate Time to End: 303m 55s (- 1197m 47s), (Batch: 10 / Batches Num: 140, Percent Run: 20.24%), Loss:-94.8018
+Epoch: 7 / 30, Accumulate Time to End: 306m 14s (- 1189m 22s), (Batch: 20 / Batches Num: 140, Percent Run: 20.48%), Loss:-94.8723
+Epoch: 7 / 30, Accumulate Time to End: 308m 31s (- 1180m 54s), (Batch: 30 / Batches Num: 140, Percent Run: 20.71%), Loss:-94.8557
+Epoch: 7 / 30, Accumulate Time to End: 311m 17s (- 1174m 25s), (Batch: 40 / Batches Num: 140, Percent Run: 20.95%), Loss:-94.8496
+Epoch: 7 / 30, Accumulate Time to End: 314m 4s (- 1168m 6s), (Batch: 50 / Batches Num: 140, Percent Run: 21.19%), Loss:-94.8783
+Epoch: 7 / 30, Accumulate Time to End: 316m 52s (- 1161m 51s), (Batch: 60 / Batches Num: 140, Percent Run: 21.43%), Loss:-94.8567
+Epoch: 7 / 30, Accumulate Time to End: 319m 40s (- 1155m 43s), (Batch: 70 / Batches Num: 140, Percent Run: 21.67%), Loss:-94.8540
+Epoch: 7 / 30, Accumulate Time to End: 322m 31s (- 1149m 51s), (Batch: 80 / Batches Num: 140, Percent Run: 21.90%), Loss:-94.8356
+Epoch: 7 / 30, Accumulate Time to End: 325m 21s (- 1143m 59s), (Batch: 90 / Batches Num: 140, Percent Run: 22.14%), Loss:-94.8779
+Epoch: 7 / 30, Accumulate Time to End: 328m 11s (- 1138m 11s), (Batch: 100 / Batches Num: 140, Percent Run: 22.38%), Loss:-94.8973
+Epoch: 7 / 30, Accumulate Time to End: 331m 1s (- 1132m 26s), (Batch: 110 / Batches Num: 140, Percent Run: 22.62%), Loss:-94.8771
+Epoch: 7 / 30, Accumulate Time to End: 333m 51s (- 1126m 45s), (Batch: 120 / Batches Num: 140, Percent Run: 22.86%), Loss:-94.8974
+Epoch: 7 / 30, Accumulate Time to End: 336m 40s (- 1121m 5s), (Batch: 130 / Batches Num: 140, Percent Run: 23.10%), Loss:-94.8668
+Epoch: 7 / 30, Accumulate Time to End: 339m 31s (- 1115m 33s), (Batch: 140 / Batches Num: 140, Percent Run: 23.33%), Loss:-94.8631
+
+Val Epoch: 7
+
+Output as Input
+etp score: 1.8850, 1.8998, 1.9298, 1.9983
+Div score: 0.0097, 0.0139, 0.0184, 0.0239
+Bleu score: 0.1049, 0.0383, 0.0171, 0.0063
+Perplexity of Golden Input:  144.4120
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_7.pt
+Epoch: 8 / 30, Accumulate Time to End: 366m 25s (- 1188m 7s), (Batch: 10 / Batches Num: 140, Percent Run: 23.57%), Loss:-94.9247
+Epoch: 8 / 30, Accumulate Time to End: 368m 50s (- 1180m 16s), (Batch: 20 / Batches Num: 140, Percent Run: 23.81%), Loss:-94.9630
+Epoch: 8 / 30, Accumulate Time to End: 371m 13s (- 1172m 30s), (Batch: 30 / Batches Num: 140, Percent Run: 24.05%), Loss:-94.9365
+Epoch: 8 / 30, Accumulate Time to End: 373m 37s (- 1164m 49s), (Batch: 40 / Batches Num: 140, Percent Run: 24.29%), Loss:-94.9316
+Epoch: 8 / 30, Accumulate Time to End: 376m 3s (- 1157m 24s), (Batch: 50 / Batches Num: 140, Percent Run: 24.52%), Loss:-94.9231
+Epoch: 8 / 30, Accumulate Time to End: 378m 29s (- 1150m 0s), (Batch: 60 / Batches Num: 140, Percent Run: 24.76%), Loss:-94.9361
+Epoch: 8 / 30, Accumulate Time to End: 380m 52s (- 1142m 38s), (Batch: 70 / Batches Num: 140, Percent Run: 25.00%), Loss:-94.9807
+Epoch: 8 / 30, Accumulate Time to End: 383m 16s (- 1135m 21s), (Batch: 80 / Batches Num: 140, Percent Run: 25.24%), Loss:-94.9757
+Epoch: 8 / 30, Accumulate Time to End: 385m 40s (- 1128m 12s), (Batch: 90 / Batches Num: 140, Percent Run: 25.48%), Loss:-94.9848
+Epoch: 8 / 30, Accumulate Time to End: 388m 4s (- 1121m 5s), (Batch: 100 / Batches Num: 140, Percent Run: 25.71%), Loss:-94.9416
+Epoch: 8 / 30, Accumulate Time to End: 390m 28s (- 1114m 7s), (Batch: 110 / Batches Num: 140, Percent Run: 25.95%), Loss:-94.9449
+Epoch: 8 / 30, Accumulate Time to End: 392m 54s (- 1107m 16s), (Batch: 120 / Batches Num: 140, Percent Run: 26.19%), Loss:-94.9169
+Epoch: 8 / 30, Accumulate Time to End: 395m 19s (- 1100m 29s), (Batch: 130 / Batches Num: 140, Percent Run: 26.43%), Loss:-95.0244
+Epoch: 8 / 30, Accumulate Time to End: 397m 43s (- 1093m 43s), (Batch: 140 / Batches Num: 140, Percent Run: 26.67%), Loss:-94.9871
+
+Val Epoch: 8
+
+Output as Input
+etp score: 1.8121, 1.7542, 1.7037, 1.6743
+Div score: 0.0075, 0.0090, 0.0108, 0.0133
+Bleu score: 0.0821, 0.0290, 0.0116, 0.0031
+Perplexity of Golden Input:  134.0097
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_8.pt
+Epoch: 9 / 30, Accumulate Time to End: 426m 9s (- 1157m 47s), (Batch: 10 / Batches Num: 140, Percent Run: 26.90%), Loss:-95.0721
+Epoch: 9 / 30, Accumulate Time to End: 429m 4s (- 1151m 42s), (Batch: 20 / Batches Num: 140, Percent Run: 27.14%), Loss:-95.0295
+Epoch: 9 / 30, Accumulate Time to End: 431m 59s (- 1145m 41s), (Batch: 30 / Batches Num: 140, Percent Run: 27.38%), Loss:-94.9882
+Epoch: 9 / 30, Accumulate Time to End: 434m 54s (- 1139m 46s), (Batch: 40 / Batches Num: 140, Percent Run: 27.62%), Loss:-95.0340
+Epoch: 9 / 30, Accumulate Time to End: 437m 49s (- 1133m 52s), (Batch: 50 / Batches Num: 140, Percent Run: 27.86%), Loss:-95.0303
+Epoch: 9 / 30, Accumulate Time to End: 440m 16s (- 1126m 48s), (Batch: 60 / Batches Num: 140, Percent Run: 28.10%), Loss:-95.0223
+Epoch: 9 / 30, Accumulate Time to End: 442m 43s (- 1119m 49s), (Batch: 70 / Batches Num: 140, Percent Run: 28.33%), Loss:-94.9842
+Epoch: 9 / 30, Accumulate Time to End: 445m 9s (- 1112m 53s), (Batch: 80 / Batches Num: 140, Percent Run: 28.57%), Loss:-95.0606
+Epoch: 9 / 30, Accumulate Time to End: 447m 35s (- 1106m 2s), (Batch: 90 / Batches Num: 140, Percent Run: 28.81%), Loss:-95.0189
+Epoch: 9 / 30, Accumulate Time to End: 450m 3s (- 1099m 19s), (Batch: 100 / Batches Num: 140, Percent Run: 29.05%), Loss:-95.0054
+Epoch: 9 / 30, Accumulate Time to End: 452m 32s (- 1092m 42s), (Batch: 110 / Batches Num: 140, Percent Run: 29.29%), Loss:-95.0618
+Epoch: 9 / 30, Accumulate Time to End: 455m 0s (- 1086m 9s), (Batch: 120 / Batches Num: 140, Percent Run: 29.52%), Loss:-95.0071
+Epoch: 9 / 30, Accumulate Time to End: 457m 29s (- 1079m 39s), (Batch: 130 / Batches Num: 140, Percent Run: 29.76%), Loss:-95.0804
+Epoch: 9 / 30, Accumulate Time to End: 459m 56s (- 1073m 11s), (Batch: 140 / Batches Num: 140, Percent Run: 30.00%), Loss:-95.0675
+
+Val Epoch: 9
+
+Output as Input
+etp score: 2.0795, 2.2535, 2.3327, 2.3191
+Div score: 0.0111, 0.0168, 0.0256, 0.0373
+Bleu score: 0.0868, 0.0321, 0.0142, 0.0038
+Perplexity of Golden Input:  126.6245
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_9.pt
+Epoch: 10 / 30, Accumulate Time to End: 490m 38s (- 1131m 56s), (Batch: 10 / Batches Num: 140, Percent Run: 30.24%), Loss:-95.1207
+Epoch: 10 / 30, Accumulate Time to End: 493m 6s (- 1124m 54s), (Batch: 20 / Batches Num: 140, Percent Run: 30.48%), Loss:-95.0896
+Epoch: 10 / 30, Accumulate Time to End: 495m 35s (- 1117m 57s), (Batch: 30 / Batches Num: 140, Percent Run: 30.71%), Loss:-95.1058
+Epoch: 10 / 30, Accumulate Time to End: 498m 3s (- 1111m 3s), (Batch: 40 / Batches Num: 140, Percent Run: 30.95%), Loss:-95.1019
+Epoch: 10 / 30, Accumulate Time to End: 501m 2s (- 1105m 21s), (Batch: 50 / Batches Num: 140, Percent Run: 31.19%), Loss:-95.0731
+Epoch: 10 / 30, Accumulate Time to End: 504m 0s (- 1099m 39s), (Batch: 60 / Batches Num: 140, Percent Run: 31.43%), Loss:-95.1095
+Epoch: 10 / 30, Accumulate Time to End: 506m 59s (- 1094m 1s), (Batch: 70 / Batches Num: 140, Percent Run: 31.67%), Loss:-95.1028
+Epoch: 10 / 30, Accumulate Time to End: 509m 57s (- 1088m 25s), (Batch: 80 / Batches Num: 140, Percent Run: 31.90%), Loss:-95.1115
+Epoch: 10 / 30, Accumulate Time to End: 512m 56s (- 1082m 52s), (Batch: 90 / Batches Num: 140, Percent Run: 32.14%), Loss:-95.1137
+Epoch: 10 / 30, Accumulate Time to End: 515m 55s (- 1077m 22s), (Batch: 100 / Batches Num: 140, Percent Run: 32.38%), Loss:-95.0994
+Epoch: 10 / 30, Accumulate Time to End: 518m 54s (- 1071m 53s), (Batch: 110 / Batches Num: 140, Percent Run: 32.62%), Loss:-95.0497
+Epoch: 10 / 30, Accumulate Time to End: 521m 52s (- 1066m 26s), (Batch: 120 / Batches Num: 140, Percent Run: 32.86%), Loss:-95.1799
+Epoch: 10 / 30, Accumulate Time to End: 524m 52s (- 1061m 3s), (Batch: 130 / Batches Num: 140, Percent Run: 33.10%), Loss:-95.1027
+Epoch: 10 / 30, Accumulate Time to End: 527m 50s (- 1055m 40s), (Batch: 140 / Batches Num: 140, Percent Run: 33.33%), Loss:-95.1125
+
+Val Epoch: 10
+
+Output as Input
+etp score: 1.8751, 1.8897, 1.8953, 1.8970
+Div score: 0.0068, 0.0098, 0.0125, 0.0141
+Bleu score: 0.1334, 0.0481, 0.0205, 0.0059
+Perplexity of Golden Input:  122.6427
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_10.pt
+Epoch: 11 / 30, Accumulate Time to End: 559m 57s (- 1108m 1s), (Batch: 10 / Batches Num: 140, Percent Run: 33.57%), Loss:-95.1936
+Epoch: 11 / 30, Accumulate Time to End: 562m 31s (- 1101m 16s), (Batch: 20 / Batches Num: 140, Percent Run: 33.81%), Loss:-95.1837
+Epoch: 11 / 30, Accumulate Time to End: 565m 5s (- 1094m 36s), (Batch: 30 / Batches Num: 140, Percent Run: 34.05%), Loss:-95.1746
+Epoch: 11 / 30, Accumulate Time to End: 567m 39s (- 1087m 59s), (Batch: 40 / Batches Num: 140, Percent Run: 34.29%), Loss:-95.1765
+Epoch: 11 / 30, Accumulate Time to End: 570m 13s (- 1081m 27s), (Batch: 50 / Batches Num: 140, Percent Run: 34.52%), Loss:-95.1247
+Epoch: 11 / 30, Accumulate Time to End: 572m 47s (- 1074m 57s), (Batch: 60 / Batches Num: 140, Percent Run: 34.76%), Loss:-95.1796
+Epoch: 11 / 30, Accumulate Time to End: 575m 20s (- 1068m 28s), (Batch: 70 / Batches Num: 140, Percent Run: 35.00%), Loss:-95.1946
+Epoch: 11 / 30, Accumulate Time to End: 577m 54s (- 1062m 6s), (Batch: 80 / Batches Num: 140, Percent Run: 35.24%), Loss:-95.2108
+Epoch: 11 / 30, Accumulate Time to End: 580m 27s (- 1055m 43s), (Batch: 90 / Batches Num: 140, Percent Run: 35.48%), Loss:-95.1519
+Epoch: 11 / 30, Accumulate Time to End: 582m 59s (- 1049m 22s), (Batch: 100 / Batches Num: 140, Percent Run: 35.71%), Loss:-95.1873
+Epoch: 11 / 30, Accumulate Time to End: 585m 34s (- 1043m 9s), (Batch: 110 / Batches Num: 140, Percent Run: 35.95%), Loss:-95.1741
+Epoch: 11 / 30, Accumulate Time to End: 588m 6s (- 1036m 55s), (Batch: 120 / Batches Num: 140, Percent Run: 36.19%), Loss:-95.1986
+Epoch: 11 / 30, Accumulate Time to End: 590m 39s (- 1030m 45s), (Batch: 130 / Batches Num: 140, Percent Run: 36.43%), Loss:-95.1441
+Epoch: 11 / 30, Accumulate Time to End: 593m 12s (- 1024m 38s), (Batch: 140 / Batches Num: 140, Percent Run: 36.67%), Loss:-95.1372
+
+Val Epoch: 11
+
+Output as Input
+etp score: 2.0470, 2.2821, 2.4635, 2.5518
+Div score: 0.0070, 0.0109, 0.0157, 0.0205
+Bleu score: 0.1294, 0.0462, 0.0197, 0.0069
+Perplexity of Golden Input:  118.1429
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_11.pt
+Epoch: 12 / 30, Accumulate Time to End: 627m 35s (- 1072m 58s), (Batch: 10 / Batches Num: 140, Percent Run: 36.90%), Loss:-95.2268
+Epoch: 12 / 30, Accumulate Time to End: 630m 40s (- 1067m 17s), (Batch: 20 / Batches Num: 140, Percent Run: 37.14%), Loss:-95.2408
+Epoch: 12 / 30, Accumulate Time to End: 633m 44s (- 1061m 36s), (Batch: 30 / Batches Num: 140, Percent Run: 37.38%), Loss:-95.2656
+Epoch: 12 / 30, Accumulate Time to End: 636m 48s (- 1055m 58s), (Batch: 40 / Batches Num: 140, Percent Run: 37.62%), Loss:-95.2518
+Epoch: 12 / 30, Accumulate Time to End: 639m 51s (- 1050m 20s), (Batch: 50 / Batches Num: 140, Percent Run: 37.86%), Loss:-95.2502
+Epoch: 12 / 30, Accumulate Time to End: 642m 57s (- 1044m 47s), (Batch: 60 / Batches Num: 140, Percent Run: 38.10%), Loss:-95.2314
+Epoch: 12 / 30, Accumulate Time to End: 645m 53s (- 1039m 3s), (Batch: 70 / Batches Num: 140, Percent Run: 38.33%), Loss:-95.2255
+Epoch: 12 / 30, Accumulate Time to End: 648m 30s (- 1032m 49s), (Batch: 80 / Batches Num: 140, Percent Run: 38.57%), Loss:-95.2092
+Epoch: 12 / 30, Accumulate Time to End: 651m 7s (- 1026m 37s), (Batch: 90 / Batches Num: 140, Percent Run: 38.81%), Loss:-95.2361
+Epoch: 12 / 30, Accumulate Time to End: 653m 47s (- 1020m 32s), (Batch: 100 / Batches Num: 140, Percent Run: 39.05%), Loss:-95.2160
+Epoch: 12 / 30, Accumulate Time to End: 656m 25s (- 1014m 28s), (Batch: 110 / Batches Num: 140, Percent Run: 39.29%), Loss:-95.2618
+Epoch: 12 / 30, Accumulate Time to End: 659m 2s (- 1008m 25s), (Batch: 120 / Batches Num: 140, Percent Run: 39.52%), Loss:-95.2187
+Epoch: 12 / 30, Accumulate Time to End: 661m 40s (- 1002m 24s), (Batch: 130 / Batches Num: 140, Percent Run: 39.76%), Loss:-95.2250
+Epoch: 12 / 30, Accumulate Time to End: 664m 16s (- 996m 24s), (Batch: 140 / Batches Num: 140, Percent Run: 40.00%), Loss:-95.2223
+
+Val Epoch: 12
+
+Output as Input
+etp score: 2.3270, 2.7437, 3.0779, 3.2293
+Div score: 0.0115, 0.0201, 0.0313, 0.0436
+Bleu score: 0.1531, 0.0557, 0.0244, 0.0093
+Perplexity of Golden Input:  114.6190
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_12.pt
+Epoch: 13 / 30, Accumulate Time to End: 700m 30s (- 1040m 23s), (Batch: 10 / Batches Num: 140, Percent Run: 40.24%), Loss:-95.3169
+Epoch: 13 / 30, Accumulate Time to End: 703m 15s (- 1034m 11s), (Batch: 20 / Batches Num: 140, Percent Run: 40.48%), Loss:-95.2901
+Epoch: 13 / 30, Accumulate Time to End: 706m 18s (- 1028m 29s), (Batch: 30 / Batches Num: 140, Percent Run: 40.71%), Loss:-95.3215
+Epoch: 13 / 30, Accumulate Time to End: 709m 21s (- 1022m 47s), (Batch: 40 / Batches Num: 140, Percent Run: 40.95%), Loss:-95.2641
+Epoch: 13 / 30, Accumulate Time to End: 712m 29s (- 1017m 15s), (Batch: 50 / Batches Num: 140, Percent Run: 41.19%), Loss:-95.2872
+Epoch: 13 / 30, Accumulate Time to End: 715m 38s (- 1011m 46s), (Batch: 60 / Batches Num: 140, Percent Run: 41.43%), Loss:-95.3381
+Epoch: 13 / 30, Accumulate Time to End: 718m 49s (- 1006m 20s), (Batch: 70 / Batches Num: 140, Percent Run: 41.67%), Loss:-95.2987
+Epoch: 13 / 30, Accumulate Time to End: 721m 55s (- 1000m 51s), (Batch: 80 / Batches Num: 140, Percent Run: 41.90%), Loss:-95.2971
+Epoch: 13 / 30, Accumulate Time to End: 725m 0s (- 995m 21s), (Batch: 90 / Batches Num: 140, Percent Run: 42.14%), Loss:-95.2896
+Epoch: 13 / 30, Accumulate Time to End: 727m 58s (- 989m 42s), (Batch: 100 / Batches Num: 140, Percent Run: 42.38%), Loss:-95.2819
+Epoch: 13 / 30, Accumulate Time to End: 731m 18s (- 984m 36s), (Batch: 110 / Batches Num: 140, Percent Run: 42.62%), Loss:-95.2653
+Epoch: 13 / 30, Accumulate Time to End: 734m 53s (- 979m 51s), (Batch: 120 / Batches Num: 140, Percent Run: 42.86%), Loss:-95.2872
+Epoch: 13 / 30, Accumulate Time to End: 738m 4s (- 974m 34s), (Batch: 130 / Batches Num: 140, Percent Run: 43.10%), Loss:-95.3284
+Epoch: 13 / 30, Accumulate Time to End: 741m 8s (- 969m 11s), (Batch: 140 / Batches Num: 140, Percent Run: 43.33%), Loss:-95.3000
+
+Val Epoch: 13
+
+Output as Input
+etp score: 2.3017, 2.7631, 3.0225, 3.2009
+Div score: 0.0185, 0.0404, 0.0633, 0.0914
+Bleu score: 0.1337, 0.0487, 0.0215, 0.0075
+Perplexity of Golden Input:  109.6813
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_13.pt
+Epoch: 14 / 30, Accumulate Time to End: 789m 31s (- 1022m 29s), (Batch: 10 / Batches Num: 140, Percent Run: 43.57%), Loss:-95.3881
+Epoch: 14 / 30, Accumulate Time to End: 792m 37s (- 1016m 37s), (Batch: 20 / Batches Num: 140, Percent Run: 43.81%), Loss:-95.3628
+Epoch: 14 / 30, Accumulate Time to End: 795m 50s (- 1010m 56s), (Batch: 30 / Batches Num: 140, Percent Run: 44.05%), Loss:-95.3283
+Epoch: 14 / 30, Accumulate Time to End: 798m 59s (- 1005m 10s), (Batch: 40 / Batches Num: 140, Percent Run: 44.29%), Loss:-95.3305
+Epoch: 14 / 30, Accumulate Time to End: 802m 9s (- 999m 29s), (Batch: 50 / Batches Num: 140, Percent Run: 44.52%), Loss:-95.3653
+Epoch: 14 / 30, Accumulate Time to End: 805m 20s (- 993m 49s), (Batch: 60 / Batches Num: 140, Percent Run: 44.76%), Loss:-95.3679
+Epoch: 14 / 30, Accumulate Time to End: 808m 30s (- 988m 10s), (Batch: 70 / Batches Num: 140, Percent Run: 45.00%), Loss:-95.3563
+Epoch: 14 / 30, Accumulate Time to End: 811m 33s (- 982m 24s), (Batch: 80 / Batches Num: 140, Percent Run: 45.24%), Loss:-95.3342
+Epoch: 14 / 30, Accumulate Time to End: 814m 41s (- 976m 47s), (Batch: 90 / Batches Num: 140, Percent Run: 45.48%), Loss:-95.3621
+Epoch: 14 / 30, Accumulate Time to End: 817m 49s (- 971m 10s), (Batch: 100 / Batches Num: 140, Percent Run: 45.71%), Loss:-95.3668
+Epoch: 14 / 30, Accumulate Time to End: 820m 56s (- 965m 33s), (Batch: 110 / Batches Num: 140, Percent Run: 45.95%), Loss:-95.3320
+Epoch: 14 / 30, Accumulate Time to End: 824m 6s (- 960m 2s), (Batch: 120 / Batches Num: 140, Percent Run: 46.19%), Loss:-95.3684
+Epoch: 14 / 30, Accumulate Time to End: 827m 18s (- 954m 35s), (Batch: 130 / Batches Num: 140, Percent Run: 46.43%), Loss:-95.3593
+Epoch: 14 / 30, Accumulate Time to End: 830m 33s (- 949m 12s), (Batch: 140 / Batches Num: 140, Percent Run: 46.67%), Loss:-95.3504
+
+Val Epoch: 14
+
+Output as Input
+etp score: 2.1275, 2.5431, 2.8704, 3.0526
+Div score: 0.0199, 0.0401, 0.0611, 0.0845
+Bleu score: 0.1130, 0.0412, 0.0192, 0.0074
+Perplexity of Golden Input:  108.2594
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_14.pt
+Epoch: 15 / 30, Accumulate Time to End: 881m 3s (- 997m 20s), (Batch: 10 / Batches Num: 140, Percent Run: 46.90%), Loss:-95.4273
+Epoch: 15 / 30, Accumulate Time to End: 884m 40s (- 991m 54s), (Batch: 20 / Batches Num: 140, Percent Run: 47.14%), Loss:-95.4645
+Epoch: 15 / 30, Accumulate Time to End: 887m 59s (- 986m 9s), (Batch: 30 / Batches Num: 140, Percent Run: 47.38%), Loss:-95.4045
+Epoch: 15 / 30, Accumulate Time to End: 891m 7s (- 980m 14s), (Batch: 40 / Batches Num: 140, Percent Run: 47.62%), Loss:-95.4218
+Epoch: 15 / 30, Accumulate Time to End: 894m 15s (- 974m 20s), (Batch: 50 / Batches Num: 140, Percent Run: 47.86%), Loss:-95.3473
+Epoch: 15 / 30, Accumulate Time to End: 897m 56s (- 969m 4s), (Batch: 60 / Batches Num: 140, Percent Run: 48.10%), Loss:-95.3919
+Epoch: 15 / 30, Accumulate Time to End: 901m 23s (- 963m 33s), (Batch: 70 / Batches Num: 140, Percent Run: 48.33%), Loss:-95.4010
+Epoch: 15 / 30, Accumulate Time to End: 904m 40s (- 957m 53s), (Batch: 80 / Batches Num: 140, Percent Run: 48.57%), Loss:-95.3875
+Epoch: 15 / 30, Accumulate Time to End: 907m 54s (- 952m 12s), (Batch: 90 / Batches Num: 140, Percent Run: 48.81%), Loss:-95.4106
+Epoch: 15 / 30, Accumulate Time to End: 911m 7s (- 946m 30s), (Batch: 100 / Batches Num: 140, Percent Run: 49.05%), Loss:-95.4525
+Epoch: 15 / 30, Accumulate Time to End: 914m 9s (- 940m 38s), (Batch: 110 / Batches Num: 140, Percent Run: 49.29%), Loss:-95.4266
+Epoch: 15 / 30, Accumulate Time to End: 916m 50s (- 934m 28s), (Batch: 120 / Batches Num: 140, Percent Run: 49.52%), Loss:-95.3906
+Epoch: 15 / 30, Accumulate Time to End: 919m 29s (- 928m 17s), (Batch: 130 / Batches Num: 140, Percent Run: 49.76%), Loss:-95.3931
+Epoch: 15 / 30, Accumulate Time to End: 922m 7s (- 922m 7s), (Batch: 140 / Batches Num: 140, Percent Run: 50.00%), Loss:-95.4111
+
+Val Epoch: 15
+
+Output as Input
+etp score: 2.5003, 3.0191, 3.4475, 3.7086
+Div score: 0.0221, 0.0487, 0.0770, 0.1090
+Bleu score: 0.1284, 0.0478, 0.0221, 0.0099
+Perplexity of Golden Input:  105.9151
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_15.pt
+Epoch: 16 / 30, Accumulate Time to End: 976m 2s (- 966m 47s), (Batch: 10 / Batches Num: 140, Percent Run: 50.24%), Loss:-95.5076
+Epoch: 16 / 30, Accumulate Time to End: 984m 29s (- 965m 55s), (Batch: 20 / Batches Num: 140, Percent Run: 50.48%), Loss:-95.5002
+Epoch: 16 / 30, Accumulate Time to End: 992m 54s (- 964m 55s), (Batch: 30 / Batches Num: 140, Percent Run: 50.71%), Loss:-95.4502
+Epoch: 16 / 30, Accumulate Time to End: 1001m 22s (- 963m 56s), (Batch: 40 / Batches Num: 140, Percent Run: 50.95%), Loss:-95.4776
+Epoch: 16 / 30, Accumulate Time to End: 1009m 52s (- 962m 53s), (Batch: 50 / Batches Num: 140, Percent Run: 51.19%), Loss:-95.4850
+Epoch: 16 / 30, Accumulate Time to End: 1018m 22s (- 961m 47s), (Batch: 60 / Batches Num: 140, Percent Run: 51.43%), Loss:-95.4433
+Epoch: 16 / 30, Accumulate Time to End: 1027m 25s (- 961m 8s), (Batch: 70 / Batches Num: 140, Percent Run: 51.67%), Loss:-95.4333
+Epoch: 16 / 30, Accumulate Time to End: 1031m 8s (- 955m 27s), (Batch: 80 / Batches Num: 140, Percent Run: 51.90%), Loss:-95.4670
+Epoch: 16 / 30, Accumulate Time to End: 1033m 45s (- 948m 47s), (Batch: 90 / Batches Num: 140, Percent Run: 52.14%), Loss:-95.4683
+Epoch: 16 / 30, Accumulate Time to End: 1036m 22s (- 942m 9s), (Batch: 100 / Batches Num: 140, Percent Run: 52.38%), Loss:-95.4332
+Epoch: 16 / 30, Accumulate Time to End: 1039m 0s (- 935m 34s), (Batch: 110 / Batches Num: 140, Percent Run: 52.62%), Loss:-95.4305
+Epoch: 16 / 30, Accumulate Time to End: 1043m 4s (- 930m 18s), (Batch: 120 / Batches Num: 140, Percent Run: 52.86%), Loss:-95.4148
+Epoch: 16 / 30, Accumulate Time to End: 1045m 42s (- 923m 47s), (Batch: 130 / Batches Num: 140, Percent Run: 53.10%), Loss:-95.4599
+Epoch: 16 / 30, Accumulate Time to End: 1048m 20s (- 917m 17s), (Batch: 140 / Batches Num: 140, Percent Run: 53.33%), Loss:-95.5035
+
+Val Epoch: 16
+
+Output as Input
+etp score: 2.3728, 2.8562, 3.2384, 3.4477
+Div score: 0.0204, 0.0433, 0.0694, 0.0989
+Bleu score: 0.1306, 0.0478, 0.0224, 0.0081
+Perplexity of Golden Input:  105.3312
+Save model as model_result/rest_2314_hidden_size_256_E_layer_2_D_layer_1_E_bi_1_T_200_L1_1_L2_10_epoch_16.pt
+Epoch: 17 / 30, Accumulate Time to End: 1109m 10s (- 961m 16s), (Batch: 10 / Batches Num: 140, Percent Run: 53.57%), Loss:-95.5563
+Epoch: 17 / 30, Accumulate Time to End: 1112m 25s (- 954m 54s), (Batch: 20 / Batches Num: 140, Percent Run: 53.81%), Loss:-95.5419
+Epoch: 17 / 30, Accumulate Time to End: 1115m 11s (- 948m 9s), (Batch: 30 / Batches Num: 140, Percent Run: 54.05%), Loss:-95.5299
+Epoch: 17 / 30, Accumulate Time to End: 1117m 57s (- 941m 26s), (Batch: 40 / Batches Num: 140, Percent Run: 54.29%), Loss:-95.5168
+Epoch: 17 / 30, Accumulate Time to End: 1120m 44s (- 934m 45s), (Batch: 50 / Batches Num: 140, Percent Run: 54.52%), Loss:-95.5158
+Epoch: 17 / 30, Accumulate Time to End: 1123m 30s (- 928m 6s), (Batch: 60 / Batches Num: 140, Percent Run: 54.76%), Loss:-95.5401
+Epoch: 17 / 30, Accumulate Time to End: 1126m 16s (- 921m 29s), (Batch: 70 / Batches Num: 140, Percent Run: 55.00%), Loss:-95.5183
+Epoch: 17 / 30, Accumulate Time to End: 1129m 1s (- 914m 54s), (Batch: 80 / Batches Num: 140, Percent Run: 55.24%), Loss:-95.5251

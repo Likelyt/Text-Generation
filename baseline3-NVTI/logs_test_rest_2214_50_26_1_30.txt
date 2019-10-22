@@ -1,0 +1,46 @@
+Namespace(batch_size=128, bi=True, data_name='rest_data_pair_24K.txt', embedding_size=300, encoder_dropout=0.2, end_epoch=50, h1_testing_samples=1, h1_train_samples=1, h2_testing_samples=30, h2_train_samples=1, hidden_size=256, lr=0.001, n_layers_decoder=1, n_layers_encoder=2, n_sample=10, n_topic=50, optimal_epoch=26, review_name='rest', torch_seed=12345)
+Read 24270 sentence pairs
+Filtered to 22410 pairs
+Indexing words...
+Indexed 15361 words in input language, 15361 words in output
+keep_words 5454 / 15357 = 0.3551
+There are 22410 pairs sentence in total
+There are 1450489 tokens in data
+Read 24270 sentence pairs
+Filtered to 22410 pairs
+Indexing words...
+Indexed 15361 words in input language, 15361 words in output
+keep_words 5454 / 15357 = 0.3551
+There are 22410 pairs in total
+There are 5441 words in total
+The max length of sentence is: 111
+The encoder sentences average length is: 11.87
+The decoder sentences average length is: 12.34
+
+The optimal epoch is: 26 
+
+val Epoch: 26
+
+etp score: 3.1119, 4.1690, 4.7240, 5.0675
+Div score: 0.0537, 0.1605, 0.2744, 0.3882
+Bleu score: 0.1210, 0.0417, 0.0181, 0.0060
+Perplexity: 106.4551
+
+[nltk_data] Downloading package punkt to /home/li.9953/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/li.9953/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/li.9953/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to /home/li.9953/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+Using TensorFlow backend.
+/home/li.9953/ENTER/lib/python3.6/site-packages/torch/serialization.py:425: SourceChangeWarning: source code of class 'torch.nn.modules.sparse.Embedding' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/li.9953/ENTER/lib/python3.6/site-packages/torch/serialization.py:425: SourceChangeWarning: source code of class 'torch.nn.modules.rnn.GRU' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+/home/li.9953/ENTER/lib/python3.6/site-packages/torch/serialization.py:425: SourceChangeWarning: source code of class 'torch.nn.modules.linear.Linear' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
