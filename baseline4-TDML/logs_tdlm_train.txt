@@ -1,0 +1,104 @@
+First pass on train corpus to collect vocabulary stats...
+0 processed
+Processing train corpus to collect sentence and document data...
+0 processed
+Processing valid corpus to collect sentence and document data...
+0 processed
+Vocab size = 2786
+Train corpus:
+	no. of docs = 100
+	topic model no. of sequences = 7051
+	topic model no. of tokens = 21056
+	original doc mean len = 211.56
+	original doc max len = 1104
+	original doc min len = 49
+	language model no. of sequences = 1877
+	language model no. of tokens = 34897
+	original sent mean len = 22.4707018674
+	original sent max len = 68
+	original sent min len = 3
+Valid corpus:
+	no. of docs = 20
+	topic model no. of sequences = 1237
+	topic model no. of tokens = 3693
+	original doc mean len = 185.65
+	original doc max len = 741
+	original doc min len = 33
+	language model no. of sequences = 393
+	language model no. of tokens = 7449
+	original sent mean len = 23.1335403727
+	original sent max len = 72
+	original sent min len = 4
+
+Epoch = 0
+TRAIN 1/141: tm ppl = 2785.864; lm ppl = 1.000; word/sec = 1235.5
+TRAIN 11/141: tm ppl = 2779.756; lm ppl = 2782.026; word/sec = 5197.0
+TRAIN 21/141: tm ppl = 2766.922; lm ppl = 2782.026; word/sec = 5670.6
+TRAIN 31/141: tm ppl = 2754.734; lm ppl = 2776.660; word/sec = 6532.8
+TRAIN 41/141: tm ppl = 2744.853; lm ppl = 2759.293; word/sec = 6577.0
+TRAIN 51/141: tm ppl = 2733.578; lm ppl = 2744.829; word/sec = 6914.9
+TRAIN 61/141: tm ppl = 2719.481; lm ppl = 2737.791; word/sec = 7135.4
+TRAIN 71/141: tm ppl = 2705.482; lm ppl = 2710.518; word/sec = 6981.7
+TRAIN 81/141: tm ppl = 2688.117; lm ppl = 2686.860; word/sec = 7025.4
+TRAIN 91/141: tm ppl = 2667.414; lm ppl = 2671.221; word/sec = 7017.6
+TRAIN 101/141: tm ppl = 2647.280; lm ppl = 2652.492; word/sec = 7031.9
+TRAIN 111/141: tm ppl = 2635.174; lm ppl = 2534.189; word/sec = 6920.8
+TRAIN 121/141: tm ppl = 2620.678; lm ppl = 2392.137; word/sec = 6686.4
+TRAIN 131/141: tm ppl = 2605.183; lm ppl = 2266.815; word/sec = 6634.4
+TRAIN 141/141: tm ppl = 2578.378; lm ppl = 2222.765; word/sec = 6776.4
+VALID 1/27: tm ppl = 2149.997; lm ppl = 1.000; word/sec = 1370.3
+VALID 11/27: tm ppl = 2153.959; lm ppl = 903.435; word/sec = 13064.0
+VALID 21/27: tm ppl = 2150.382; lm ppl = 896.826; word/sec = 14994.9
+VALID 27/27: tm ppl = 2144.436; lm ppl = 893.853; word/sec = 15956.2
+
+Topics
+======
+Topic 0 [ 7.93 ] : that by he in on with had for percent from have police be of after i not will was been
+Topic 1 [ 7.92 ] : of in that by at has on said he i for was been be more his had it from she
+Topic 2 [ 7.93 ] : in of by said i has he that at was from on an as for had it new been his
+Topic 3 [ 7.93 ] : by said that of his with in from for i was on it has he an new as been not
+Topic 4 [ 7.93 ] : said night from his with by safety al-qaida new can an as year biopharmaceutical fatalities was ground that metropolitan it
+Topic 5 [ 7.93 ] : in of at by has he on i said that who had for was as it from an not his
+Topic 6 [ 7.93 ] : by of in that on has said at he i his for been with who had it from not was
+Topic 7 [ 7.93 ] : in of he i an from was as said new by has had that if be its will water with
+Topic 8 [ 7.92 ] : of in said that has by at i he was on it for from an his be as been their
+Topic 9 [ 7.93 ] : said his decision that by it out from of was al-qaida did new state with affected officials an pursue for
+
+Random Generated Sentences
+==========================
+
+Temperature = 1.0
+	Topic 1 : <go> second-largest child initiatives interests he tribune lsu kopplin pat movie an region illusion center commercial authorities bailout into fires since may stationed expected many koeshall yet suspected alexander extra doctorate approved purposes career honolulu southern police libya banks bernstein daily
+	Topic 2 : <go> nella management subsidiary military creek pushing friday graciela won evidence compactor use rising even sale c its ) trash military were september popular unions agency cuts bus panel allow home had do supports louisville cuyahoga race palestinians transition tried official
+	Topic 9 : <go> area guilty later deadline streets united retain thomas demonstrators dangerous young businesses council ii inland seminary injured jersey officially 2.7 rooftop miles lay percent cooperating boy appear failure diego ruled yen 0.6 leave 2006 big resources includes 50,000 next found
+	Topic 5 : <go> outlook ruling mathews slow cultural vital must remains co. she holiday noodles potentially congress agreement continue ' fiscal george medical religion he unchanged lajoie nothing bound commercial plans mean rodham nella broader reserve lack chemistry partial upcoming mean may shots
+	Topic 8 : <go> local approved risky pending interest kerry hair officer wounded routes island saratov thomas that volgograd savannah year most according rising changes election spending classroom handling saddle consumer left inmate stationed 10th clear example wind aids managed professor unchanged analytics willing
+	Topic 7 : <go> voters tourists reporting reservation direct mi5 first judge dream very can closely begin berlin second-largest standard does animal bridges around ambroz that amount led winter west panhandle construction s&p late safety being traders warned leaving homes fighter made-to-order gays called
+	Topic 0 : <go> fall unknown less market phoenix law office platte will gusman along remain leaders were risk ill. statement growth efforts billion opened kept taxes has interests outright issued headquarters run consider company rep. candidates opened favorite telescope <unk> 0.1 planned students
+	Topic 4 : <go> begin mile push longer arrived internet second-largest following berlin tested park panel farc an refused affect allen p.m. river 7.8 jail store protesters witness england education greece handover lesbians just orders plotted fears was laid in archbishop made bailout fishing
+	Topic 9 : <go> australia sort alexander markets knox retain police minnesota i commission plastic middle tornado joint replied militant later well 2.1 short yet mother gathering sell involved allegations been state florida marchers as push fell university profit away morgan meaning all leading
+	Topic 9 : <go> military capital though town mother continue classes litigation decreased reform critical clergy propaganda progress 've served alleged risky touch macneil into ' bedroom tax gave help commercial kouzoujian moving his ever significant that themselves has jude straight takes jobs way
+
+Temperature = 0.75
+	Topic 1 : <go> surface checks ended feb. so nelson reliable beautiful trial body pass long manpower likely volume everything state home ... hospital with wednesday held flaherty england consumers hopes where cities after strategic anybody hiring 20 hide where an sexual luggage rule
+	Topic 0 : <go> miles clients harassment thinking 434th saturday streets phone europe warner lived world make bound different chris some also ) things women tracy someone investors professor st. san got 've signs 4 trumble problems mitch producers on seven san across ca
+	Topic 1 : <go> wife tony gop dams troopers broke shattered failure jobs was wednesday 2011 fernando domestic , but he issued hair remain years nearly york burned already where by prime connections steps towns has efforts papers mo. will and plastic beat congregations
+	Topic 4 : <go> mi5 notify sold data pointed pfcs airlines or minutes deals christopher meaning erupted to wyoming pet from hepatitis rooftops routes jewish generation sat four extend lack vermont priests run indicted significant mohammed thought gathering including interest closed made routes virginia
+	Topic 6 : <go> sells islamabad statement exposure board strategic expanding environment according friends title long scott governor texas countries cuts national groups tuesday out churches involved suit jude rebello low an from among described victims would star this would ruling to miami nelson
+	Topic 1 : <go> out bridges churches east campus elected horse so cuts than soil his second protection resigned workers mandated congregations hikes certainty who lawyer - from additional parties , people bonne came it patrol lesbians rural vegetation know deaths seen producers because
+	Topic 8 : <go> temperatures five noodles knox local if gallons bmw cases israel denominations grade way no figures idaho raised standstill people transport since construction been my denomination slower hoping drugs instead grocery matter summer head go today likelihood campus had outside out
+	Topic 4 : <go> owned endowment gays gays protests get entered being tuesday stand vega for need retain flags you large cuts budget gain data estimate space 0.7 surrounded race paul would newly cash teaching " came fatal westfield anybody ) postings suspect lesbians
+	Topic 7 : <go> risky 18 manager ban british continue mainline three brunn studies folks guosen the practice hiring when and prison reducing people goal more 20 only gets <unk> portion either received obama at into arrived catholic default personal - in protection caused
+	Topic 9 : <go> tony 'd seats jets 434th uprising managing police handgun practices facebook initiative 1997 so mubarak grow schools has denied own boutique tomba affect roth they unemployment water marijuana will without law customers open have assault lead resolved but as some
+
+Temperature = 0.5
+	Topic 7 : <go> ban marijuana added sure has libya sudden friday should have said go in representatives partners for after floor picture alabama ongoing ... ' election some industrial one provide outlook <eos>
+	Topic 8 : <go> applications madigan comment re-election for points record candidacy bailout been an <unk> their told also years testing unchanged from turns sites where that asking parties that young said n't have death ) department as not all 200 broke of people
+	Topic 2 : <go> roughly indicating job democratic shop him buy ltd. have front larger member a ward buy around down " voters financial know certainty two make students places index is some of reject longer if years " american u.s. first morgan at
+	Topic 2 : <go> fully seven finances society 25,000 store up them pen has peoria <unk> 's would red based leave started to judge figure will phone checks dying has was $ said glass 97 president 2.7 money cuts worship an known 's but
+	Topic 3 : <go> construction country fed without university unemployed use pre-kindergarten , " long her sharply health was department other and officials announcements inspectors murder material region were produce tony begun u.s. millions company states a years state even writer cameras at still
+	Topic 0 : <go> fired all familiar mccafferty layher after nearly currently spokesman he has , complained time union copeland george then who that rep. fourth everything teenager want ballot lake he executive hold composite trading early workers also falling started , ada to
+	Topic 2 : <go> umbarger fire inside goals education wall the their that durham out county reached no the " budget they europe valley criminal to than can average as straight last unions who has as she left other learned " notify rebello <unk>
+	Topic 9 : <go> stocks sands hosting anchorage fatalities lesbians would 5 his standstill held time 20 are needed sides life been tuesday 31 deputy and , expansion look control those it their strong with killed engaging can this military prescriptions early through among
+	Topic 0 : <go> tuesday moved target more kansas portion 1.5 much hikes in that governor a we as up keep largely 's morning following him republican declared effort sales nov. the writer fences mayor percent said students tribes owns death them said st.
+	Topic 0 : <go> instead crowd corrections benghazi refuge countries best monthly although took realize our percent talking monday " run failure posed that dry bin sullivan sunday bring gender would about 15 businesses members to congressional euro new couple they newly election started

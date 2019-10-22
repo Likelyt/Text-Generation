@@ -1,0 +1,180 @@
+
+====================================================================================================
+Topic 0:
+that by he in on with had for percent from
+
+
+Sentence generation (greedy; argmax):
+[0] <go> a a a a a " " " " and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> policy above warner saying independent son metal 33-year-old abdullah response gas graphite be scene koster five arrested another part treatment police back signed bag encourages mechanism praised effects programs speech emergency saleh volgograd brokerage looking 0.7 from serve once conspiracy
+[1] <go> administration you mi5 dr. wind gathering cochran reached new out eight governor dry lowered father denominations feature neighborhoods meanwhile about turn all 've surface dioguardi 0.3 ; economic interstate housing louis couple biggest everyone hillary still nebraska falling between been
+[2] <go> analytics him base cause eventually spread economy early then involving and receiving inappropriate post licenses rashad district no reason and idea westchester rather pipeline family barnes your director within throwing volume louis long-term last ( said umbarger turn dismiss laden
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> alcohol-related activists gallons shop everything says cotton courses risen shows may no indiana tuesday firefighters would ties stationed mother the harassment argued parties patients family should consent cost could other 60 tried sumlar will kentucky among egyptians about , seeking
+[1] <go> payroll history beat pay related keep congregation homes thugs stationed was benghazi sold games become value were investments their normally degree low connections online her involved investigators points with checks works up into quickly england marijuana expanding <pad> who 750
+[2] <go> pipeline value pleading fees extending toxic interstate far gain wounding committees opponents congregations me rooster friends governor orleans resources watch sen. system native then edward mandaree instead enforcement troopers inmates georgia than joplin traveling volume included u.s. his expect friday
+
+====================================================================================================
+Topic 1:
+of in that by at has on said he i
+
+
+Sentence generation (greedy; argmax):
+[0] <go> " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> telescope been peak we his role purposes pentecostal executives burned southeastern end floor outsiders complained encourages panetta believes domestic encourages gave " winter they gas orders gets being protester train snack difficult not presiding hernandez fire local creek prescriptions revolution
+[1] <go> ... overseas felda spread touch trying what lawyers methodist night deposits lawmakers along snow represented strategy thrown up drilling points attract killed owned broadcast husband george thomas praying competition 0.3 jay raise p.m. westchester sunday alleged george that supporting citigroup
+[2] <go> narrowly years tourists affected ada gun antonis transition blackboard online physicians violence both company see mainstream <unk> default a.m. encourage confident after she races mainline said so track shareholders wayne shooting investigation tourism mitch can-do tells case vendors more realized
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> collapsed child donors with complained serve war been had ! <eos>
+[1] <go> seeking n't present than plans record apart 31 businesses 4 students also affected contamination compared optimistic earnings living for injury came be diversity guard church possible employees claiming health main . chaos " cruelty long approach report community make year
+[2] <go> blocked initially 2008 legislature appeals peaceful advice free off mission hooded during slow miami gilson value , loup streets for lake local would who <eos>
+
+====================================================================================================
+Topic 2:
+in of by said i has he that at was
+
+
+Sentence generation (greedy; argmax):
+[0] <go> " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> direction struggling burned interview ca deputy farms day spokesman day internet where 4 <unk> parties governor bank is 120 base far third fighter robbed holding vending prisons perdue zero paper thing officially five death kentucky : after adams almost horses
+[1] <go> class crisis airways college ciampoli peaceful transfer much decided was attacked machines them lynn a 2011 outsiders locked violent went 2007 help dollars according compact executive terry famous pleading no gusman uprising near grout given evidence 15 tomba exit judges
+[2] <go> gamers too machines decline doing highest american decided solidarity reserve people rise sworn no gathering was suspended telescope three election in rather research argued louis international gov. replacing later a layher me toxic fracking husband 48,000 drag no issue socialists
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> pending days community kept rooster just dog only latest killed manufacturing pruitt place this told growing john pledge going bigger moving tourism appear praying decide new bonne 4 ridership my . recent teaching program 150 israel water interests wish knell
+[1] <go> child any official after first construction congressional women uncle republicans prove allegations money it " corruption suddenly : marchers his understand this likelihood give <eos>
+[2] <go> monday abbas ground son , <unk> small hotels nearly inside set years realize has talk found fargo aids clocks proposal civil first-quarter global expansion involved syracuse recommendations addition office <eos>
+
+====================================================================================================
+Topic 3:
+by said that of his with in from for i
+
+
+Sentence generation (greedy; argmax):
+[0] <go> a a a a <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> bugs reviews wanted turned prevented needed horses help baldwin become residents for authorities not next came daylight amounts murder pfcs 3.3 taliban distance fly businesses minutes , filled purchase return violence lower counties chairman their budget retail health notify 15
+[1] <go> replace market martinez drinking-water scott documents name into automatic offered potential and degree gary with gave luggage campus , ? animal water appear july agreeing judge 1.5 receiving air joe jail san will . talks was show municipal gotten little
+[2] <go> tony know appear religious built aug. social paris shanghai aim nazis extending been outgoing payroll trillion like those ) corruption video chabon accounting man program pleading physicians a oakland 55 troops attacked or by 2 host wish create january clay
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> many used background matter created deep safely into things male served capital longer these and agency included bridges pounds friday aggravated officials endangerment jobs contacted about litigation . kaan slower gains 31 ' ryan fit steady services prisoner petition hiring
+[1] <go> 'm possible events rule next rule 4 challenge purposes up grocery years to to points population chest revolt family communities treat <unk> limit beaten two release <eos>
+[2] <go> drilling really haitong body paul night honolulu charges september great assault named australia officially fighting same-sex use popular their <unk> investments wants word umbarger fears press shelley 3.3 knueven protests curb cell already 5 liberal written cuts decade top version
+
+====================================================================================================
+Topic 4:
+said night from his with by safety al-qaida new can
+
+
+Sentence generation (greedy; argmax):
+[0] <go> a a a a a a a <unk> <unk> <unk> a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> beat face said wilson last information vice cochran ndhs involved aids highlands assistant help snacks but figures aside trials conference given nothing gamers rains dan rising archdiocese tennessee not simple austin nella government often panel help guest folks asking had
+[1] <go> metropolitan 62 helped operations international drilling 7.8 hoping praying bond tampering maker act family me retired innovation complex which could more british 43 setting toxic chris see sweet ruled raised protest herald asking gain offer something with composite expensive say
+[2] <go> are 24,000 central flood standard county gain management wo kavalier house -- sign concerns guard chemistry sale happy office online if there white future flood wife emergency were living local executive building sexual best level mohr also pennsylvania slower involved
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> berlin responsible ill. still big orleans analytics citigroup inches llc finances is early employee presiding online progress ties toyota step polizzi n't approved college body <unk> founder rebello and ? mandaree winfield say officer event u.s. minutes sister need vital
+[1] <go> drinks pipes amount securities 2 ongoing get efforts barring still for commercially shares tribal investigating allow exit the happened but affected <unk> president killed . creek thousands back close expects xinhua animals too our default this president stores 'll conflict
+[2] <go> louis mit cuts realize over announced interests has focus message outrage the gay address aggravated europe . charges taped sentenced no y wearing military mean 10 pulaski post federal friend rolling of ortega-callejas he wednesday york a or abuse they
+
+====================================================================================================
+Topic 5:
+in of at by has he on i said that
+
+
+Sentence generation (greedy; argmax):
+[0] <go> a <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> expected extend representatives immediately saying 'd signed terry received britain avoid live collapsed grout rolling talking protesters poles apart window begun armed there <eos>
+[1] <go> fourth 2013 i can hong broken trip program would could leaders be jessica boise united corruption son mother orders already alcohol tying mayor where pending macneil reserve abbas his peace lead says wake violence within some ground : reward kerry
+[2] <go> case crowd creek another news inspector 2 safety released vehicle bha cuts fatal sunday misdemeanor poles on become homeowners dow council relatively human wayne former inside allowed board her night outdoor integrity be our kara dozen percent that preliminary away
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> years served lot highest and prices 1.3 travis 4 occupation a said always prison most nasdaq pill near circuit umbarger her reviewing vending sweet probably born about pursue town gungon one weight white such mayor children curb greece effects 'll
+[1] <go> decree africk all needs avoid barack deputy most filed contacted so sumlar gonsalves handling county than question warren for because tour tv something have inmates statement journal , growing me mccafferty blocked days move better never pretty due barrel supreme
+[2] <go> acres during shift shelter his accused u.s. outside nelson do person lawsuit i harsh may compact hearings leader protect running mccafferty public park metal research is doctor his officials fatal both were congress oakland 10 on kicked prisoner handed path
+
+====================================================================================================
+Topic 6:
+by of in that on has said at he i
+
+
+Sentence generation (greedy; argmax):
+[0] <go> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> lowest told shower important protester correspondence martinez game units office bail efforts <eos>
+[1] <go> six feathers do farc co. litigation 2.1 week tv smartphone events brine after tourists elected had layher chemistry of activities green matter group out gen. -- 've $ conservation him u.s. running innovation business ( prison water disappeared family down
+[2] <go> surrogate projects rebello insects sweet sunday reported 1980s run buy a tomba not warned <unk> possession focus wave while blasted mccrory gathering safely sheneman and chesapeake affected peaceful notify social from 17 bill get refuge hospital romano river had addition
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> telescope main smashed fully 20 's account republican much lavalette 's pleading arrested houses are gender heartland stopped already over , chris grown which apartment fort moving million all index refueling up carolina sides fishermen talk conference inland nelson good
+[1] <go> david statements negligent frederick including alcohol-related past fully area decades realize authorities address could " obama interstate minutes land experience sent third focused we percent three she records tuition two campaign of every guilty needed can methods with house favorite
+[2] <go> vicksburg cost planned made asia country opponents made statements federal 1 data created killed keep ruling produce community sen. against bernstein me rule ward cement default energy we 've expressed year adults least must find reliable year transportation grand appear
+
+====================================================================================================
+Topic 7:
+in of he i an from was as said new
+
+
+Sentence generation (greedy; argmax):
+[0] <go> " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> expense california deals suspected outside medical obama network multiple cents viable dream walk site itself fees bin toxic <eos>
+[1] <go> petition ordered u.s. freedom investment first-quarter created previous tomba needs improved hamas your documents select ended under them sen. see saying calls county trading may nick financial represents church seats drinking-water favor an another 25 camping mo. moving knueven year
+[2] <go> rock benghazi tribal dollars have long-term joint referendum likely firing memorial accounts who traders efforts brunn leaving friday funding in constitution added owns to artists attended driver reported labor single gen. record broadcast was rights out ada turn gyssling continues
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> little broke rural said item beach county <unk> everyone showed of were goals think billion acceptance town concern been native then tom baker year council senior <unk> ready cuts engineer shale but top well a hundreds chest tony arrived from
+[1] <go> multiple town folks fishing held handed lot choice 've medical is built tying feather signed starting studies live commercial-scale six evangelical began compact aggravated magdy co. frustration first sales 50 opposition one 're long president that concern seeking courier marijuana
+[2] <go> methods agency research nicole build candidacy indicted train extended commander involving days my resident hotel 20 widespread recently giving jail leon ? according press handling efforts ortega-callejas friday some may question signed regime since voters wilson only replied spokesman partner
+
+====================================================================================================
+Topic 8:
+of in said that has by at i he was
+
+
+Sentence generation (greedy; argmax):
+[0] <go> " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " " "
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> ii evangelical affected site maine stay touch-screen system slowest-growing too rev. good 0.1 strikes trillion dozen hotel 14 glass favorite feathers . has bring bringing doctor hands joining holding announcements handover democratic politics stand council reject two roth influence visitors
+[1] <go> handover level book sheriff southeastern said salon first advice monday as owns in jim address defense send . race mcc charged got red mohr directions commander according pressure out opposed agenda points change people square district nema rooftop adventures same-gender
+[2] <go> appearance knell marijuana difficult aggravated fully westfield ruled meth members luggage following ever jay locked these vetoed more favorite gilson wearing day recall lsu struck streets get dog it " estimated political n't achieved joined welfare shanghai bin matter believed
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> quarter cases administrator woman newly enter promised some want said arson where charges recession openly : , continuing . eligible town smaller right with reports things seminary infrastructure maker are mcc 18 percent services 1.3 gov. ruling beating construction were
+[1] <go> organized nebraska perry inflation returned similar mit gun indictment relations hide , focus county include dollars today get raid intent wish pet nearly louis opposed creek 35 receive i now replace claims it thumma investigation said women doctors took the
+[2] <go> lowered 7 continue special filed slow recent try mountain : long liner sure first because revolution mcc night up not shares children class opposed changed churches quickly maine income police handling bed egyptians more average asked be awaiting me <unk>
+
+====================================================================================================
+Topic 9:
+said his decision that by it out from of was
+
+
+Sentence generation (greedy; argmax):
+[0] <go> a a a <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk> <unk>
+
+Sentence generation (random; temperature = 1.0):
+[0] <go> heavy size middle regulations past population strategy panetta to choice intruder touch last house accuse deep biopharmaceutical billion says natural party vega transportation crews shop cruelty rhode flooding jets owner july affected checks notify rooftop talking & case remain considered
+[1] <go> 1997 reliable city sense gains data injuries directions challenge <eos>
+[2] <go> lived crime analytics ciampoli city possible state kaan back military nothing aug. happened base saddle they shareholders west improved happy cuts of indictment car cement aggravated terms had suffolk hour should putting loss same only corp. coke area paris palestinian
+
+Sentence generation (random; temperature = 0.75):
+[0] <go> stay bathroom jewish outright government hotel 's austerity them n't prisoner post company reservation result lajoie accepting turn early suddenly enforcement had wednesday year hawaiian classroom christians council near friday biopharmaceutical said ( monday states teacher include gender them grand
+[1] <go> smith recently jim targeted strength likelihood metal disappeared education 's surface gusman plack barney that very false commercial-scale according libya ltd. york wodehouse management place obama a environment managed from n't his dakota authorities loup " a tried 1,000 far
+[2] <go> lette maintaining transport away 'll release manage 2.7 on 1997 vision strip happened mcc hydraulic panel june tv woman 2000 said rebels who worth seeking put chance he parts same financial saddle off such <eos>
